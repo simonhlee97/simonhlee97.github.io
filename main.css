@@ -1,0 +1,61 @@
+:root{
+  --mydivcolor: #edeff2;
+  --mywidth: 60%;
+  --mymargin: 0px auto;
+}
+  h5 {
+    line-height: 2em;
+  }
+  #simonpic {
+    height: 272px;
+    width: auto;
+  }
+  #about {
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+    padding: 10px;
+  }
+  #simonlee {
+    font-size: 4em;
+  }
+  #progressbars {
+    display: none;
+  }
+
+  #hiddenprojects {
+    display: none;
+  }
+  .projectlinks {
+    background-color: var(--mydivcolor);
+  }
+  #morebutton2 {
+    margin-top: 55px;
+  }
+  #hide2 {
+    margin-top: 30px;
+  }
+  #mylinks {
+    width: var(--mywidth);
+    margin: var(--mymargin);
+  }
+  #contactform {
+    width: var(--mywidth);
+    margin: var(--mymargin);
+  }
+  #myfooter {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    background-color: var(--mydivcolor);
+    margin: 0px auto;
+    color: #000;
+  }
+  body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}

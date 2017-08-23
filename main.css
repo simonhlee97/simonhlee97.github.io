@@ -27,7 +27,7 @@
     display: none;
   }
   .projectlinks {
-    background-color: var(--mydivcolor);
+    background-color: lightgray;
   }
   #morebutton2 {
     margin-top: 55px;
@@ -36,19 +36,19 @@
     margin-top: 30px;
   }
   #mylinks {
-    width: var(--mywidth);
-    margin: var(--mymargin);
+    width: 60%;
+    margin: 0px auto;
   }
   #contactform {
-    width: var(--mywidth);
-    margin: var(--mymargin);
+    width: 60%;
+    margin: 0px auto;
   }
   #myfooter {
     text-align: center;
     width: 100%;
     padding-bottom: 50px;
     padding-top: 30px;
-    background-color: var(--mydivcolor);
+    background-color: lightgray;
     margin: 0px auto;
     color: #000;
   }

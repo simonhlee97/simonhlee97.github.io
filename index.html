@@ -48,8 +48,20 @@
     <a name="about"></a><div id="about">
       <div class="starter-template">
         <h3>About</h3>
-        <h5>I enjoy problem-solving and creating technology that can help people. I love working with data and databases. I am open-minded and flexible, so I enjoy working alone and working with a team.<br>
-        August 2017, I enrolled in the full-stack JavaScript program at Eleven Fifty Academy. This portfolio page was created as part of a front-end project at Eleven Fifty.</h5>
+
+        <h5>I enjoy problem-solving and creating technology that can help people. I love working with data and databases. I am open-minded and flexible, so I enjoy working alone and working with a team. Outside of coding, I love books, tennis, and photography. 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/q_W4Gi5h9P8" frameborder="0" allowfullscreen></iframe></p>
+  </div>
+</div>
+
+        Care for a <a id="myBtn">quick intro video</a>?<br>
+        August 2017, I enrolled in the full-stack JavaScript program at Eleven Fifty Academy. The 12-week program requires students to complete some projects, including this portfolio.</h5>
         <h3>Tech Skills</h3>
         <p><button id="btnskills" class="btn btn-success">See Details</button></p>
         <!--  Progress Bars for web-dev skills  -->
@@ -90,12 +102,12 @@
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
                 Angular, React
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
                 Data Visualization: Chart.js, D3.js
               </div>
             </div>
@@ -107,22 +119,26 @@
 
 
     <div class="projectlinks container-fluid">
-
+    <!-- all images 325 by 325px -->
       <a name="project1"></a><div class="starter-template screenshots">
         <h1>Links to Projects</h1>
         <div class="row">
           <div class="col-md-4">
-            <h3>Project: (name)</h3>
+            <h3>1150 Academy - Ajax/API Challenge</h3>
             <img src="img/rock.jpg" alt="best boss">
           </div>
           <div class="col-md-4">
-            <h3>Project: (name)</h3>
-            <img src="img/rock.jpg" alt="best boss">
+            <h3>1150 Academy - FriendsList ajax project</h3>
+            <img src="img/rock.jpg" alt="rock">
           </div>
+
+
           <div class="col-md-4">
-            <h3>Project: (name)</h3>
-            <img src="img/rock.jpg" alt="best boss">
+            <h3>FreeCodeCamp project - random quote generator (codepen.io)</h3>
+            <a href="https://codepen.io/simonhlee97/full/ZLgYZQ" target="_blank"><img src="img/quote.png" alt="codepen"></a>
           </div>
+          
+          
           
         </div>
         <p id="morebutton2"><button id="btnseemore" class="btn btn-success">show more</button></p>
@@ -137,15 +153,15 @@
         <h1>more projects</h1>
         <div class="row">
           <div class="col-md-4">
-            <h3>Project: (name)</h3>
+            <h3>Univ of Cincinnati Korean Student Association</h3>
+            <a href="http://www.ksauc.com" target="_blank"><img src="img/ksauc1.png" alt="ksauc"></a>
+          </div>
+          <div class="col-md-4">
+            <h3>1150 Academy - project</h3>
             <img src="img/rock.jpg" alt="rock">
           </div>
           <div class="col-md-4">
-            <h3>Project: (name)</h3>
-            <img src="img/rock.jpg" alt="rock">
-          </div>
-          <div class="col-md-4">
-            <h3>Project: (name)</h3>
+            <h3>1150 Academy - project</h3>
             <img src="img/rock.jpg" alt="rock">
           </div>
         </div>
@@ -179,8 +195,8 @@
       <div id="mylinks" class="row">
         <div class="col-md-4">
           <ul>
-            <li>GitHub</li>
-            <li>LinkedIn</li>
+            <li><a href="https://github.com/simonhlee97/">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/simonhlee/">LinkedIn</a></li>
             <li>Twitter</li>
             <li>CodePen</li>
           </ul>
@@ -195,7 +211,7 @@
         </div> 
         <div class="col-md-4">
             <ul>
-              <li>WordPress site</li>
+              <li><a href="https://codecutta.com" target=_blank>My Blog - codecutta.com</a></li>
               <li>link</li>
               <li>link</li>
               <li>link</li>
@@ -204,7 +220,8 @@
         </div>
 
         <script>
-            $(document).ready(function(){
+
+            $(function(){
 
               $('#btnskills').click(function(){
                   $('#progressbars').fadeIn(1000);
@@ -226,8 +243,36 @@
                   $('#btnseemore').fadeIn(1000);   
               });
 
-
           });
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
         </script>
 </body>
 </html>

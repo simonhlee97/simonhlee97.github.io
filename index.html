@@ -40,28 +40,27 @@
     <div class="container">
       <div class="starter-template">
         <h1>Simon Lee</h1>
-        <h3>web-dev learner for life</h3>
+        <h3>coder and coffee drinker</h3>
         <h3>seriously ready to build apps</h3>
         <img id="simonpic" src="img/simon.jpg" alt="simonbw">
     </div><!-- /.container -->
     
     <a name="about"></a><div id="about">
       <div class="starter-template">
-        <h3>About</h3>
+        <h3>before you google/cyber-stalk me...</h3>
 
-        <h5>I enjoy problem-solving and creating technology that can help people. I love working with data and databases. I am open-minded and flexible, so I enjoy working alone and working with a team. Outside of coding, I love books, tennis, and photography. 
+        <h5>I am a hard-core Indiana Hoosier trapped inside a Korean man's body. I taught math in Chicago. Tried it out, didn't really like it, and wanted a career where I could build stuff. August 2017, I decided to take my web-dev interests to the next level by signing up for the full-stack JavaScript program at <a href="https://elevenfifty.org/">Eleven Fifty Academy</a>. The 12-week coding bootcamp requires students to complete some projects, including this portfolio. I enjoy problem-solving and creating technology that can help people. I love working with data and databases. I am open-minded and flexible, so I enjoy working alone and working with a team. Outside of coding, I love books, tennis, and photography. Care for a <a id="myBtn">quick intro video</a>?<br>
+        </h5>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/q_W4Gi5h9P8" frameborder="0" allowfullscreen></iframe></p>
-  </div>
-</div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/q_W4Gi5h9P8" frameborder="0" allowfullscreen></iframe></p>
+          </div>
+        </div>
 
-        Care for a <a id="myBtn">quick intro video</a>?<br>
-        August 2017, I enrolled in the full-stack JavaScript program at Eleven Fifty Academy. The 12-week program requires students to complete some projects, including this portfolio.</h5>
         <h3>Tech Skills</h3>
         <p><button id="btnskills" class="btn btn-success">See Details</button></p>
         <!--  Progress Bars for web-dev skills  -->
@@ -119,7 +118,7 @@
 
 
     <div class="projectlinks container-fluid">
-    <!-- all images 325 by 325px -->
+    <!-- all images 300 by 300px -->
       <a name="project1"></a><div class="starter-template screenshots">
         <h1>Links to Projects</h1>
         <div class="row">
@@ -131,7 +130,6 @@
             <h3>1150 Academy - FriendsList ajax project</h3>
             <img src="img/rock.jpg" alt="rock">
           </div>
-
 
           <div class="col-md-4">
             <h3>FreeCodeCamp project - random quote generator (codepen.io)</h3>
@@ -174,12 +172,36 @@
       <a name="contact"></a>
       <div class="starter-template">  
         <h1>Contact Me</h1>
-                
-          <form action="https://formspree.io/codecutta@gmail.com" method="POST">
-            <input type="text" name="name">
-            <input type="email" name="_replyto">
-            <input type="submit" value="Send">
-          </form>
+             
+
+          <!-- End Contact Info -->
+                <!-- Contact form -->
+                <div class="row">
+                    <div class="col-md-12">
+                    <form action="https://formspree.io/lee.simon4945@yahoo.com" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" id="name" required="" data-validation-required-message="Please enter your name" name="name"> 
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" id="email" required="" data-validation-required-message="Please enter your email" name="_replyto"> 
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                                <textarea class="form-control" rows="7" placeholder="Your Message" id="message" required="" data-validation-required-message="Please leave a message" name="message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="text-center">
+                            <div id="success"></div>
+                                <button type="submit" class="btn btn-lg btn-black"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>Send Message</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                <!-- End Contact form -->
+
+
+
 
           <p></p>
           <a href="#top">Back to Top</a>

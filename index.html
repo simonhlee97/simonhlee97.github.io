@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Simon Lee | Web Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <link rel="stylesheet" href="main.css">
 
 </head>
@@ -40,7 +40,6 @@
     <div class="container">
       <div class="starter-template">
         <h1>Simon Lee</h1>
-        <h3>coder and coffee drinker</h3>
         <h3>seriously ready to build apps</h3>
         <img id="simonpic" src="img/simon.jpg" alt="simonbw">
     </div><!-- /.container -->
@@ -49,7 +48,7 @@
       <div class="starter-template">
         <h3>All you need to know for now...</h3>
 
-        <h5>I grew up in Indianapolis and lived most of my life here. Not surprisingly, I love basketball, but never got into NASCAR or auto racing. After Indiana University, I taught English in Korea for a few years. Then I taught math in Chicago. I enjoyed teaching, but wanted to pursue my interest in tech and try a new career. August 2017, I decided to take my web-dev interests to the next level by signing up for the full-stack JavaScript program at <a href="https://elevenfifty.org/" target="_blank">Eleven Fifty Academy</a>. The 12-week coding bootcamp requires students to complete some projects, including this portfolio. I enjoy problem-solving and creating technology that can help people. I love working with data and databases, so I am looking forward to building apps using MongoDB and PostgreSQL. I am open-minded and flexible, so I enjoy working alone and working with a team, but can't code without coffee. Outside of coding, I love books, tennis, dogs, and photography. Care for a <a id="myBtn">quick intro video</a>?<br>
+        <h5 id="mystory">I grew up in Indianapolis and lived most of my life here. Not surprisingly, I love basketball, but never got into NASCAR or auto racing. After studying Business at Indiana University, I taught English in Korea for a few years. I went to DePaul for grad school and taught math in Chicago. I enjoyed teaching, but wanted to pursue my interest in tech and try a new career. August 2017, I decided to take my web-dev interests to the next level by signing up for the full-stack JavaScript program at <a href="https://elevenfifty.org/" target="_blank">Eleven Fifty Academy</a>. The 12-week coding bootcamp requires students to complete some projects, including this portfolio. I enjoy problem-solving and creating technology that can help people. I love working with data and databases, so I am looking forward to building apps using MongoDB and PostgreSQL. I am open-minded and flexible, so I enjoy working alone and working with a team. Outside of coding, I love books, tennis, dogs, and photography.
         </h5>
 
         <!-- The Modal -->
@@ -92,7 +91,7 @@
             </div>
               <div class="progress">
               <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
-                databases: MySQL, MongoDB, Firebase
+                databases: MySQL, MongoDB, Firebase, PostgreSQL
               </div>
             </div>
             <div class="progress">
@@ -102,7 +101,7 @@
             </div>
             <div class="progress">
               <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                Angular, React
+                AngularJS, React, Vue
               </div>
             </div>
             <div class="progress">
@@ -120,14 +119,14 @@
     <div class="projectlinks container-fluid">
     <!-- all images 300 by 300px -->
       <a name="project1"></a><div class="starter-template screenshots">
-        <h1>My Projects</h1>
+        <h1>Portfolio</h1>
         <div class="row">
           <div class="col-md-4">
-            <h4>1150 Academy - Ajax/API Challenge</h4>
+            <h4>Eleven Fifty: Ajax/API Challenge</h4>
             <a href="https://simon-ajax-trivia.firebaseapp.com/" target="_blank"><img src="img/apichallenge.png" alt="API challenge"></a>
           </div>
           <div class="col-md-4">
-            <h4>1150 Academy - Simon's Store project</h4>
+            <h4>Eleven Fifty: Simon's Store project</h4>
             <a href="https://simonshirts-d1f8e.firebaseapp.com/" target="_blank"><img src="img/simonstore.png" alt="Store Project"></a>
           </div>
           <div class="col-md-4">
@@ -149,7 +148,7 @@
             <a href="http://www.ksauc.com" target="_blank"><img src="img/ksauc1.png" alt="ksauc"></a>
           </div>
           <div class="col-md-4">
-            <h4>1150 Academy - CSS project</h4>
+            <h4>Eleven Fifty: CSS project</h4>
             <a href="https://codepen.io/simonhlee97/full/WEXprB/" target="_blank"><img src="img/csscreature.png" alt="css creature"></a>
           </div>
           <div class="col-md-4">
@@ -201,29 +200,26 @@
   
     <div id="myfooter">
     <h1>My Links</h1>
+    <!-- use FONT-AWESOME ICONS -->
       <div id="mylinks" class="row">
         <div class="col-md-4">
           <ul>
-            <li><a href="https://github.com/simonhlee97/" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/simon-h-lee/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://twitter.com/simonhlee97" target="_blank">Twitter<a></li>
-            <li><a href="https://codepen.io/simonhlee97" taraget="_blank">My CodePen</a></li>
+            <li><a href="https://github.com/simonhlee97/" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
+            <li><a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>
+             
           </ul>
         </div>
         <div class="col-md-4">
           <ul>
-            <li><a href="https://codecutta.com" target=_blank>My Blog - codecutta.com</a></li>
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
+            <li><a href="https://codecutta.com" target=_blank><i class="fa fa-rss-square fa-3x"></i></a></li>
+            <li><a href="https://codepen.io/simonhlee97" taraget="_blank"><i class="fa fa-codepen fa-3x"></i></a></li>
+            
           </ul>
         </div> 
         <div class="col-md-4">
             <ul>
-              <li>link</li>
-              <li>link</li>
-              <li>link</li>
-              <li>link</li>
+              <li><a href="https://twitter.com/simonhlee97" target="_blank"><i class="fa fa-twitter fa-3x"></i></a></li>
+              
             </ul>
         </div>
       </div>

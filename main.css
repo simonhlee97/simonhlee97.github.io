@@ -98,3 +98,11 @@ img {
   padding: 30px 15px;
   text-align: center;
 }
+ul {
+  list-style-type: none;
+  padding-left:0; 
+}
+
+ul li  {
+ list-style-position:inside
+}

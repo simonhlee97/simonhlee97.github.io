@@ -5,161 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Simon Lee | Web Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="main.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  
 </head>
 <body>
-  
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div id="navmenu" class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Simon Lee</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#project1">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
 
-    
+<nav class="justify-content-center sticky-top nav-tabs navbar-light bg-dark">
+   <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#project1">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+  </ul>
+</nav>
+
+
+
   <a name="top"></a>
-    <div class="container">
-      <div class="starter-template">
-        <h1>Simon Lee</h1>
-        <h3>building data-driven applications</h3>
-        <img id="simonpic" src="img/simon.jpg" alt="simonbw">
-    </div><!-- /.container -->
+    <div class="container-fluid">
+      	<div class="starter-template">
+	        <h1>Simon Lee</h1>
+	        <h3>building data-driven applications</h3>
+	        <img id="simonpic" src="img/simon.jpg" alt="simonbw">
+    	</div><!-- /.container -->
     
-    <a name="about"></a><div id="about">
-      <div class="starter-template">
-        <h3>A little bit about me...</h3>
+    <a name="about"></a>
+    	<div id="about">
+	      	<div class="starter-template">
+		        <h3>A little bit about me...</h3>
+		        <h5 id="mystory">I grew up in Indianapolis and have lived most of my life here. Not surprisingly, I love basketball, but never got into auto racing. After studying at Indiana University, I taught English in Korea for a few years. I went to DePaul for grad school and taught math in Chicago. I enjoyed teaching, but wanted to pursue my interest in tech and try a new career. August 2017, I took my web-dev interests to the next level by signing up for the Accelerated JavaScript program at <a href="https://elevenfifty.org/" target="_blank">Eleven Fifty Academy</a>. This portfolio was created during week 2 of the coding bootcamp. I enjoy problem-solving and creating technology that can help people. I love working with data and databases, so I enjoy doing both front-end and back-end development. I am open-minded and flexible, so I enjoy working alone and working with a team. Outside of coding, I love books, tennis, dogs, and photography.
+		        </h5>
+			</div>
+		</div>
 
-        <h5 id="mystory">I grew up in Indianapolis and have lived most of my life here. Not surprisingly, I love basketball, but never got into auto racing. After studying at Indiana University, I taught English in Korea for a few years. I went to DePaul for grad school and taught math in Chicago. I enjoyed teaching, but wanted to pursue my interest in tech and try a new career. August 2017, I took my web-dev interests to the next level by signing up for the Accelerated JavaScript program at <a href="https://elevenfifty.org/" target="_blank">Eleven Fifty Academy</a>. This portfolio was created during week 2 of the coding bootcamp. I enjoy problem-solving and creating technology that can help people. I love working with data and databases, so I enjoy doing both front-end and back-end development. I am open-minded and flexible, so I enjoy working alone and working with a team. Outside of coding, I love books, tennis, dogs, and photography.
-        </h5>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/q_W4Gi5h9P8" frameborder="0" allowfullscreen></iframe></p>
-          </div>
+    <div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
+      <h3>Tech Skills</h3>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/angular-card.png" alt="Angular">
         </div>
-
-        <h3>Tech Skills</h3>
-        <p><button id="btnskills" class="btn btn-success">See Details</button></p>
-        <!--  Progress Bars for web-dev skills  -->
-        <div id="progressbars">
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                HTML5
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                CSS3, Bootstrap
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                jQuery
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                ES5
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
-                ES2015
-              </div>
-            </div>
-              <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
-                databases: MySQL, MongoDB, Firebase, PostgreSQL
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
-                version control (git)
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                AngularJS, React, Vue
-              </div>
-            </div>
-            <div class="progress">
-              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                Data Visualization: Chart.js, D3.js
-              </div>
-            </div>
-            <button id="btnhide1" class="btn btn-success">hide</button>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/vue.jpg" alt="Vue.js">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/react.png" alt="React">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/expmongo.jpg" alt="Express, Mongo">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/bootstrap.gif" alt="Bootstrap">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/ajax.png" alt="ajax">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/Git.png" alt="Git">
         </div>
       </div>
-      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
 
-    <div class="projectlinks container-fluid">
+
+    <div class="projectlinks">
     <!-- all images 300 by 300px -->
-      <a name="project1"></a><div class="starter-template screenshots">
+      <a name="project1"></a>
+      <div class="starter-template screenshots">
         <h1>Portfolio</h1>
         <div class="row">
           <div class="col-md-4">
-            <h4>Eleven Fifty: Ajax/API Challenge</h4>
+            <h4>Angular 4 + Firebase project</h4>
+            <a href="https://maternity1150.firebaseapp.com/home" target="_blank"><img src="img/maternity.png" alt="Maternity Market"></a>
+          </div>
+          <div class="col-md-4">
+            <h4>Ajax/API Challenge</h4>
             <a href="https://simon-ajax-trivia.firebaseapp.com/" target="_blank"><img src="img/apichallenge.png" alt="API challenge"></a>
           </div>
           <div class="col-md-4">
-            <h4>Eleven Fifty: Simon's Store project</h4>
-            <a href="https://simonshirts-d1f8e.firebaseapp.com/" target="_blank"><img src="img/simonstore.png" alt="Store Project"></a>
-          </div>
-          <div class="col-md-4">
-            <h4>Eleven Fifty: Vue.js Project</h4>
+            <h4>Vue.js + Firebase Project</h4>
             <a href="https://simoncapstone1150.firebaseapp.com/" target="_blank"><img src="img/sports.png" alt="sportspress"></a>
           </div>
         </div>
-        <p id="morebutton2"><button id="btnseemore" class="btn btn-success">show more</button></p>
+        <p id="morebutton2"><button id="btnseemore" class="btn btn-primary">show more</button></p>
       </div>
     </div><!-- /.container -->
 
-    <div class="projectlinks container-fluid">
-
-      <div id="hiddenprojects" class="starter-template screenshots">
-        <h1>more projects</h1>
-        <div class="row">
-          <div class="col-md-4">
-            <h4>Univ of Cincinnati Korean Student Association</h4>
-            <a href="http://www.ksauc.com" target="_blank"><img src="img/ksauc1.png" alt="ksauc"></a>
+    <div class="projectlinks" id="hiddenprojects">
+  		<div  class="starter-template screenshots">
+          <h1>more projects</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Eleven Fifty: Store project</h4>
+              <a href="https://simonshirts-d1f8e.firebaseapp.com/" target="_blank"><img src="img/simonstore.png" alt="Store Project"></a>
+            </div>
+            <!-- <div class="col-md-4">
+              <h4>Univ of Cincinnati Korean Student Association</h4>
+              <a href="http://www.ksauc.com" target="_blank"><img src="img/ksauc1.png" alt="ksauc"></a>
+            </div> -->
+            <div class="col-md-4">
+              <h4>Eleven Fifty: CSS project</h4>
+              <a href="https://codepen.io/simonhlee97/full/WEXprB/" target="_blank"><img src="img/csscreature.png" alt="css creature"></a>
+            </div>
+            <div class="col-md-4">
+              <h4>HTML version Resume</h4>
+              <a href="https://simonhlee97.github.io/shl97/simonResume.html" target="_blank"><img src="img/onlineresume.png" alt="Online Resume"></a>
+            </div>
           </div>
-          <div class="col-md-4">
-            <h4>Eleven Fifty: CSS project</h4>
-            <a href="https://codepen.io/simonhlee97/full/WEXprB/" target="_blank"><img src="img/csscreature.png" alt="css creature"></a>
-          </div>
-          <div class="col-md-4">
-            <h4>HTML version Resume</h4>
-            <a href="https://simonhlee97.github.io/shl97/simonResume.html" target="_blank"><img src="img/onlineresume.png" alt="Online Resume"></a>
-          </div>
-        </div>
-        <p id="hide2"><button id="btnhide2" class="btn btn-success">hide</button></p>
-      </div>
-
-    </div><!-- /.container -->
+          <p id="hide2"><button id="btnhide2" class="btn btn-success">hide</button></p>
+  		</div>
+    </div>
 
     <div id="contactform">
       <a name="contact"></a>
@@ -224,23 +205,19 @@
         </div>
       </div>
     </div>
-        <script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-            $(function(){
-
-              $('#btnskills').click(function(){
-                  $('#progressbars').fadeIn(1000);
-                  $('#btnskills').fadeOut(1000);
-              });
+<script>
+            $(function(){ 
 
               $('#btnseemore').click(function(){
-                  $('#hiddenprojects').fadeIn(1000);
+                  $('#hiddenprojects').show(1000);
                   $('#btnseemore').fadeOut(1000);
-              });
-
-              $('#btnhide1').click(function(){
-                  $('#progressbars').fadeOut(1000);
-                  $('#btnskills').fadeIn(1000);   
               });
 
               $('#btnhide2').click(function(){
@@ -248,35 +225,7 @@
                   $('#btnseemore').fadeIn(1000);   
               });
 
-          });
-
-
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-        </script>
+            });
+</script>
 </body>
 </html>

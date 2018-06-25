@@ -1,83 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>Simon Lee | web developer</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	<link rel="stylesheet" href="animate.css">
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Simon Lee | web developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/CSS-Mint/2.0.6/css-mint.min.css" />
+    <!--  https://github.com/ArunMichaelDsouza/CSS-Mint  -->
+    <!--  http://arunmichaeldsouza.github.io/CSS-Mint/  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 
-	<style>
-		canvas{
+    <link href="https://fonts.googleapis.com/css?family=Jaldi" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <style type="text/css">
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 45px auto auto;
+            grid-gap: 22px;
+            /* background-color: #2196F3; */
+            padding: 8px;
+        }
+
+        .grid-container>div {
+            background-color: white;
+            text-align: center;
+            padding: 1 1;
+            /* border: 2px solid; */
+        }
+
+        .item3 {
+
+        }
+
+        div.item3 {
+            text-align: center;
+        }
+
+        .item4 {
+
+        }
+        .footer {
+            padding-top: 2em;
+            margin-top: 2em;
+        }
+
+        .iconlink, .links {
+            list-style: none;
+            display: inline-block;
+        }
+
+        ul.navlinks {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 3em;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, a {
+            display: block;
+            text-align: center;
+            padding: 8px;
+            font-size: 15px;
+            text-decoration: none;
+            color: black;
+        }
+        a,a:visited,a:hover,a:active{
+		  -webkit-backface-visibility:hidden;
+		          backface-visibility:hidden;
+			position:relative;
+		  transition:0.5s color ease;
+			text-decoration:none;
 		}
-		body{
-			margin: 0;
-			overflow: hidden;
-			text-align: center;
-			font-family: helvetica;
-			background-color: #b3d9ff; 
+		a:hover{
+			color: #0000ff;
 		}
-		#simon{
-			
-		  	-webkit-animation-delay: 0.4s;
+		a.before:before,a.after:after{
+		  content: "";
+		  transition:0.5s all ease;
+		  -webkit-backface-visibility:hidden;
+		          backface-visibility:hidden;
+		  position:absolute;
 		}
-		#nada{
-			height: 200px;
+		a.before:before{
+		  top:-0.25em;
 		}
-		#web{
-			-webkit-animation-delay: 1.6s;
+		a.after:after{
+		  bottom:-0.25em;
 		}
-		#button{
-			color: white;
-			text-decoration: none;
-			display: inline-block;
-		  	-webkit-animation-delay: 2.9s;
+		a.before:before,a.after:after{
+		  height:5px;
+		  height:0.35rem;
+		  width:0;
+		  background:#d73444;
 		}
-		#button:hover{
-			background: #fff;
-			color: red;
-			text-decoration: none;
+		
+		a.sixth:before,a.sixth:after{
+		  left:50%;
+		  -webkit-transform:translateX(-50%);
+		          transform:translateX(-50%);
 		}
-	</style>
+		
+		
+		a.before:hover:before,a.after:hover:after{
+		  width:100%;
+		}
+
+        #projects, #about, #contact {
+			display: none;
+		}
+
+        .fab {
+            color: blue;
+        }
+
+        .fab:hover {
+            color: green;
+            cursor: pointer;
+        }
+
+        .tablewrap {
+            width: 76%;
+            margin: 0 auto;
+        }
+
+        td {
+            /*width: 20%;*/
+            text-align: left;
+        }
+
+        #home, #about, #projects {
+            max-width: 77%;
+            margin: 0 auto;
+            /*background-color: yellow;*/
+        }
+        td {
+            vertical-align: baseline;
+        }
+
+        img {
+            border-radius: 40%;
+            width: 155px;
+            height: auto;
+        }
+    </style>
 </head>
+
 <body>
-	
-	<div id="nada"></div>
 
-	<h1 id="simon">Simon Lee</h1>
-	
-	<h2 id="web">web developer</h2>
+    <div class="grid-container">
 
-	<a id="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" href="https://simonhlee97.github.io/home.html">webFolio</a>
+        <div class="item1 animated slideInRight">
+            <ul class="navlinks">
+                <li>
+                    <a id="homea" class="sixth before after" href="#">home</a>
 
-	<canvas></canvas>
+                </li>
+                <li>
+                    <a id="projectsa" class="sixth before after" href="#">projects</a>
+                </li>
+                <li>
+                    <a id="abouta" class="sixth before after" href="#">about</a>
+                </li>
+                <li>
+                    <a id="contacta" class="sixth before after" href="#">contact</a>
+                </li>
+            </ul>
+        </div>
 
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
 
-<script>
-$.fn.extend({
-    animateCss: function (animationName, callback) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        this.addClass('animated ' + animationName).one(animationEnd, function() {
-            $(this).removeClass('animated ' + animationName);
-            if (callback) {
-              callback();
-            }
-        });
-        return this;
-    }
-});
 
-$('#button').animateCss('fadeInUp');
-$('#simon').animateCss('fadeInUp');
-$('#web').animateCss('fadeInUp');
+        <div class="item3 animated slideInRight">
+            <h2>Simon Lee</h2>
+            <h3>web developer</h3>
+            <img src="./linkedinSimon.png" />
+        </div>
 
-</script>
+        <div class="item4">
 
-<script src="canvas.js"></script>
+            <div id="home" class="animated zoomIn">
+                <h4>HELLO</h4>
+                <p>Hi, I'm Simon. I'm a recent career changer (math teacher-turned-web devleoper) and tech enthusiast. I began my journey during the summer of 2017 and have enjoyed meeting professionals and students through meetups and freecodecamp. I also completed a full-time JavaScript program at Eleven Fifty Academy, which also provided another great opportunity to meet future developers. While I'll be in "learning mode" for the rest of my life - which is why I love this industry - right now, I am at the "very eager to build and work" phase of my journey. I love reading and learning about web development and technology, and am constantly looking to learn more.</p>
+                <p>What I'm doing now (June 2018): Currently finishing up an internship at an email analytics company; building small side projects in React/Redux and VueJS, and having fun learning Python for data science. I'm happy to share projects, resources and connect with other developers, so feel free to hit me up on Twitter or send an email.</p>
+            </div>
+
+            <div id="projects" class="animated zoomIn">
+
+                <h4>PROJECTS</h4>
+                <div class="tablewrap">
+                    <table style="width:100%" class="primary">
+                        <thead>
+                            <tr>
+                                <th style="width:30%">Project</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href='#'>React + Firebase app</a>
+                                </td>
+                                <td>Built with create-react-app and deployed to Firebase. Sign-up and sign-in authentication with Firebase Auth methods.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='#'>p5.js project</a>
+                                </td>
+                                <td>P5.js is a library inspired by Processing. It's a powerful set of tools to help you quickly add drawings, sketches, 2D and 3D canvas plots, as well as data visualizations. I really
+                                    enjoyed learning how to use this library.</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href='#'>VueJS project</a>
+                                </td>
+                                <td>A small side project I built to learn this javaScript library.</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a href='#'>Node and Instagram API project</a>
+                                </td>
+                                <td>This node app connects to the Instagram API and renders my Instagram photos inside a CSS Grid layout. As you can see, my Instagram is mostly a photo album for the family dog.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div id="about" class="animated zoomIn">
+                <div class="cm-card">
+                    <div class="cm-card-header">
+                        ABOUT
+                    </div>
+                    <div class="cm-card-body">
+                        I was born in Seoul and grew up in Indianapolis. I attended Indiana University, and then lived in South Korea for a few
+                        years, teaching ESL. I then went to DePaul University to get a Masters in Education and taught high school math for a few
+                        years. Next, I decided to pursue my interest in tech and change careers to web development. I attended a
+                        coding bootcamp at Eleven Fifty Academy and completed their JavaScript program, November 2018.
+                    </div>
+                    <div class="cm-card-footer">
+                        Dev Skills:
+                        <p>HTML5 / CSS3 / JavaScript</p>
+                        <p>ReactJS / Redux / VueJS</p>
+                        <p>Node / Express / MongoDB</p>
+                        <p>git / WordPress / MySQL</p>
+                    </div>
+                </div>
+                <div class="cm-card">
+                    <div class="cm-card-header">
+                        More...
+                    </div>
+                    <div class="cm-card-body">
+                        Outside of tech, I enjoy being with my family, being a father and husband, reading, golf, tennis, and watching Indiana Pacers
+                        and Chicago Cubs games.
+                    </div>
+                    <div class="cm-card-footer">
+                        Some of my favorites:
+                        <p>Movies, tv shows: Back to the Future, Napoleon Dynamite, Rocky I and II, Seinfeld, The Office</p>
+                        <p>Books: All time favorite books: 1984 and Animal Farm</p>
+                        <p>Bands: Pink Floyd and Led Zeppelin</p>
+                    </div>
+                </div>
+                
+                <p></p>
+                
+            </div>
+
+            <div id="contact" class="animated zoomIn">
+                <h4>CONTACT</h4>
+                <p>
+                    <input type="text" placeholder="Your name" />
+                </p>
+                <p>
+                    <input type="email" placeholder="Your email" />
+                </p>
+                <p>
+                    <textarea placeholder="question or comment"></textarea>
+                </p>
+                <button class="cm-btn primary">Send</button>
+            </div>
+            <div class="footer animated fadeIn">
+                <a class="iconlink" href="https://simonhlee97.github.io/" target="_blank">
+                    <i class="fab fa-github-square fa-3x"></i>
+                </a>&nbsp;&nbsp;&nbsp;
+                <a class="iconlink" href="https://www.linkedin.com/in/simon-h-lee/" target="_blank">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                </a>&nbsp;&nbsp;&nbsp;
+                <a class="iconlink" href="https://twitter.com/simonhlee97" target="_blank">
+                    <i class="fab fa-twitter fa-3x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+                $('#homea').hover(function () {
+                    $('#projects').hide();
+                    $('#about').hide();
+                    $('#contact').hide();
+                    $('#home').fadeIn();
+                });
+
+                $('#projectsa').hover(function () {
+                    $('#home').hide();
+                    $('#about').hide();
+                    $('#contact').hide();
+                    $('#projects').fadeIn();
+                });
+
+                $('#abouta').hover(function () {
+                    $('#home').hide();
+                    $('#projects').hide();
+                    $('#contact').hide();
+                    $('#about').fadeIn();
+                });
+
+                $('#contacta').hover(function () {
+                    $('#home').hide();
+                    $('#projects').hide();
+                    $('#about').hide();
+                    $('#contact').fadeIn();
+                });
+            });
+    </script>
+
 </body>
 </html>

@@ -16,148 +16,9 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
-
+    <link rel="stylesheet" href="output.min.css">
     <style type="text/css">
-	    body {
-	    	
-		font-family: Jaldi;
-	    }
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto;
-            grid-template-rows: 45px auto auto;
-            grid-gap: 22px;
-            padding: 8px;
-        }
-
-        .grid-container>div {
-            background-color: white;
-            text-align: center;
-            padding: 1 1;
-            /* border: 2px solid; */
-        }
-
-        .item3 {
-
-        }
-
-        div.item3 {
-            text-align: center;
-        }
-
-        .item4 {
-		background-color: #ccccff;
-        }
-        .footer {
-            padding-top: 2em;
-            margin-top: 2em;
-        }
-
-        .iconlink, .links {
-            list-style: none;
-            display: inline-block;
-        }
-
-        ul.navlinks {
-            list-style-type: none;
-            margin: 0;
-            padding-left: 3em;
-            overflow: hidden;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a, a {
-            display: block;
-            text-align: center;
-            padding: 8px;
-            font-size: 15px;
-            text-decoration: none;
-            color: black;
-        }
-        a,a:visited,a:hover,a:active{
-		  -webkit-backface-visibility:hidden;
-		          backface-visibility:hidden;
-			position:relative;
-		  transition:0.5s color ease;
-			text-decoration:none;
-		}
-		a:hover{
-			color: #0000ff;
-		}
-		a.before:before,a.after:after{
-		  content: "";
-		  transition:0.5s all ease;
-		  -webkit-backface-visibility:hidden;
-		          backface-visibility:hidden;
-		  position:absolute;
-		}
-		a.before:before{
-		  top:-0.25em;
-		}
-		a.after:after{
-		  bottom:-0.25em;
-		}
-		a.before:before,a.after:after{
-		  height:5px;
-		  height:0.35rem;
-		  width:0;
-		  background:#d73444;
-		}
-		
-		a.sixth:before,a.sixth:after{
-		  left:50%;
-		  -webkit-transform:translateX(-50%);
-		          transform:translateX(-50%);
-		}
-		
-		
-		a.before:hover:before,a.after:hover:after{
-		  width:100%;
-		}
-
-        #projects, #about, #contact {
-			display: none;
-		}
-
-        .fab {
-            color: blue;
-        }
-
-        .fab:hover {
-            color: green;
-            cursor: pointer;
-        }
-	    .favs {
-	    	font-size: 18px;
-	    }
-
-        .tablewrap {
-            width: 76%;
-            margin: 0 auto;
-        }
-
-        td {
-            /*width: 20%;*/
-            text-align: left;
-        }
-
-        #home, #about, #projects {
-            max-width: 77%;
-            margin: 0 auto;
-            /*background-color: yellow;*/
-        }
-        td {
-            vertical-align: baseline;
-        }
-
-        img {
-            border-radius: 40%;
-            width: 155px;
-            height: auto;
-        }
+        
     </style>
 </head>
 
@@ -169,7 +30,6 @@
             <ul class="navlinks">
                 <li>
                     <a id="homea" class="sixth before after" href="#">home</a>
-
                 </li>
                 <li>
                     <a id="projectsa" class="sixth before after" href="#">projects</a>
@@ -195,8 +55,8 @@
 
             <div id="home" class="animated zoomIn">
                 <h4>HELLO</h4>
-                <p>Hi, I'm Simon. I'm a recent career changer (math teacher-turned-web devleoper) and tech enthusiast. I began my journey during the summer of 2017 and have enjoyed meeting professionals and students through meetups and freecodecamp. I also completed a full-time JavaScript program at Eleven Fifty Academy, which also provided another great opportunity to meet future developers and work on cool team projects. While I'll be in "learning mode" for the rest of my life - which is why I love this industry - right now, I am at the "very eager to build and work" phase of my journey. I love reading and learning about web development and technology, and am constantly looking to learn more.</p>
-                <p>What I'm doing now (June 2018): Currently finishing up an internship at an email analytics company; building small side projects in React/Redux and VueJS, and having fun learning Python for data science. I'm happy to share projects, resources and connect with other developers, so feel free to hit me up on Twitter or send an email.</p>
+                <p>Hi, I'm Simon. I'm a recent career changer (math teacher-turned-web devleoper) and tech enthusiast from Indianapolis. I'm a Korean-born Hoosier and Midwesterner, an odd combination that has produced perhaps the most often misunderstood group of Korean-Americans.</p>
+                <p>Right now (June 2018): I'm currently finishing up an internship at an email analytics company, and working on side projects (mostly React/Redux and VueJS apps). I'm also spending some of my time learning Python for data science. I'm happy to chat about projects, resources and connect with other developers, so feel free to hit me up on Twitter or send an email.</p>
             </div>
 
             <div id="projects" class="animated zoomIn">
@@ -213,15 +73,17 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href='#'>React + Firebase app</a>
+                                    <a href='https://hillvalleyhigh-80376.firebaseapp.com/'>React + Firebase app</a>
                                 </td>
-                                <td>Built with create-react-app and deployed to Firebase. Sign-up and sign-in authentication with Firebase Auth methods.</td>
+                                <td>Built with create-react-app and deployed to Firebase. Sign-up and sign-in authentication
+                                    with Firebase Auth methods.</td>
                             </tr>
                             <tr>
                                 <td>
                                     <a href='#'>p5.js project</a>
                                 </td>
-                                <td>P5.js is a library inspired by Processing. It's a powerful set of tools to help you quickly add drawings, sketches, 2D and 3D canvas plots, as well as data visualizations. I really
+                                <td>P5.js is a library inspired by Processing. It's a powerful set of tools to help you quickly
+                                    add drawings, sketches, 2D and 3D canvas plots, as well as data visualizations. I really
                                     enjoyed learning how to use this library.</td>
                             </tr>
 
@@ -229,14 +91,15 @@
                                 <td>
                                     <a href='#'>VueJS project</a>
                                 </td>
-                                <td>A small side project I built to learn this javaScript library.</td>
+                                <td>[Coming Soon]: A small side project I built to learn this javaScript library.</td>
                             </tr>
-                            
+
                             <tr>
                                 <td>
-                                    <a href='#'>Node and Instagram API project</a>
+                                    <a href='https://spankygram-mklqtjqzip.now.sh/'>Node and Instagram API project</a>
                                 </td>
-                                <td>This node app connects to the Instagram API and renders my Instagram photos inside a CSS Grid layout. As you can see, my Instagram is mostly a photo album for the family dog.</td>
+                                <td>This node app connects to the Instagram API and renders my Instagram photos inside a CSS
+                                    Grid layout. As you can see, my Instagram is mostly a photo album for the family dog.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -250,10 +113,8 @@
                         ABOUT
                     </div>
                     <div class="cm-card-body">
-                        I was born in Seoul and grew up in Indianapolis. I attended Indiana University, and then lived in South Korea for a few
-                        years, teaching ESL. I then went to DePaul University to get a Masters in Education and taught high school math for a few
-                        years. Next, I decided to pursue my interest in tech and change careers to web development. I attended a
-                        coding bootcamp at Eleven Fifty Academy and completed their JavaScript program, November 2018.
+                        <p>I was born in Seoul and grew up in Indianapolis. I attended Indiana University. Having spent most of my life in Indiana, my Korean language ability is quite low compared to other Korean immigrants. I spent a few years in Korea as an adult, teaching English and re-learning my heritage language and culture. I then went to DePaul University to get a Masters in Education and taught high school math for a few years. Next, I attended Eleven Fifty Academy, and completed their full-time coding bootcamp in November 2017.</p>
+                        <p>I have really enjoyed learning how web applications work and changing careers to software development has been very satisfying. I love the constantly-changing nature of the industry and all the new and exciting things being created by developers all over the world. I'm always looking to learn and have a crazy appetite for learning new things, so I feel right at home in the web development world.</p>
                     </div>
                     <div class="cm-card-footer favs">
                         Dev Skills:
@@ -278,23 +139,19 @@
                         <p>Bands: Pink Floyd and Led Zeppelin</p>
                     </div>
                 </div>
-                
                 <p></p>
-                
+
             </div>
 
             <div id="contact" class="animated zoomIn">
                 <h4>CONTACT</h4>
-                <p>
-                    <input type="text" placeholder="Your name" />
-                </p>
-                <p>
-                    <input type="email" placeholder="Your email" />
-                </p>
-                <p>
-                    <textarea placeholder="question or comment"></textarea>
-                </p>
-                <button class="cm-btn primary">Send</button>
+                
+                <form method="POST" action="https://formspree.io/simonhlee97@hotmail.com">
+                    <p><input class="inputs" name="email" placeholder="Your email" type="email"></p>
+                    <p><textarea class="inputs" name="message" placeholder="Your message"></textarea></p>
+                    <button id="spreebtn" type="submit">Send</button>
+                </form>
+                    
             </div>
             <div class="footer animated fadeIn">
                 <a class="iconlink" href="https://simonhlee97.github.io/" target="_blank">
@@ -313,35 +170,36 @@
 
     <script>
         $(document).ready(function () {
-                $('#homea').hover(function () {
-                    $('#projects').hide();
-                    $('#about').hide();
-                    $('#contact').hide();
-                    $('#home').fadeIn();
-                });
-
-                $('#projectsa').hover(function () {
-                    $('#home').hide();
-                    $('#about').hide();
-                    $('#contact').hide();
-                    $('#projects').fadeIn();
-                });
-
-                $('#abouta').hover(function () {
-                    $('#home').hide();
-                    $('#projects').hide();
-                    $('#contact').hide();
-                    $('#about').fadeIn();
-                });
-
-                $('#contacta').hover(function () {
-                    $('#home').hide();
-                    $('#projects').hide();
-                    $('#about').hide();
-                    $('#contact').fadeIn();
-                });
+            $('#homea').hover(function () {
+                $('#projects').hide();
+                $('#about').hide();
+                $('#contact').hide();
+                $('#home').fadeIn();
             });
+
+            $('#projectsa').hover(function () {
+                $('#home').hide();
+                $('#about').hide();
+                $('#contact').hide();
+                $('#projects').fadeIn();
+            });
+
+            $('#abouta').hover(function () {
+                $('#home').hide();
+                $('#projects').hide();
+                $('#contact').hide();
+                $('#about').fadeIn();
+            });
+
+            $('#contacta').hover(function () {
+                $('#home').hide();
+                $('#projects').hide();
+                $('#about').hide();
+                $('#contact').fadeIn();
+            });
+        });
     </script>
 
 </body>
+
 </html>

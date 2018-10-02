@@ -81,9 +81,9 @@
               
             </div>
           </v-flex>
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap align-center>
+          <!-- <v-flex xs12> -->
+            <v-container fluid grid-list-xl>
+              <v-layout justify-space-between row wrap>
                 <v-flex xs12 md4>
                   <v-card class="elevation-0 transparent">
                     <v-card-text class="text-xs-center">
@@ -93,7 +93,8 @@
                       <div class="headline text-xs-center">React Projects</div>
                     </v-card-title>
                     <v-card-text class="text-xs-center">
-                    	<a href="https://hillvalleyhigh-80376.firebaseapp.com/" target="_blank">{{project1}}</a> 
+                    	<v-chip label outline color="black"><a href="https://hillvalleyhigh-80376.firebaseapp.com/" target="_blank">{{project1}}</a></v-chip>
+                    	 
                     </v-card-text>
                   </v-card>
                 </v-flex>
@@ -107,9 +108,9 @@
                     </v-card-title>
                     <v-card-text class="text-xs-center">
                       <ul class="projects2">
-                      	<li><a href="http://nextvoyage.surge.sh/">{{project2[0]}}</a></li>
-                      	<li><a href="https://codepen.io/simonhlee97/full/ZqYxdB/">{{project2[1]}}</a></li>
-                      	<li><a href="https://codepen.io/simonhlee97/full/ReNMvY/">{{project2[2]}}</a></li>
+                      	<li><v-chip label outline color="black"><a href="http://nextvoyage.surge.sh/">{{project2[0]}}</a></li></v-chip>
+                      	<li><v-chip label outline color="black"><a href="https://codepen.io/simonhlee97/full/ZqYxdB/">{{project2[2]}}</a></li></v-chip>
+                      	<li><v-chip label outline color="black"><a href="https://codepen.io/simonhlee97/full/ReNMvY/">{{project2[1]}}</a></li></v-chip>
                       </ul>
                       
                     </v-card-text>
@@ -124,13 +125,13 @@
                       <div class="headline text-xs-center">Data Visualization Projects</div>
                     </v-card-title>
                     <v-card-text class="text-xs-center">
-                      <a href="http://federermatchups.surge.sh/" target="_blank">{{project3}}</a>
+                      <v-chip label outline color="black"><a href="http://federermatchups.surge.sh/" target="_blank">{{project3}}</a></v-chip>
                     </v-card-text>
                   </v-card>
                 </v-flex>
               </v-layout>
             </v-container>
-          </v-flex>
+          <!-- </v-flex> -->
         </v-layout>
       </section>
 

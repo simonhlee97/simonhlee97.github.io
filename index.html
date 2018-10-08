@@ -18,7 +18,7 @@
   	width: 100%;
   	margin: 0 auto;
   }
-  .projects2{
+  .projects1, .projects2{
   	list-style: none;
   }
   	#face {
@@ -90,11 +90,19 @@
                       <v-icon x-large class="blue--text text--lighten-2">work_outline</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-xs-center">React Projects</div>
+                      <div class="headline text-xs-center">Full-stack Projects</div>
                     </v-card-title>
                     <v-card-text class="text-xs-center">
-                    	<v-chip label outline color="black"><a href="https://hillvalleyhigh-80376.firebaseapp.com/" target="_blank">{{project1}}</a></v-chip>
-                    	 
+                    	<ul class="projects2">
+                    		<li>
+                				<v-chip label outline color="black"><a href="https://hillvalleyhigh-80376.firebaseapp.com/" target="_blank">{{ project1[0] }}</a></v-chip>
+                    		</li>
+                    		<li>
+                    			<v-chip label outline color="black"><a href="http://simonreddit.surge.sh/" target="_blank">{{ project1[0] }}</a></v-chip>
+                    		</li>
+                    		
+                    	</ul>
+                    	
                     </v-card-text>
                   </v-card>
                 </v-flex>
@@ -256,7 +264,7 @@
         about2: 'If you are looking to hire a front-end, React, or Vue developer, then please send me an email or visit my LinkedIn page and connect with me. I am currently available for front-end projects and would be happy to discuss your project\'s goals.',
         connect: 'Would love to connect with developers, engineers, and tech enthusiasts!',
         date: document.lastModified.toLocaleString(),
-        project1: 'React + Firebase',
+        project1: ['React + Firebase', 'MongoDB/Express/Vue/Node']
         project2: ['Marketing/Landing page', 'HTTP Requests Project', 'AJAX Methods Project'],
         project3: 'VueJS and Frappe Charts',
         skills1: 'Managing state with Redux, Vuex',

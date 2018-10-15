@@ -116,9 +116,10 @@
                     </v-card-title>
                     <v-card-text class="text-xs-center">
                       <ul class="projects2">
-                      	<li><v-chip label outline color="black"><a href="http://nextvoyage.surge.sh/">{{project2[0]}}</a></li></v-chip>
-                      	<li><v-chip label outline color="black"><a href="https://codepen.io/simonhlee97/full/ZqYxdB/">{{project2[2]}}</a></li></v-chip>
-                      	<li><v-chip label outline color="black"><a href="https://codepen.io/simonhlee97/full/ReNMvY/">{{project2[1]}}</a></li></v-chip>
+                      	<li><v-chip label outline color="black"><a href="https://simonhlee97.github.io/musicjsons/">{{ project2[0] }}</a></li><v-chip>
+                      	<li><v-chip label outline color="black"><a href="http://nextvoyage.surge.sh/">{{project2[1]}}</a></li></v-chip>
+                      	<li><v-chip label outline color="black"><a href="https://codepen.io/simonhlee97/full/ZqYxdB/">{{project2[3]}}</a></li></v-chip>
+                      	<li><v-chip label outline color="black"><a href="https://codepen.io/simonhlee97/full/ReNMvY/">{{project2[2]}}</a></li></v-chip>
                       </ul>
                       
                     </v-card-text>
@@ -151,10 +152,11 @@
             	<v-flex xs12>
 	            	<div class="subheading">
 	            		<h1 class="mb-4">Skills:</h1>
-	            		<em><p>{{skills1}}</p>
-	            		<p>{{skills2}}</p>
-	            		<p>{{skills3}}</p>
-	            		<p>{{skills4}}</p></em>
+	            		<em><p>{{ skills1 }}</p>
+	            		<p>{{ skills2 }}</p>
+	            		<p>{{ skills3 }}</p>
+	            		<p>{{ skills4 }}</p>
+	            		<p>{{ skills5 }}</p></em>
 	            	</div>
             	</v-flex>
          	</v-layout>
@@ -265,12 +267,13 @@
         connect: 'Would love to connect with developers, engineers, and tech enthusiasts!',
         date: document.lastModified.toLocaleString(),
         project1: ['React + Firebase', 'MongoDB/Express/Vue/Node'],
-        project2: ['Marketing/Landing page', 'HTTP Requests Project', 'AJAX Methods Project'],
+        project2: ['React Axios Project', 'Marketing/Landing page', 'HTTP Requests Project', 'AJAX Methods Project'],
         project3: 'VueJS and Frappe Charts',
         skills1: 'Managing state with Redux, Vuex',
-        skills2: 'Node, Express, MySQL, PostgreSQL, MongoDB, Firebase',
-        skills3: 'CSS3, Stylus, Sass, Bootstrap, responsive design',
-        skills4: 'HTML5, JavaScript, jQuery, WebPack, Git'
+        skills2: 'Node, Express, MongoDB, MySQL, PostgreSQL, Firebase',
+        skills3: 'CSS3, Sass (Scss), Bootstrap, responsive design',
+        skills4: 'HTML5, JavaScript, jQuery, WebPack, Git',
+        skills5: 'Unit testing, Integration testing with Jest and Enzyme'
       }
     }
   })

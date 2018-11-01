@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:400italic,400' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
   <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <style>
@@ -74,7 +79,7 @@
         </v-parallax>
       </section>
 
-      <section>
+      <!-- <section>
         <v-layout
           column
           wrap
@@ -88,7 +93,7 @@
               
             </div>
           </v-flex>
-          <!-- <v-flex xs12> -->
+          
             <v-container fluid grid-list-xl>
               <v-layout justify-space-between row wrap>
                 <v-flex xs12 md4>
@@ -147,9 +152,66 @@
                 </v-flex>
               </v-layout>
             </v-container>
-          <!-- </v-flex> -->
+          
         </v-layout>
-      </section>
+      </section> -->
+      <div class="projects-container">
+		<ul>
+			<li class="cd-single-project">
+				<div class="cd-title">
+					<h2>Project 1</h2>
+					<p>MERN Stack { MongoDB, Express, React, Node.js }</p>
+				</div> <!-- .cd-title -->
+
+				<div class="cd-project-info">
+					<p>
+						Simon Lee Projectsssssssssssssss
+					</p>
+				</div> <!-- .cd-project-info -->
+			</li>
+
+			<li class="cd-single-project">
+				<div class="cd-title">
+					<h2>Project 2</h2>
+					<p>MEVN Stack { MongoDB, Express, Vue.js, Node.js }</p>
+				</div> <!-- .cd-title -->
+
+				<div class="cd-project-info">
+					<p>
+						This full-stack project is a mini-clone of Reddit. Anyone can post a topic and content. I used Bootswatch themes to help me style the front-end. 
+					</p>
+				</div> <!-- .cd-project-info -->
+			</li>
+
+			<li class="cd-single-project">
+				<div class="cd-title">
+					<h2>Project 3</h2>
+					<p>MERN Stack { MongoDB, Express, React, Node.js }</p>
+				</div> <!-- .cd-title -->
+
+				<div class="cd-project-info">
+					<p>
+						Simon Lee Projectsssssssssssssss
+					</p>
+				</div> <!-- .cd-project-info -->
+			</li>
+
+			<li class="cd-single-project">
+				<div class="cd-title">
+					<h2>Project 4</h2>
+					<p>MERN Stack { MongoDB, Express, React, Node.js }</p>
+				</div> <!-- .cd-title -->
+
+				<div class="cd-project-info">
+					<p>
+						Simon Lee Projectsssssssssssssss
+					</p>
+				</div> <!-- .cd-project-info -->
+			</li>
+		</ul>
+		<a href="#0" class="cd-close">Close</a>
+		<a href="#0" class="cd-scroll">Scroll</a>
+	</div> <!-- .project-container -->
 
       <section>
         <v-parallax src="assets/dark.jpg" height="380">
@@ -298,5 +360,7 @@ function typeWriter() {
     }
   })
  </script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

@@ -1,0 +1,199 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	line-height: 2.46em;
+}
+h1, h3 {
+	font-size: 280%;
+}
+#name {
+	padding-top: 35px;;
+}
+#pic {
+	border-radius: 9%;
+	margin: 45px auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+	display: grid;
+	text-align: center;
+	align-items: center stretch;
+	justify-content: stretch;
+	
+	grid-gap: 5px;
+	/* height: 100vh; */
+	background-color: white;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto; 
+ 	grid-template-areas:
+    	"head head head head head head"
+		"fronti fronti wp wp backi backi"
+		"frontskill frontskill frontskill backskill backskill backskill"
+		"freela freela freela person person person"
+		"int int int int int int"
+    	"footer footer footer footer footer footer";
+}
+@media screen and (max-width: 560px) {
+	h1, h3 {
+		font-size: 160%;
+	}
+	.item-1 {
+		height: 30vh;
+		box-align: center;
+		background-color: #5558e2;
+	}
+	.portf{
+		text-align: center;
+		padding-left: 0;
+	}
+  	.container {
+		text-align: center;
+    	grid-template-areas:
+      "head head head head head head"
+      "fronti fronti fronti fronti fronti fronti"
+			"backi backi backi backi backi backi"
+			"frontskill frontskill frontskill frontskill frontskill frontskill"
+			"backskill backskill backskill backskill backskill backskill"
+			"wp wp wp wp wp wp"
+			"freela freela freela freela freela freela"
+			"person person person person person person"
+			"int int int int int int"
+      "footer footer footer footer footer footer";
+  }
+}
+
+a {
+	text-decoration: none;
+	color: #00001c;
+}
+a:hover {
+	text-decoration: underline;
+	color: #9F2820;
+}
+
+.item-1 {
+	grid-area: head;
+	height: 58vh;
+	background-color: #5558e2;
+}
+.fronti {
+	grid-area: fronti;
+	background-color: #ecad4e;
+}
+.backi {
+	grid-area: backi;
+	background-color: #9078e6;
+}
+.wp {
+	grid-area: wp;
+	background-color: rgb(82, 231, 187); 
+	/* align-self: center; */
+}
+.interests {
+	grid-area: int;
+	background-color: #afbdbd;
+}
+.interests > :nth-child(odd) {
+	color: navy;
+}
+
+.interests2 {
+	grid-area: inte;
+	background-color: #afbdbd;
+}
+.frontskill {
+	grid-area: frontskill;
+	background-color: #cdf735;
+}
+.backskill {
+	grid-area: backskill;
+	background-color: #0a255f;
+	color: white;
+}
+
+.personal-projects {
+	grid-area: person;
+	background-color: salmon;
+}
+.freelance-projects {
+	grid-area: freela;
+	background-color: rgb(158, 4, 4);
+}
+.portf > :nth-child(even) {
+	color: #ece2e2;
+}
+.footer {
+	grid-area: footer;
+	background-color: #7fd67f;
+}
+.container > div {
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+hr {
+	width: 43%;
+}
+button {
+	color: white;
+	font-size: 20px;
+	background-color: black;
+	width: 150px;
+	height: 55px;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	transition:all 0.3s ease;
+}
+button:hover {
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	transform: scale(1.08);
+}
+input, textarea {
+	width: 40%;
+	border-radius: 8px;
+	font-size: 18px;
+	padding-left: 11px; 
+	color: navy;
+	background-color: lightgrey;
+	border: 2px solid black;
+	margin: 15px;
+}
+#lastm {
+	margin-top: 36px;
+}
+.iconlinks {
+	transition:all 0.3s ease;
+	color: #009DF6;
+}
+.iconlinks:hover{
+	-webkit-transform: scale(1.09);
+  -ms-transform: scale(1.09);
+	transform: scale(1.09);
+	color: black;
+}

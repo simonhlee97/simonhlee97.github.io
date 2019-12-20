@@ -52,10 +52,7 @@ h1, h3 {
 	grid-template-rows: auto; 
  	grid-template-areas:
     	"head head head head head head"
-		"fronti fronti wp wp backi backi"
-		"frontskill frontskill frontskill backskill backskill backskill"
-		"freela freela freela person person person"
-		"int int int int int int"
+		"wp wp wp backi backi backi"
     	"footer footer footer footer footer footer";
 }
 @media screen and (max-width: 560px) {

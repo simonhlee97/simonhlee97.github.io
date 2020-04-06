@@ -39,7 +39,7 @@
   	width: 100%;
   }
   .p1 {
-  	min-height: 100vh;
+  	min-height: 80vh;
   	background-color: black;
   	color: white;
   	padding: 10rem 15rem;
@@ -85,9 +85,21 @@
   	border-radius: 6px;
   }
   .fab {
-  	font-size: 35px;
-  	color: blue;
+  	font-size: 30px;
+  	color: grey;
   }
+  .my-social{
+  	transition: all 0.4s;
+  	margin-top: 15px;
+  }
+  .my-social:hover {
+	color: white;
+	cursor: pointer;
+  	font-size: 34px;
+  }
+
+ 
+ 
 </style>
 
 </head>
@@ -102,14 +114,12 @@
 	</div>
 
 
-
-
     	<h3 class="w3-center w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
 
     <p class='w3-center'>I'm a WordPress/front-end developer from Indianapolis. Hoosier for life.</p>
 	<!-- About Section -->
 
-	<h4 class='w3-center'>My Projects</h4>
+	<h4 class='w3-center'>My Web Projects</h4>
   <div class="panel p2 w3-container w3-padding-32" id="about" data-aos="fade-in">
     
 	<div class="flex-item w3-card-4">
@@ -124,9 +134,10 @@
 	<div class="flex-item w3-card-4">
     	<img src="./house2.jpg" alt="__" style="width:100%" />
 		<div class="w3-container w3-center">
-			<p>(coming soon) "Placeholder project"</p>
-			<p>I will upload a link to this project soon...</p>
-			<!-- <i class="fab fa-vuejs"></i> -->
+			<p>SimonCameraShop</p>
+			<p> - (link coming soon! - </p>
+			<p>VueJS UI for digital camera data set.</p>
+			<i class="fab fa-vuejs"></i>
     	</div>
 	</div>
 
@@ -169,25 +180,26 @@
     </form>
   </div>
   
-<!-- Image -->
-<div class="w3-container">
-  <img src="./corean.jpg" class="w3-image" style="width:100%">
-</div>
+	<!-- Image -->
+	<div class="w3-container p1">
+		<img src="./thinking.jpg" style="border-radius: 5%;" height="100" width="auto" />
+		<p><a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social"></i></a></p>
+		<p><a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social"></i></a></p>
+	</div>
 
-<!-- End page content -->
-</div>
+</div><!-- End page content -->
 
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>last modified: 27 March 2020</p>
+  <p>last modified: 4 April 2020</p>
 </footer>
 
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 1100,
+    duration: 1000,
     delay: 500,
     once: false,
     easing: 'ease-out'

@@ -85,17 +85,19 @@
   	border-radius: 6px;
   }
   .fab {
-  	font-size: 30px;
+  	font-size: 27px;
   	color: grey;
   }
   .my-social{
   	transition: all 0.4s;
-  	margin-top: 15px;
   }
   .my-social:hover {
 	color: white;
 	cursor: pointer;
-  	font-size: 34px;
+  	font-size: 30px;
+  }
+  .my-links {
+  	margin: 3em;
   }
 
  
@@ -134,8 +136,9 @@
 	<div class="flex-item w3-card-4">
     	<img src="./leicaShop.jpg" alt="__" style="width:100%;height:auto;" />
 		<div class="w3-container w3-center">
-			<p>SimonLeicaShop: a fake (Leica) cameras database and store</p>
+			<p>SimonLeicaShop</p>
 			<p> - <a href="https://simonleicashop.surge.sh/" target="_blank" />Simon Leica Shop</a> - </p>
+			<p>Camera database and store, created with VueJS</p>
 			<i class="fab fa-vuejs"></i>
     	</div>
 	</div>
@@ -179,18 +182,26 @@
   </div>
   
 	<!-- Image -->
-	<div class="w3-container p1">
+	<div class="w3-container p1" data-aos="fade-in">
 		<img src="./thinking.jpg" style="border-radius: 5%;" height="100" width="auto" />
-		<p><a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social"></i></a></p>
-		<p><a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social"></i></a></p>
+
+		<div class="my-links">
+			<a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social"></i></a>
+		</div>
+
+		<div class="my-links">
+			<a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social"></i></a>
+		</div>
+
+		<div class="my-links">
+			<a href="https://dev.to/simonhlee97"><i class="my-social fab fa-dev" title="simonhlee97's DEV Profile"></i></a>
+		</div>	
 	</div>
-
 </div><!-- End page content -->
-
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>last modified: 4 April 2020</p>
+  <p>last modified: 12 April 2020</p>
 </footer>
 
 

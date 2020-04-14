@@ -1,0 +1,116 @@
+{
+  "dunderteam": [
+    {
+      "id": 1,
+      "name": "Toby Flenderson",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/1/18/Toby_Flenderson_promo_picture.jpg",
+      "phone": "546.333.8845",
+      "email": "toby@dunder.com",
+      "department": "hr"
+    },
+    {
+      "id": 2,
+      "name": "Kelly Kapoor",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/6/69/Kelly_Kapoor.jpg",
+      "phone": "(446) 984-5172",
+      "email": "Kelly@dunder.com",
+      "department": "hr"
+    },
+    {
+      "id": 3,
+      "name": "Ryan Howard",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/9/91/Ryan_Howard_%28The_Office%29.jpg",
+      "phone": "1-248-467-9912",
+      "email": "ryan@dunder.com",
+      "department": "hr"
+    },
+    {
+      "id": 4,
+      "name": "Jim Halpert",
+      "avatar": "https://nypdecider.files.wordpress.com/2017/09/the-office-jim-is-the-worst.jpg?quality=80&strip=all&w=646&h=431&crop=1",
+      "phone": "546.333.8845",
+      "email": "jim@hotmail.com",
+      "department": "sales"
+    },
+    {
+      "id": 5,
+      "name": "Andy Bernard",
+      "avatar": "https://m.media-amazon.com/images/M/MV5BMTU2MjM3Mjc3NF5BMl5BanBnXkFtZTgwMjg2OTQ1MjE@._V1_.jpg",
+      "phone": "(446) 984-5172",
+      "email": "narddog@dunder.com",
+      "department": "sales"
+    },
+    {
+      "id": 6,
+      "name": "Dwight Schrute",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/c/cd/Dwight_Schrute.jpg",
+      "phone": "1-248-467-9912",
+      "email": "dwightFarms@dunder.com",
+      "department": "sales"
+    },
+    {
+      "id": 7,
+      "name": "Angela",
+      "avatar": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2014%2F06%2Fthe-office-angela-kinsey.jpg&q=85",
+      "phone": "546.333.8845",
+      "email": "angela@Dunder.com",
+      "department": "accounting"
+    },
+    {
+      "name": "Jan Levinson",
+      "email": "jan@dunder.com",
+      "phone": "242-111-2222",
+      "department": "corporate",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Melorahardinla.jpg",
+      "id": 8
+    },
+    {
+      "name": "Stan Hudson",
+      "email": "stan@dunder.com",
+      "phone": "999-000-9999",
+      "department": "sales",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/2/23/Stanley_Hudson.jpg",
+      "id": 9
+    },
+    {
+      "name": "Pam Beesley",
+      "email": "pam@dunder.com",
+      "phone": "242-446-7777",
+      "department": "sales",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/6/67/Pam_Beesley.jpg",
+      "id": 10
+    },
+    {
+      "name": "Creed Bratton",
+      "email": "creed@dunder.com",
+      "phone": "151-151-7777",
+      "department": "hr",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/c/cd/CreedBratton%28TheOffice%29.jpg",
+      "id": 11
+    },
+    {
+      "name": "Charles Miner",
+      "email": "chuck@dunder.com",
+      "phone": "111-222-9999",
+      "department": "corporate",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/8/83/Idris_Elba.jpg",
+      "id": 12
+    },
+    {
+      "name": "David Wallace",
+      "email": "david@dunder.com",
+      "phone": "101-222-8899",
+      "department": "corporate",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/a/a0/David_Wallace_%28The_Office%29.jpg",
+      "id": 13
+    },
+    {
+      "name": "Kevin Malone",
+      "email": "kevin@mifflin.com",
+      "phone": "454-242-1111",
+      "department": "accounting",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/6/60/Office-1200-baumgartner1.jpg",
+      "id": 14
+    }
+  ]
+}

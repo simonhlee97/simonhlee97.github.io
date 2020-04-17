@@ -136,11 +136,10 @@ tr:nth-child(even) {
 #myname {
 	letter-spacing: 20px;
 }
-
- 
- 
+.about, .skills {
+	padding: 6em 1em;
+}
 </style>
-
 </head>
 
 <body>
@@ -152,13 +151,15 @@ tr:nth-child(even) {
 		<h2 id='downarrow'>&darr;</h2>
 	</div>
 
+	<div class="about w3-panel w3-blue">
+    	<h2 class="w3-center w3-border-bottom w3-border-light-grey">A B O U T</h2>
+		<p class='w3-center'>I'm a WordPress/front-end developer from Indianapolis. Hoosier for life. I love coffee, tacos, and pizza.</p>
+		<p class='w3-center'><small>I am currently stuck in Korea during COVID-19. I'll be returning to the US soon.</small></p>
+	</div>
 
-    	<h2 class="w3-center w3-border-bottom w3-border-light-grey w3-padding-16">A B O U T</h2>
 
-    <p class='w3-center'>I'm a WordPress/front-end developer from Indianapolis. Hoosier for life. I love coffee, tacos, and pizza.</p>
-
-    <div class="w3-center" style='margin-bottom: 2em;'>
-    	<h5 class='w3-border-light-grey w3-padding-12'>S K I L L S:</h5>
+    <div class="skills w3-panel w3-grey w3-center" style='margin-bottom: 2em;'>
+    	<h2 class='w3-panel w3-border-light-grey'>S K I L L S:</h2>
     	<table>
     		<tr>
     			<th><i class="fab fa-wordpress"></i></th>
@@ -174,58 +175,53 @@ tr:nth-child(even) {
     			<td>VueJS</td>
     			<td>HTML5</td>
     			<td>SASS</td>
-
     		</tr>
-    	</table>
-    	    
+    	</table> 
     </div>
 
-	<!-- About Section -->
 
-	<h4 class='w3-center'>My Web Development Projects</h4>
-  <div class="panel p2 w3-container w3-padding-32" id="about" data-aos="fade-in">
+	<h4 class='w3-panel w3-center'>MY WEB DEVELOPMENT PROJECTS</h4>
+  	<div class="projects panel p2 w3-container w3-padding-32" id="about" data-aos="fade-in">
     
-	<div class="flex-item w3-card-4">
-    	<img src="./my-blog.jpg" alt="__" style="width:100%; height:auto;" />
-		<div class="w3-container w3-center">
-			<p>my blog: <a href="https://ryucave.com/">RyuCave.com</a></p>
-			<p>I built a WP theme from scratch, which I use for my personal blog.</p>
-			<i class="fab fa-wordpress"></i>
-    	</div>
-	</div>
+		<div class="flex-item w3-card-4">
+	    	<img src="./my-blog.jpg" alt="__" style="width:100%; height:auto;" />
+			<div class="w3-container w3-center">
+				<p>my blog: <a href="https://ryucave.com/">RyuCave.com</a></p>
+				<p>I built a WP theme from scratch, which I use for my personal blog.</p>
+				<i class="fab fa-wordpress"></i>
+	    	</div>
+		</div>
 
-	<div class="flex-item w3-card-4">
-    	<img src="./leicaShop.jpg" alt="__" style="width:100%;height:auto;" />
-		<div class="w3-container w3-center">
-			<p>SimonLeicaShop</p>
-			<p> - <a href="https://simonleicashop.surge.sh/" target="_blank" />Simon Leica Shop</a> - </p>
-			<p>Camera database and store, created with VueJS</p>
-			<i class="fab fa-vuejs"></i>
-    	</div>
-	</div>
+		<div class="flex-item w3-card-4">
+	    	<img src="./leicaShop.jpg" alt="__" style="width:100%;height:auto;" />
+			<div class="w3-container w3-center">
+				<p>SimonLeicaShop</p>
+				<p> - <a href="https://simonleicashop.surge.sh/" target="_blank" />Simon Leica Shop</a> - </p>
+				<p>Camera database and store, created with VueJS</p>
+				<i class="fab fa-vuejs"></i>
+	    	</div>
+		</div>
 
-	<div class="flex-item w3-card-4">
-    	<img src="./mifflin.jpg" alt="__" style="width:100%" />
-		<div class="w3-container w3-center">
-			<p>"Regional-Manager-App"</p>
-			<p> - <a href="https://simonhlee97.github.io/regionalmanagerapp/">an app to celebrate The Office</a> - </p>
-			<p>Let's celebrate the 15-year anniversary of one of the greatest shows of all time</p>
-			<i class="fab fa-vuejs"></i>
-    	</div>
-	</div>
+		<div class="flex-item w3-card-4">
+	    	<img src="./mifflin.jpg" alt="__" style="width:100%" />
+			<div class="w3-container w3-center">
+				<p>"Regional-Manager-App"</p>
+				<p> - <a href="https://simonhlee97.github.io/regionalmanagerapp/">an app to celebrate The Office</a> - </p>
+				<p>Let's celebrate the 15-year anniversary of one of the greatest shows of all time</p>
+				<i class="fab fa-vuejs"></i>
+	    	</div>
+		</div>
 
-	<div class="flex-item w3-card-4">
-    	<img src="./house5.jpg" alt="__" style="width:100%" />
-		<div class="w3-container w3-center">
-			<p>"Project Name"</p>
-			<p> - link coming soon! - </p>
-			<p>"Project description..."</p>
-			<!-- <i class="fab fa-vuejs"></i> -->
-    	</div>
-	</div>
-
-	
-  </div><!-- panel p2 About -->
+		<div class="flex-item w3-card-4">
+	    	<img src="./house5.jpg" alt="__" style="width:100%" />
+			<div class="w3-container w3-center">
+				<p>"Project Name"</p>
+				<p> - link coming soon! - </p>
+				<p>"Project description..."</p>
+				<!-- <i class="fab fa-vuejs"></i> -->
+	    	</div>
+		</div>
+  </div>
 
   <!-- Contact Section -->
   <div class="panel w3-container w3-padding-64" id="contact" data-aos="fade-in">

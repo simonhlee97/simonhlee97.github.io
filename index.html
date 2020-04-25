@@ -30,6 +30,7 @@
   body {
   	margin: 0;
     padding: 0;
+    overflow: hidden;
   }
   h1, h2, h3, h4, h5, h6 {
   	margin-top: 0;
@@ -39,10 +40,10 @@
   	width: 100%;
   }
   .p1 {
-  	min-height: 80vh;
+  	min-height: 75vh;
   	background-color: black;
   	color: white;
-  	padding: 10rem 15rem;
+  	padding: 9rem 12rem;
   }
   .p2 {
   	background-color: white;
@@ -85,7 +86,7 @@
   	border-radius: 6px;
   }
   .fab {
-  	font-size: 27px;
+  	font-size: 36px;
   	color: grey;
   }
   .my-social{
@@ -94,7 +95,7 @@
   .my-social:hover {
 	color: white;
 	cursor: pointer;
-  	font-size: 30px;
+  	font-size: 40px;
   }
   .my-links {
   	margin: 3em;
@@ -118,16 +119,16 @@
 	table {
 		font-family: arial, sans-serif;
 		border-collapse: collapse;
-		width: 450px;
+		width: 100%;
 		text-align: center;
-		margin: 0 auto;
+		margin: 5em auto;
 	}
 
 td, th {
   border: 1px solid #dddddd;
   text-align: center;
-  padding: 1px;
-  width: 150px;
+  padding: 2px;
+  width: 100px;
 }
 
 tr:nth-child(even) {
@@ -137,7 +138,7 @@ tr:nth-child(even) {
 	letter-spacing: 20px;
 }
 .about, .skills {
-	padding: 14em 2.5em;
+	padding: 8em 2.0em;
 }
 </style>
 </head>
@@ -158,25 +159,31 @@ tr:nth-child(even) {
 	</div>
 
 
-    <div class="skills w3-light-grey w3-center" style='margin-bottom: 2em;'>
+    <div class="skills w3-light-grey w3-center" style='margin-bottom: 3em;'>
     	<h2 class='w3-panel w3-border-light-grey'>S K I L L S:</h2>
     	<table>
     		<tr>
     			<th><i class="fab fa-wordpress"></i></th>
-    			<th><i class="fab fa-react"></i></th>
-    			<th><i class="fab fa-vuejs"></i></th>
-    			<th><i class="fab fa-git"></i></th>
     			<th><i class="fab fa-html5"></i></th>
     			<th><i class="fab fa-sass"></i></th>
-
     		</tr>
     		<tr>
     			<td>WordPress</td>
+    			<td>HTML5</td>
+    			<td>SASS</td>
+    		</tr>
+    	</table> 
+    	<table>
+    		<tr>
+    			<th><i class="fab fa-react"></i></th>
+    			<th><i class="fab fa-vuejs"></i></th>
+    			<th><i class="fab fa-git"></i></th>
+
+    		</tr>
+    		<tr>
     			<td>React</td>
     			<td>VueJS</td>
     			<td>Git</td>
-    			<td>HTML5</td>
-    			<td>SASS</td>
     		</tr>
     	</table> 
     </div>

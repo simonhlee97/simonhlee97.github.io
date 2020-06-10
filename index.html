@@ -140,6 +140,19 @@ tr:nth-child(even) {
 .about, .skills {
 	padding: 8em 2.0em;
 }
+
+.flx-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+.flex-it {
+	margin: 10px;
+	max-width: 460px;
+	height: auto;
+	padding: 10px;
+}
 </style>
 </head>
 
@@ -154,8 +167,8 @@ tr:nth-child(even) {
 
 	<div class="about w3-blue">
     	<h2 class="w3-center w3-border-bottom w3-border-light-grey">A B O U T</h2>
-		<p class='w3-center'>I'm a WordPress/front-end developer from Indianapolis. Hoosier for life. I love coffee, tacos, and pizza.</p>
-		<p class='w3-center'><small>I am currently stuck in Korea because of COVID-19. I'll be returning to the US soon. (Fingers crossed).</small></p>
+		<p class='w3-center'>I'm a web developer from Indianapolis. Hoosier for life. I love coffee, tacos, and pizza.</p>
+		<p class='w3-center'><small>I am currently stuck in Korea because of COVID-19. I'll be returning to the US late 2020, or early 2021. (Fingers crossed).</small></p>
 	</div>
 
 
@@ -185,7 +198,10 @@ tr:nth-child(even) {
     			<td>Vue, Vuex</td>
     			<td>Git</td>
     		</tr>
-    	</table> 
+		</table> 
+		
+		<h3>Other Skills:</h3>
+		Node.js | MongoDB | WebPack, Gulp
     </div>
 
 
@@ -195,20 +211,12 @@ tr:nth-child(even) {
     	<div class="flex-item w3-card-4">
 	    	<img src="./crown.jpg" alt="__" style="width:100%; height:auto;" />
 			<div class="w3-container w3-center">
-				<p><a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">Crown Clothing Shop</a></p>
+				<p> - <a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">Crown Clothing Shop</a> - </p>
 				<p>A full stack e-commerce app, built with React/Redux, Firebase, and Stripe API.</p>
 				<i class="fab fa-react"></i>
 	    	</div>
 		</div>
 
-		<!-- <div class="flex-item w3-card-4">
-	    	<img src="./my-blog.jpg" alt="__" style="width:100%; height:auto;" />
-			<div class="w3-container w3-center">
-				<p>my blog: <a href="https://ryucave.com/">RyuCave.com</a></p>
-				<p>I built a WP theme from scratch, which I use for my personal blog.</p>
-				<i class="fab fa-wordpress"></i>
-	    	</div>
-		</div> -->
 
 		<div class="flex-item w3-card-4">
 	    	<img src="./leicaShop.jpg" alt="__" style="width:100%;height:auto;" />
@@ -230,11 +238,24 @@ tr:nth-child(even) {
 	    	</div>
 		</div>
   </div>
+ 
+
+	
+	<div class="about w3-green">
+		<h2 class="w3-center w3-border-bottom w3-border-light-grey">C E R T I F I C A T E S</h2>
+		<div class="flx-container">
+			<img class='flex-it' src="https://res.cloudinary.com/ryucave/image/upload/v1591763140/free_code_camp/fcc-cert2_c1swlr.jpg" alt="fcc1" />
+			<img class='flex-it' src="https://res.cloudinary.com/ryucave/image/upload/v1591757312/free_code_camp/fcc-cert1_e3aujb.jpg" alt="fcc" />
+		</div>
+	</div>
+
+
+
 
   <!-- Contact Section -->
   <div class="panel w3-container w3-padding-64" id="contact" data-aos="fade-in">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>Would love to connect and talk about tech!</p>
+    <p>Available for remote contract work. Let's connect and talk!</p>
     <form method="POST" action="https://formspree.io/simonhlee97@hotmail.com">
 
       <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -261,12 +282,16 @@ tr:nth-child(even) {
 		<div class="my-links">
 			<a href="https://dev.to/simonhlee97"><i class="my-social fab fa-dev" title="simonhlee97's DEV Profile"></i></a>
 		</div>	
+		
+		<div class="my-links">
+			<a href="https://codepen.io/simonhlee97"><i class="my-social fab fa-codepen" title="my codepen"></i></a>
+		</div>
 	</div>
 </div><!-- End page content -->
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>last modified: 12 April 2020</p>
+  <p>last modified: 12 June 2020</p>
 </footer>
 
 

@@ -90,12 +90,12 @@
   	color: grey;
   }
   .my-social{
-  	transition: all 0.4s;
+  	transition: all 0.3s;
   }
   .my-social:hover {
 	color: white;
 	cursor: pointer;
-  	font-size: 40px;
+  	transform: scale(1.5);
   }
   .my-links {
   	margin: 3em;
@@ -153,6 +153,15 @@ tr:nth-child(even) {
 	height: auto;
 	padding: 10px;
 }
+.whiteline {
+	width: 280px;
+	height: 20px;
+	line-height: 20px;
+	background-color: white;
+	color: black;
+	text-align: center;
+	margin-bottom: 4em;
+}
 </style>
 </head>
 
@@ -160,7 +169,7 @@ tr:nth-child(even) {
 
 	<div class="panel p1">
 		<h1 id='myname'>SIMON LEE</h1>
-		<h5>web developer</h5>
+		<div class="whiteline"><h4>web developer</h4></div>
 		<img src="./myface.jpg" style="border-radius: 5%;" height="100" width="auto" />
 		<h2 id='downarrow'>&darr;</h2>
 	</div>

@@ -14,7 +14,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css">
 <title>Simon Lee - web developer</title>
@@ -136,6 +137,7 @@ tr:nth-child(even) {
 }
 #myname {
 	letter-spacing: 20px;
+	color: #f1eeee;
 }
 .about, .skills {
 	padding: 8em 2.0em;
@@ -154,104 +156,184 @@ tr:nth-child(even) {
 	padding: 10px;
 }
 .whiteline {
-	width: 280px;
+	width: 278px;
 	height: 20px;
 	line-height: 20px;
 	background-color: white;
 	color: black;
 	text-align: center;
-	margin-bottom: 4em;
+	margin: 12px 0px 4em 0px;
+}
+
+
+
+.centered-text {
+	text-align:center;
+}
+table {
+	margin: 3.5em auto;
 }
 </style>
 </head>
 
 <body>
 
-	<div class="panel p1">
-		<h1 id='myname'>SIMON LEE</h1>
-		<div class="whiteline"><h4>web developer</h4></div>
-		<img src="./simonfc.jpg" style="border-radius: 5%;" width="auto" />
-		<h2 id='downarrow'>&darr;</h2>
-	</div>
-
-	<div class="about w3-blue">
-    	<h2 class="w3-center w3-border-bottom w3-border-light-grey">A B O U T</h2>
-		<p class='w3-center'>I'm a web developer from Indianapolis. Hoosier for life. I love coffee, tacos, and pizza.</p>
-		<p class='w3-center'><small>I am currently stuck in Korea because of COVID-19. I'll be returning to the US late 2020, or early 2021. (Fingers crossed).</small></p>
-	</div>
-
-
-    <div class="skills w3-light-grey w3-center" style='margin-bottom: 3em;'>
-    	<h2 class='w3-panel w3-border-light-grey'>S K I L L S:</h2>
-    	<table>
-    		<tr>
-    			<th><i class="fab fa-wordpress"></i></th>
-    			<th><i class="fab fa-html5"></i></th>
-    			<th><i class="fab fa-sass"></i></th>
-    		</tr>
-    		<tr>
-    			<td>WordPress</td>
-    			<td>HTML5</td>
-    			<td>SASS</td>
-    		</tr>
-    	</table> 
-    	<table>
-    		<tr>
-    			<th><i class="fab fa-react"></i></th>
-    			<th><i class="fab fa-vuejs"></i></th>
-    			<th><i class="fab fa-git"></i></th>
-
-    		</tr>
-    		<tr>
-    			<td>React, Redux</td>
-    			<td>Vue, Vuex</td>
-    			<td>Git</td>
-    		</tr>
-		</table> 
-		
-		<h3>Other Skills:</h3>
-		Node.js | MongoDB | WebPack, Gulp
-    </div>
-
-
-	<h4 class='w3-panel w3-center'>MY WEB DEVELOPMENT PROJECTS</h4>
-  	<div class="projects panel p2 w3-container w3-padding-32" id="about" data-aos="fade-in">
-    
-    	<div class="flex-item w3-card-4">
-	    	<img src="./crown.jpg" alt="__" style="width:100%; height:auto;" />
-			<div class="w3-container w3-center">
-				<p> - <a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">Crown Clothing Shop</a> - </p>
-				<p>A full stack e-commerce app, built with React/Redux, Firebase, and Stripe API.</p>
-				<i class="fab fa-react"></i>
-	    	</div>
+	<section class="hero is-medium is-dark is-bold">
+		<div class="hero-body">
+			<div class="container centered-text">
+				<h1 class="title">Simon Lee</h1>
+				<h2 class="subtitle">web developer</h2>
+				<img src="./simonfc.jpg" style="border-radius: 5%;" width="130" />
+			</div>
 		</div>
+	</section>
 
+	<section class="hero is-medium is-light is-bold" data-aos="fade-in">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">A B O U T</h1>
 
-		<div class="flex-item w3-card-4">
-	    	<img src="./leicaShop.jpg" alt="__" style="width:100%;height:auto;" />
-			<div class="w3-container w3-center">
-				<p>SimonLeicaShop</p>
-				<p> - <a href="https://simonleicashop.surge.sh/" target="_blank" />Simon Leica Shop</a> - </p>
-				<p>Camera database and store, created with VueJS</p>
-				<i class="fab fa-vuejs"></i>
-	    	</div>
+				<div class="tile is-ancestor">
+					<div class="tile is-vertical is-8">
+						<div class="tile">
+							<div class="tile is-parent is-vertical">
+								<article class="tile is-child notification is-primary">
+									<p class="title">Obsessed with growth-mindset</p>
+								</article>
+								<article class="tile is-child notification is-warning">
+									<p class="title">I love books, coffee, tacos, and pizza</p>
+								</article>
+							</div>
+							<div class="tile is-parent">
+								<article class="tile is-child notification is-info">
+									<p class="title">I love basketball, tennis, and photography</p>
+								</article>
+							</div>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child notification is-danger">
+								<p class="title">Passionate</p>
+								<p class="subtitle">I love building data-driven websites</p>
+								<div class="content">
+									<p>I love building stuff with JavaScript, especially VueJS and React. (I've seen the VueJS documentary. TWICE!) I also enjoy CSS3, WordPress, and doing stuff with REST APIs. I've played around with a bunch of technologies and frameworks, but would prefer finding a job and really focusing on one stack.</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child notification is-success">
+							<div class="content">
+								<p class="title">I'm a web developer from Indianapolis. Hoosier for life.</p>
+								<div class="content">
+									<!-- Content -->
+									<p>Looking for my 1st full-time web developer job. Remote or on-site.</p>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
 		</div>
+	</section>
 
-		<div class="flex-item w3-card-4">
-	    	<img src="./mifflin.jpg" alt="__" style="width:100%" />
-			<div class="w3-container w3-center">
-				<p>"Regional-Manager-App"</p>
-				<p> - <a href="https://simonhlee97.github.io/regionalmanagerapp/">an app to celebrate The Office</a> - </p>
-				<p>Let's celebrate the 15-year anniversary of one of the greatest shows of all time</p>
-				<i class="fab fa-vuejs"></i>
-	    	</div>
+	<section class="hero is-medium is-info is-bold" data-aos="fade-in">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title centered-text">S K I L L S</h1>
+				<div class="table-container">
+					<table class="table">
+						<!-- Your table content -->
+						<tr>
+							<th><i class="fab fa-wordpress fa-2x"></i></th>
+							<th><i class="fab fa-html5 fa-2x"></i></th>
+							<th><i class="fab fa-sass fa-2x"></i></th>
+						</tr>
+						<tr>
+							<td>WordPress</td>
+							<td>HTML5</td>
+							<td>SASS, CSS3</td>
+						</tr>
+					</table>
+				</div>
+				<div class="table-container">
+					<table class="table">
+						<!-- Your table content -->
+						<tr>
+							<th><i class="fab fa-react fa-2x"></i></th>
+							<th><i class="fab fa-vuejs fa-2x"></i></th>
+							<th><i class="fab fa-git fa-2x"></i></th>
+						</tr>
+						<tr>
+							<td>React, Redux</td>
+							<td>Vue, Vuex</td>
+							<td>Git</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="centered-text">
+					<h2>Other Skills:</h2>
+					<p>Node.js | MongoDB | WebPack, Gulp</p>
+				</div>
+			</div>
 		</div>
-  </div>
+	</section>
+
+
+
+	<section class="hero is-medium is-light is-bold" data-aos="fade-in">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">P R O J E C T S</h1>
+	
+				<div class="tile is-ancestor">
+					<div class="tile is-vertical is-8">
+						<div class="tile">
+							<div class="tile is-parent is-vertical">
+								<article class="tile is-child notification is-info">
+									<p class="title"><img src="./crown.jpg" alt="__" style="width:100%; height:auto;" /></p>
+									<a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">An e-commerce website, built with React, Redux, Firebase Auth, and Firestore DB.</a>
+								</article>
+								<article class="tile is-child notification is-danger">
+									<p class="title"><img src="./leicaShop.jpg" alt="__" style="width:100%;height:auto;" /></p>
+									<a href="https://simonleicashop.surge.sh/" target="_blank" />A Vue.js single-page-app. (I love cameras)</a>
+								</article>
+							</div>
+							<div class="tile is-parent">
+								<article class="tile is-child notification is-primary">
+									<p class="title"><img src="./mifflin.jpg" alt="__" style="width:100%" /></p>
+									<a href="https://simonhlee97.github.io/regionalmanagerapp/">A Vue.js single-page-app I made to celebrate the 15 year anniversary of The Office.</a>
+								</article>
+							</div>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child notification is-warning">
+								<p><img src="https://res.cloudinary.com/ryucave/image/upload/v1593489092/cave-screen_sm_vvtcdv.jpg" alt="myBlog" /></p>
+								<a href="https://simonhlee97.github.io/regionalmanagerapp/" target="_blank">My personal blog has gone through many experiments. From WordPress, to NetlifyCMS + Gridsome, to (most recently) Eleventy. I've enjoyed playing with static site generators and templating with Nunjucks.</a></p>
+								
+							</article>
+						</div>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child notification is-success">
+							<div class="content">
+								<p><img src="https://res.cloudinary.com/ryucave/image/upload/v1593489439/pet-proj_sm_i5cmsz.jpg" alt="pets"></p>
+								<a href="https://koreapetproject.netlify.app/" target='_blank'>I used Vue, Gridsome, and Google Sheets to create a little pet project for a Korean animal shelter directory.</a>
+								
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
  
 
 	
-	<div class="about w3-green">
-		<h2 class="w3-center w3-border-bottom w3-border-light-grey">C E R T I F I C A T E S</h2>
+	<div class="about">
+		<h1 class="title centered-text">C E R T I F I C A T E S</h1>
 		<div class="flx-container">
 			<img class='flex-it' src="https://res.cloudinary.com/ryucave/image/upload/v1591763140/free_code_camp/fcc-cert2_c1swlr.jpg" alt="fcc1" />
 			<img class='flex-it' src="https://res.cloudinary.com/ryucave/image/upload/v1591757312/free_code_camp/fcc-cert1_e3aujb.jpg" alt="fcc" />
@@ -261,49 +343,64 @@ tr:nth-child(even) {
 
 
 
-  <!-- Contact Section -->
-  <div class="panel w3-container w3-padding-64" id="contact" data-aos="fade-in">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>Available for remote contract work. Let's connect and talk!</p>
-    <form method="POST" action="https://formspree.io/simonhlee97@hotmail.com">
+  <!-- Contact Form Section -->
+	<section class="hero is-medium is-primary is-bold">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class='title'>C O N T A C T</h1>
+				<form method="POST" action="https://formspree.io/simonhlee97@hotmail.com">
+					<div class="field">
+						<label class="label">Email</label>
+						<div class="control has-icons-left has-icons-right">
+							<input class="input" type="email" placeholder="Email" required>
+							<span class="icon is-small is-left">
+								<i class="fas fa-envelope"></i>
+							</span>
+						</div>
+					</div>
+				
+					<div class="field">
+						<label class="label">Message</label>
+						<div class="control">
+							<textarea class="textarea" placeholder="Textarea"></textarea>
+						</div>
+					</div>
 
-      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-      <textarea rows="5" class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment"></textarea>
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </form>
-  </div>
+					<div class="field is-grouped">
+						<div class="control">
+							<button class="button is-link" type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
   
 	<!-- Image -->
 	<div class="w3-container p1" data-aos="fade-in">
-		<img src="./thinking.jpg" style="border-radius: 5%;" height="100" width="auto" />
+		<img src="https://res.cloudinary.com/ryucave/image/upload/v1593488103/simon/thinking_sm_uuphlm.jpg" style="border-radius: 5%;" height="auto" width="100" />
 
 		<div class="my-links">
-			<a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social"></i></a>
+			<a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social fa-2x"></i></a>
 		</div>
 
 		<div class="my-links">
-			<a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social"></i></a>
+			<a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social fa-2x"></i></a>
 		</div>
-
-		<div class="my-links">
-			<a href="https://dev.to/simonhlee97"><i class="my-social fab fa-dev" title="simonhlee97's DEV Profile"></i></a>
-		</div>	
 		
 		<div class="my-links">
-			<a href="https://codepen.io/simonhlee97"><i class="my-social fab fa-codepen" title="my codepen"></i></a>
+			<a href="https://codepen.io/simonhlee97"><i class="my-social fab fa-codepen fa-2x" title="my codepen"></i></a>
 		</div>
 	</div>
 </div><!-- End page content -->
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>last modified: 12 June 2020</p>
+<footer class="footer">
+  <p class='centered-text'>last modified: 26 June 2020</p>
 </footer>
 
-
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({

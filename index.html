@@ -20,87 +20,20 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css">
 <title>Simon Lee - web developer</title>
 <style>
-  .project-links:hover {
-    cursor: pointer;
-  }
-  html {
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-  	margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  h1, h2, h3, h4, h5, h6 {
-  	margin-top: 0;
-  }
-  .panel {
-  	min-height: 100vh;
-  	width: 100%;
-  }
-  .p1 {
-  	min-height: 75vh;
-  	background-color: black;
-  	color: white;
-  	padding: 9rem 12rem;
-  }
-  .p2 {
-  	background-color: white;
-  	color: black;
-  	padding-top: 10rem;
-  	padding-left: 10rem;
-  	padding-right: 10rem;
-  	text-align: center;
-  }
-  .p3 {
-  	background-color: blue;
-  	color: white;
-  }
-  .p4 {
-  	background-color: white;
-  	color: black;
-  }
-  #contact {
-  	background-color: #24274d;
-  	color: white;
-  }
-  #downarrow {
-  	margin-top: 25vh;
-  }
-  #about {
-  	display: flex;
-  	flex-wrap: wrap;
-  	justify-content: center;
-  	flex-direction: row;
-  	padding-left: 5rem;
-  	padding-right: 5rem;
-  }
-  .flex-item {
-  	border-radius: 6px;
-  	margin: 8px;
-  	width: 300px;
-  	height: 400px;
-  }
-  img {
-  	border-radius: 6px;
-  }
-  .fab {
-  	font-size: 36px;
-  	color: grey;
-  }
-  .my-social{
-  	transition: all 0.3s;
-  }
-  .my-social:hover {
-	color: white;
-	cursor: pointer;
-  	transform: scale(1.5);
-  }
-  .my-links {
-  	margin: 3em;
-  }
+	html {
+		scroll-behavior: smooth;
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		font-family: Helvetica, arial, sans-serif;
+	}
+
+  
+  
   .fa-vuejs {
   	color: #4FC08D;	
   }
@@ -116,62 +49,38 @@
   .fa-html5 {
   	color: #E34F26;
   }
-
-	table {
-		font-family: arial, sans-serif;
-		border-collapse: collapse;
-		width: 100%;
-		text-align: center;
-		margin: 5em auto;
-	}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 2px;
-  width: 100px;
+table {
+	width: 100%;
+	text-align: center;
+	margin: 4em auto;
 }
-
+td, th {
+	width: 33.33%;
+}
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-#myname {
-	letter-spacing: 20px;
-	color: #f1eeee;
+.padded-section {
+	padding: 0 4em;
 }
-.about, .skills {
-	padding: 8em 2.0em;
+li {
+	display: inline;
 }
-
-.flx-container {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-}
-.flex-it {
-	margin: 10px;
-	max-width: 460px;
-	height: auto;
-	padding: 10px;
-}
-.whiteline {
-	width: 278px;
-	height: 20px;
-	line-height: 20px;
-	background-color: white;
+.my-social {
 	color: black;
-	text-align: center;
-	margin: 12px 0px 4em 0px;
+	transition: 0.4s;
+	margin: 10px;
 }
-
-
-
-.centered-text {
-	text-align:center;
+.my-social:hover {
+	color: white;
+	cursor: pointer;
+  	transform: scale(1.4);
 }
-table {
-	margin: 3.5em auto;
+.name {
+	letter-spacing: 3px;
+}
+#otherskills {
+	margin-top: 5em;
 }
 </style>
 </head>
@@ -180,15 +89,15 @@ table {
 
 	<section class="hero is-medium is-dark is-bold">
 		<div class="hero-body">
-			<div class="container centered-text">
-				<h1 class="title">Simon Lee</h1>
+			<div class="container has-text-centered">
+				<h1 class="title is-1 name">S I M O N &MediumSpace;  L E E</h1>
 				<h2 class="subtitle">web developer</h2>
 				<img src="./simonfc.jpg" style="border-radius: 5%;" width="130" />
 			</div>
 		</div>
 	</section>
 
-	<section class="hero is-medium is-light is-bold" data-aos="fade-in">
+	<section class="padded-section hero is-medium is-light is-bold" data-aos="fade-in">
 		<div class="hero-body">
 			<div class="container">
 				<h1 class="title">A B O U T</h1>
@@ -197,9 +106,17 @@ table {
 					<div class="tile is-vertical is-8">
 						<div class="tile">
 							<div class="tile is-parent is-vertical">
-								<article class="tile is-child notification is-primary">
-									<p class="title">Obsessed with growth-mindset</p>
+
+								<article class="tile is-child notification is-success">
+									<div class="content">
+										<p class="title">I'm a web developer from Indianapolis. Hoosier for life.</p>
+										<div class="content">
+											<!-- Content -->
+											<p>Looking for my 1st full-time web developer job. Remote or on-site.</p>
+										</div>
+									</div>
 								</article>
+								
 								<article class="tile is-child notification is-warning">
 									<p class="title">I love books, coffee, tacos, and pizza</p>
 								</article>
@@ -210,25 +127,21 @@ table {
 								</article>
 							</div>
 						</div>
-						<div class="tile is-parent">
+						<div class="tile is-parent is-vertical">
 							<article class="tile is-child notification is-danger">
 								<p class="title">Passionate</p>
 								<p class="subtitle">I love building data-driven websites</p>
 								<div class="content">
-									<p>I love building stuff with JavaScript, especially VueJS and React. (I've seen the VueJS documentary. TWICE!) I also enjoy CSS3, WordPress, and doing stuff with REST APIs. I've played around with a bunch of technologies and frameworks, but would prefer finding a job and really focusing on one stack.</p>
+									<p>I love building stuff with JavaScript, especially VueJS and React. (I've seen the VueJS documentary. TWICE!) I've also built custom WordPress themes. I've learned a ton of modern technologies and frameworks, and hungry for an opportunity to focus on one stack.</p>
 								</div>
 							</article>
 						</div>
 					</div>
+
 					<div class="tile is-parent">
-						<article class="tile is-child notification is-success">
-							<div class="content">
-								<p class="title">I'm a web developer from Indianapolis. Hoosier for life.</p>
-								<div class="content">
-									<!-- Content -->
-									<p>Looking for my 1st full-time web developer job. Remote or on-site.</p>
-								</div>
-							</div>
+						<article class="tile is-child notification is-primary">
+							<p class="title">Growth-mindset</p>
+							<p>Always looking to improve (in all areas of life)</p>
 						</article>
 					</div>
 				</div>
@@ -236,44 +149,43 @@ table {
 		</div>
 	</section>
 
-	<section class="hero is-medium is-info is-bold" data-aos="fade-in">
+	<section class="padded-section hero is-medium is-info is-bold" data-aos="fade-in">
 		<div class="hero-body">
-			<div class="container">
-				<h1 class="title centered-text">S K I L L S</h1>
-				<div class="table-container">
-					<table class="table">
-						<!-- Your table content -->
-						<tr>
-							<th><i class="fab fa-wordpress fa-2x"></i></th>
-							<th><i class="fab fa-html5 fa-2x"></i></th>
-							<th><i class="fab fa-sass fa-2x"></i></th>
-						</tr>
-						<tr>
-							<td>WordPress</td>
-							<td>HTML5</td>
-							<td>SASS, CSS3</td>
-						</tr>
-					</table>
-				</div>
-				<div class="table-container">
-					<table class="table">
-						<!-- Your table content -->
-						<tr>
-							<th><i class="fab fa-react fa-2x"></i></th>
-							<th><i class="fab fa-vuejs fa-2x"></i></th>
-							<th><i class="fab fa-git fa-2x"></i></th>
-						</tr>
-						<tr>
-							<td>React, Redux</td>
-							<td>Vue, Vuex</td>
-							<td>Git</td>
-						</tr>
-					</table>
-				</div>
+			<div class="container has-text-centered">
+				<h1 class="title">S K I L L S</h1>
 
-				<div class="centered-text">
-					<h2>Other Skills:</h2>
-					<p>Node.js | MongoDB | WebPack, Gulp</p>
+				<table class="table">
+					<tr>
+						<th><i class="fab fa-react fa-2x"></i></th>
+						<th><i class="fab fa-vuejs fa-2x"></i></th>
+						<th><i class="fab fa-git fa-2x"></i></th>
+					</tr>
+					<tr>
+						
+						<td>React, Redux</td>
+						<td>Vue, Vuex</td>
+						<td>Git</td>
+					</tr>
+				</table>
+				<table class="table">
+					<tr>
+						<th><i class="fab fa-wordpress fa-2x"></i></th>
+						<th><i class="fab fa-html5 fa-2x"></i></th>
+						<th><i class="fab fa-sass fa-2x"></i></th>
+						
+					</tr>
+					<tr>
+						<td>WordPress</td>
+						<td>HTML5</td>
+						<td>SASS, CSS3</td>
+						
+					</tr>
+				</table>
+				
+
+				<div class="has-text-centered">
+					<h2 id='otherskills' class='subtitle'>Other Skills:</h2>
+					<div><span class='tag is-danger'>Node.js</span> | <span class='tag is-danger'>MongoDB</span> | <span class="tag is-danger">WebPack</span> | <span class="tag is-danger">Gulp</span></div>
 				</div>
 			</div>
 		</div>
@@ -281,7 +193,7 @@ table {
 
 
 
-	<section class="hero is-medium is-light is-bold" data-aos="fade-in">
+	<section class="padded-section hero is-medium is-light is-bold" data-aos="fade-in">
 		<div class="hero-body">
 			<div class="container">
 				<h1 class="title">P R O J E C T S</h1>
@@ -309,8 +221,7 @@ table {
 						<div class="tile is-parent">
 							<article class="tile is-child notification is-warning">
 								<p><img src="https://res.cloudinary.com/ryucave/image/upload/v1593489092/cave-screen_sm_vvtcdv.jpg" alt="myBlog" /></p>
-								<a href="https://ryucave.com/" target="_blank">My personal blog has gone through many experiments. From WordPress, to NetlifyCMS + Gridsome, to (most recently) Eleventy. I've enjoyed playing with static site generators and templating with Nunjucks.</a></p>
-								
+								<a href="https://ryucave.com/" target="_blank">My personal blog has gone through many experiments. From WordPress, to NetlifyCMS + Gridsome, to (most recently) Eleventy. I've enjoyed playing with static site generators and templating with Nunjucks.</a>
 							</article>
 						</div>
 					</div>
@@ -319,7 +230,6 @@ table {
 							<div class="content">
 								<p><img src="https://res.cloudinary.com/ryucave/image/upload/v1593489439/pet-proj_sm_i5cmsz.jpg" alt="pets"></p>
 								<a href="https://koreapetproject.netlify.app/" target='_blank'>I used Vue, Gridsome, and Google Sheets to create a little pet project for a Korean animal shelter directory.</a>
-								
 							</div>
 						</article>
 					</div>
@@ -329,22 +239,57 @@ table {
 	</section>
 
 
- 
-
-	
-	<div class="about">
-		<h1 class="title centered-text">C E R T I F I C A T E S</h1>
-		<div class="flx-container">
-			<img class='flex-it' src="https://res.cloudinary.com/ryucave/image/upload/v1591763140/free_code_camp/fcc-cert2_c1swlr.jpg" alt="fcc1" />
-			<img class='flex-it' src="https://res.cloudinary.com/ryucave/image/upload/v1591757312/free_code_camp/fcc-cert1_e3aujb.jpg" alt="fcc" />
+	<section class="padded-section hero is-info">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title has-text-centered">C E R T I F I C A T E S</h1>
+				<div class="columns">
+					<div class="column" style="text-align: center;">
+						<img src="https://res.cloudinary.com/ryucave/image/upload/v1593582154/free_code_camp/fcc-cert1_sm_d8sdfg.jpg" alt="fcc1" />
+					</div>
+					<div class="column" style="text-align: center;">
+						<img src="https://res.cloudinary.com/ryucave/image/upload/v1593582154/free_code_camp/fcc-cert2_sm_ffwv0o.jpg" alt="fcc" />
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
 
+	<section class="padded-section hero is-dark">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title">Available for freelance/contract work</h1>
+				<div class="table-container">
+					<table class="table">
+						<tr class='is-blue'>
+							<th>Service</th>
+							<th>Price</th>
+						</tr>
+						<tr>
+							<td>Static home/landing page</td>
+							<td><i class="fas fa-dollar-sign"></i></td>
+						</tr>
+						<tr>
+							<td>Custom WordPress site</td>
+							<td><i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i></td>
+						</tr>
+						<tr>
+							<td>Full stack app (w/ User auth & registration, REST API, MongoDB, React or Vue front-end)</td>
+							<td><i class="fas fa-dollar-sign"></i> <i class="fas fa-dollar-sign"></i> <i class="fas fa-dollar-sign"></i></td>
+						</tr>
+						<tr>
+							<td>Initial Consultation</td>
+							<td>Free (30 minutes)</td>
+						</tr>
+					</table>
+				</div>
 
-
-
-  <!-- Contact Form Section -->
-	<section class="hero is-medium is-primary is-bold">
+				<p class="subtitle">If you have any questions, please use the contact form below.</p>
+			</div>
+		</div>
+	</section>
+	<!-- Contact Form Section -->
+	<section class="padded-section hero is-medium is-primary is-bold">
 		<div class="hero-body">
 			<div class="container">
 				<h1 class='title'>C O N T A C T</h1>
@@ -368,7 +313,7 @@ table {
 
 					<div class="field is-grouped">
 						<div class="control">
-							<button class="button is-link" type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
+							<button class="button is-link" type="submit"><i class="fas fa-paper-plane"></i>&MediumSpace; SEND MESSAGE</button>
 						</div>
 					</div>
 				</form>
@@ -376,36 +321,35 @@ table {
 		</div>
 	</section>
 
-  
-	<!-- Image -->
-	<div class="w3-container p1" data-aos="fade-in">
-		<img src="https://res.cloudinary.com/ryucave/image/upload/v1593488103/simon/thinking_sm_uuphlm.jpg" style="border-radius: 5%;" height="auto" width="100" />
-
-		<div class="my-links">
-			<a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social fa-2x"></i></a>
+	<section class="hero is-link">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<p>
+					<img src="https://res.cloudinary.com/ryucave/image/upload/v1593488103/simon/thinking_sm_uuphlm.jpg" style="border-radius: 5%; height:130px;" />
+				</p>
+				<ul>
+					<li><a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social fa-2x"></i></a></li>
+					<li><a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social fa-2x"></i></a></li>
+					<li><a href="https://codepen.io/simonhlee97"><i class="my-social fab fa-codepen fa-2x"></i></a></li>
+				</ul>
+			</div>
 		</div>
+	</section>
 
-		<div class="my-links">
-			<a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social fa-2x"></i></a>
+	<section class="hero is-dark">
+		<div class="hero-body">
+			<div class="container">
+				<p class='has-text-centered'>last modified: 30 June 2020</p>
+			</div>
 		</div>
-		
-		<div class="my-links">
-			<a href="https://codepen.io/simonhlee97"><i class="my-social fab fa-codepen fa-2x" title="my codepen"></i></a>
-		</div>
-	</div>
-</div><!-- End page content -->
-
-<!-- Footer -->
-<footer class="footer">
-  <p class='centered-text'>last modified: 26 June 2020</p>
-</footer>
+	</section>
 
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 1000,
-    delay: 500,
+    duration: 600,
+    delay: 400,
     once: false,
     easing: 'ease-out'
   });

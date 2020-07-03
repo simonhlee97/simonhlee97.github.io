@@ -32,37 +32,54 @@
 		font-family: Helvetica, arial, sans-serif;
 	}
 
-  
-  
-  .fa-vuejs {
-  	color: #4FC08D;	
-  }
-  .fa-wordpress {
-  	color: #23282D;
-  }
-  .fa-react {
-  	color: #61DAFB;
-  }
-  .fa-sass {
-  	color: #CF649A;
-  }
-  .fa-html5 {
-  	color: #E34F26;
-  }
-table {
-	width: 100%;
-	text-align: center;
-	margin: 4em auto;
-}
-td, th {
-	width: 33.33%;
-}
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+	.fa-vuejs {
+		color: #4FC08D;	
+	}
+	.fa-wordpress {
+		color: #23282D;
+	}
+	.fa-react {
+		color: #61DAFB;
+	}
+	.fa-sass {
+		color: #CF649A;
+	}
+	.fa-html5 {
+		color: #E34F26;
+	}
+
+	table {
+		width: 100%;
+		text-align: center;
+		margin: 4em auto;
+	}
+	td, th {
+		width: 33.33%;
+	}
+	tr:nth-child(even) {
+	background-color: #dddddd;
+	}
+
 .padded-section {
-	padding: 0 4em;
+	padding-left: 0px;
+	padding-right: 0px;
 }
+@media only screen and (min-width: 415px) {
+	.padded-section {
+		padding: 0 1em;
+	}
+}
+@media only screen and (min-width: 430px) {
+	.padded-section {
+		padding: 0 2em;
+	}
+}
+@media only screen and (min-width: 445px) {
+	.padded-section {
+		padding: 0 3em;
+	}
+}
+
 li {
 	display: inline;
 }
@@ -78,9 +95,11 @@ li {
 }
 .name {
 	letter-spacing: 3px;
+	font-size: 6.8vw;
 }
-#otherskills {
-	margin-top: 5em;
+.my-subtitle {
+	letter-spacing: 2px;
+	font-size: 5.0vw;
 }
 </style>
 </head>
@@ -90,8 +109,8 @@ li {
 	<section class="hero is-medium is-dark is-bold">
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<h1 class="title is-1 name">S I M O N &MediumSpace;  L E E</h1>
-				<h2 class="subtitle">web developer</h2>
+				<h1 class="name">S I M O N &MediumSpace;  L E E</h1>
+				<h2 class="my-subtitle">web developer</h2>
 				<img src="./simonfc.jpg" style="border-radius: 5%;" width="130" />
 			</div>
 		</div>
@@ -178,14 +197,15 @@ li {
 						<td>WordPress</td>
 						<td>HTML5</td>
 						<td>SASS, CSS3</td>
-						
 					</tr>
 				</table>
 				
 
-				<div class="has-text-centered">
-					<h2 id='otherskills' class='subtitle'>Other Skills:</h2>
-					<div><span class='tag is-danger'>Node.js</span> | <span class='tag is-danger'>MongoDB</span> | <span class="tag is-danger">WebPack</span> | <span class="tag is-danger">Gulp</span></div>
+				<div class="has-text-centered content">
+					<br>
+					<h2 class='mt-6 subtitle'>Other Skills:</h2>
+					<p><span class='mx-2 tag is-danger'>Node.js</span><span class='mx-2 tag is-danger'>MongoDB</span></p>
+					<p><span class="mx-2 tag is-danger">WebPack</span><span class="mx-2 tag is-danger">Gulp</span></p>
 				</div>
 			</div>
 		</div>
@@ -239,7 +259,7 @@ li {
 	</section>
 
 
-	<section class="padded-section hero is-info">
+	<section class="padded-section hero is-medium is-info">
 		<div class="hero-body">
 			<div class="container">
 				<h1 class="title has-text-centered">C E R T I F I C A T E S</h1>

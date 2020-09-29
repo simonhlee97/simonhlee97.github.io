@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css" />
+        <title>Simon Lee - web developer</title>
+        <style>
+            html {
+                scroll-behavior: smooth;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                font-family: Helvetica, arial, sans-serif;
+            }
+
+            .fa-vuejs {
+                color: #4fc08d;
+            }
+            .fa-wordpress {
+                color: #23282d;
+            }
+            .fa-react {
+                color: #61dafb;
+            }
+            .fa-sass {
+                color: #cf649a;
+            }
+            .fa-html5 {
+                color: #e34f26;
+            }
+
+            table {
+                width: 100%;
+                text-align: center;
+                margin: 4em auto;
+            }
+            td,
+            th {
+                width: 33.33%;
+            }
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+
+            .padded-section {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            @media only screen and (min-width: 415px) {
+                .padded-section {
+                    padding: 0 1em;
+                }
+            }
+            @media only screen and (min-width: 430px) {
+                .padded-section {
+                    padding: 0 2em;
+                }
+            }
+            @media only screen and (min-width: 445px) {
+                .padded-section {
+                    padding: 0 3em;
+                }
+            }
+            .project-article:hover {
+                opacity: 0.8;
+            }
+            li {
+                display: inline;
+            }
+            .my-social {
+                color: black;
+                transition: 0.4s;
+                margin: 10px;
+            }
+            .my-social:hover {
+                color: white;
+                cursor: pointer;
+                transform: scale(1.4);
+            }
+            .crossout {
+                text-decoration: line-through;
+            }
+            .name {
+                letter-spacing: 3px;
+                font-size: 6.8vw;
+                font-weight: 900;
+            }
+            .my-subtitle {
+                letter-spacing: 3px;
+                font-size: 5vw;
+                font-weight: 800;
+            }
+            a:hover {
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="hero is-medium is-dark is-bold">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="name">S I M O N &MediumSpace; L E E</h1>
+                    <h2 class="my-subtitle"><span class="crossout">Front-end</span> Full-stack Developer</h2>
+                    <h2 class="subtitle">MEVN and MERN stack</h2>
+                    <img src="./simon.jpg" style="max-height: 350px; border-radius: 10px" />
+                </div>
+            </div>
+        </section>
+
+        <section class="padded-section hero is-medium is-light is-bold" data-aos="fade-in">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="my-subtitle">ABOUT</h1>
+
+                    <article class="message is-dark">
+                        <div class="message-body">I grew up in Indianapolis. Hard-core Hoosier. Big Pacers fan.</div>
+                    </article>
+
+                    <article class="message is-dark">
+                        <div class="message-body">I love tacos. Best tacos in Indy? Chris's Ice Cream in Nora. I love pizza. Bazbueax is the best in Indy. I also enjoy photography, tennis, golf, books, and NPR radio.</div>
+                    </article>
+
+                    <article class="message is-dark">
+                        <div class="message-body">And of course, I enjoy both front-end and back-end development. I'm a huge fan of VueJS and Bulma.io. I use them for a lot of my personal projects. I'm very comfortable working on Node, Express, MongoDB projects. I can also build WordPress themes from scratch. I'm currently learning DenoJS.</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="padded-section hero is-medium is-info is-bold" data-aos="fade-in">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title mysubtitle">SKILLS</h1>
+                    <table class="table">
+                        <tr>
+                            <th><i class="fab fa-react fa-2x"></i></th>
+                            <th><i class="fab fa-vuejs fa-2x"></i></th>
+                            <th><i class="fab fa-git fa-2x"></i></th>
+                        </tr>
+                        <tr>
+                            <td>React, Redux</td>
+                            <td>Vue, Vuex</td>
+                            <td>Git</td>
+                        </tr>
+                    </table>
+                    <table class="table">
+                        <tr>
+                            <th><i class="fab fa-wordpress fa-2x"></i></th>
+                            <th><i class="fab fa-html5 fa-2x"></i></th>
+                            <th><i class="fab fa-sass fa-2x"></i></th>
+                        </tr>
+                        <tr>
+                            <td>WordPress</td>
+                            <td>HTML5</td>
+                            <td>SASS, CSS3</td>
+                        </tr>
+                    </table>
+                    <div class="has-text-centered content">
+                        <br />
+                        <h2 class="mt-6 subtitle">Other Skills:</h2>
+                        <p><span class="mx-2 tag is-danger">Node.js</span><span class="mx-2 tag is-danger">MongoDB</span></p>
+                        <p><span class="mx-2 tag is-danger">WebPack</span><span class="mx-2 tag is-danger">Gulp</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="padded-section hero is-medium is-light is-bold" data-aos="fade-in">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title mysubtitle">PROJECTS</h1>
+                    <div class="columns">
+                        <div class="column">
+                            <article class="project-article message is-dark">
+                                <div class="message-header">
+                                    <p>eCommerce/React/Redux project</p>
+                                    <a href="https://github.com/simonhlee97/edutools"> <i class="fab fa-github my-social fa-2x"></i></a>
+                                </div>
+                                <a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">
+                                    <div class="message-body">
+                                        <img src="./crown.jpg" alt="project" style="width: 100%; height: auto" />
+                                        An e-commerce website, built with React, Redux, Firebase Auth, and Firestore DB.
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="column">
+                            <article class="project-article message is-dark">
+                                <div class="message-header">
+                                    <p>VueJS project</p>
+                                    <a href="https://github.com/simonhlee97/vue-camera-shop"><i class="fab fa-github my-social fa-2x"></i></a>
+                                </div>
+                                <a href="https://simonleicashop.surge.sh/" target="_blank">
+                                    <div class="message-body">
+                                        <img src="https://res.cloudinary.com/ryucave/image/upload/v1598683424/dev-portfolio/leicashop_mea2uz.jpg" alt="leica" style="width: 100%; height: auto" />
+                                        <p>I'm kind of a photography/camera geek. I window shop a lot and look at cameras I will probably never buy.</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column">
+                            <article class="project-article message is-link">
+                                <div class="message-header">
+                                    <p>VueJS project</p>
+                                    <a href="https://github.com/simonhlee97/regionalmanagerapp"><i class="fab fa-github my-social fa-2x"></i></a>
+                                </div>
+                                <a href="https://simonhlee97.github.io/regionalmanagerapp/" target="_blank">
+                                    <div class="message-body">
+                                        <img src="https://res.cloudinary.com/ryucave/image/upload/v1598683455/dev-portfolio/mifflin_o8s1n0.jpg" alt="dunder" style="width: 100%" />
+                                        <p>A Vue.js single-page-app I made to celebrate the 15 year anniversary of "The Office."</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <div class="column">
+                            <article class="project-article message is-link">
+                                <a href="https://ryucave.com" target="_blank">
+                                    <div class="message-header">
+                                        <p>RyuCave.com (my blog)</p>
+                                        <a href="https://github.com/simonhlee97/eleventy-base-blog" target="_blank"><i class="fab fa-github my-social fa-2x"></i></a>
+                                    </div>
+                                    <div class="message-body">
+                                        <img src="./ryucave.jpg" alt="blog" style="width: 100%" />
+                                        <p>Built with Eleventy, a static site generator, and Nunjucks.js (templating engine). It was formerly a WordPress blog.</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="padded-section hero is-medium is-info">
+            <div class="hero-body">
+                <div class="container-full">
+                    <h1 class="my-subtitle has-text-centered">CERTIFICATES</h1>
+                    <div class="columns">
+                        <div class="column">
+                            <img src="https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert1_iom5sr.jpg" alt="fcc1" />
+                        </div>
+                        <div class="column" style="text-align: center">
+                            <img src="https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert2_qlqzxi.jpg" alt="fcc2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="padded-section hero is-dark">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">Available for freelance/contract work</h1>
+                    <div class="table-container">
+                        <table class="table">
+                            <tr class="is-blue">
+                                <th>Service</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Static home/landing page</td>
+                                <td><i class="fas fa-dollar-sign"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Custom WordPress site</td>
+                                <td><i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Full stack app (w/ User auth & registration, REST API, MongoDB, React or Vue front-end)</td>
+                                <td><i class="fas fa-dollar-sign"></i> <i class="fas fa-dollar-sign"></i> <i class="fas fa-dollar-sign"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Initial Consultation</td>
+                                <td>Free (30 minutes)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="subtitle">If you have any questions, please use the contact form below.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form Section -->
+        <section class="padded-section hero is-medium is-primary is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title mysubtitle">CONTACT</h1>
+                    <form method="POST" action="https://formspree.io/simonhlee97@hotmail.com">
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input" type="email" placeholder="Email" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Textarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link" type="submit"><i class="fas fa-paper-plane"></i>&MediumSpace; SEND MESSAGE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero is-link">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <p>
+                        <img src="./me-guam.jpg" style="width: 60%" />
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://codepen.io/simonhlee97"><i class="my-social fab fa-codepen fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero is-dark">
+            <div class="hero-body">
+                <div class="container">
+                    <p class="has-text-centered">last modified: Sept 2020</p>
+                    <p class="has-text-centered">go to <a href="index.html">current version</a></p>
+                </div>
+            </div>
+        </section>
+
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 600,
+                delay: 400,
+                once: false,
+                easing: 'ease-out',
+            })
+        </script>
+    </body>
+</html>

@@ -1,363 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css">
-<title>Simon Lee - web developer</title>
-<style>
-	html {
-		scroll-behavior: smooth;
-		margin: 0;
-		padding: 0;
-	}
-	body {
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		font-family: Helvetica, arial, sans-serif;
-	}
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" />
 
-	.fa-vuejs {
-		color: #4FC08D;	
-	}
-	.fa-wordpress {
-		color: #23282D;
-	}
-	.fa-react {
-		color: #61DAFB;
-	}
-	.fa-sass {
-		color: #CF649A;
-	}
-	.fa-html5 {
-		color: #E34F26;
-	}
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css" />
+        <title>Document</title>
+        <style>
+            html {
+                scroll-behavior: smooth;
+                box-sizing: border-box;
+            }
+            body {
+                padding: 2px 2px;
+                overflow-x: hidden;
+            }
+            .container {
+                margin: 4px auto;
+                width: 100%;
+                text-align: center;
+                min-height: 100vh;
+                background-color: #fff;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-row: auto auto;
+                grid-column-gap: 4px;
+                grid-row-gap: 4px;
+            }
+            .container .box {
+                background-color: #333;
+                border-radius: 10px;
+                color: #fff;
+                /* display: flex; */
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                min-height: 50vh;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: #fff;
+            }
+            .box.padd-box {
+                padding: 2em 1.5em;
+            }
+            #box1 {
+                background-image: url('./simon.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                /* background-attachment: fixed; */
+                border-radius: 10px;
+            }
 
-	table {
-		width: 100%;
-		text-align: center;
-		margin: 4em auto;
-	}
-	td, th {
-		width: 33.33%;
-	}
-	tr:nth-child(even) {
-	background-color: #dddddd;
-	}
+            @media only screen and (max-width: 700px) {
+                #box1 {
+                    background-attachment: fixed;
+                }
+                .container {
+                    grid-template-columns: 100%;
+                }
+                .container > div {
+                    height: auto;
+                    align-items: center;
+                    display: block;
+                }
+            }
 
-.padded-section {
-	padding-left: 0px;
-	padding-right: 0px;
-}
-@media only screen and (min-width: 415px) {
-	.padded-section {
-		padding: 0 1em;
-	}
-}
-@media only screen and (min-width: 430px) {
-	.padded-section {
-		padding: 0 2em;
-	}
-}
-@media only screen and (min-width: 445px) {
-	.padded-section {
-		padding: 0 3em;
-	}
-}
-.project-article:hover {
-	opacity: 0.8;
-}
-li {
-	display: inline;
-}
-.my-social {
-	color: black;
-	transition: 0.4s;
-	margin: 10px;
-}
-.my-social:hover {
-	color: white;
-	cursor: pointer;
-  	transform: scale(1.4);
-}
-.crossout {
-	text-decoration: line-through;
-}
-.name {
-	letter-spacing: 3px;
-	font-size: 6.8vw;
-	font-weight: 900;
-}
-.my-subtitle {
-	letter-spacing: 3px;
-	font-size: 5.0vw;
-	font-weight:800;
-}
-</style>
-</head>
+            i.fab {
+                margin: 5px 15px;
+            }
+            a:hover,
+            i.fab:hover {
+                color: #050111;
+                transition: 0.7s all;
+            }
+            .certificate {
+                margin-bottom: 1em;
+                height: auto;
+                max-width: 100%;
+            }
+            #last-box {
+                width: 100vw;
+                text-align: center;
+                padding-top: 3em;
+                padding-bottom: 3em;
+                min-height: 10vh;
+            }
+            .small-hr {
+                width: 20%;
+                margin: 0 auto;
+            }
+            .flex-item {
+                margin: 6px;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box padd-box">
+                <h2>( hello ) => { I'm Simon }</h2>
+                <h4>full stack web developer</h4>
+                <p>JavaScript / React & Redux / VueJS & Vuex</p>
+                <p>HTML5 / Mustache.js / SASS / CSS3</p>
+                <p>NodeJS / Express / MongoDB / git</p>
+                <p>WordPress / Gulp / WebPack</p>
+            </div>
 
-<body>
+            <div id="box1" class="box padd-box">
+                <p></p>
+            </div>
 
-	<section class="hero is-medium is-dark is-bold">
-		<div class="hero-body">
-			<div class="container has-text-centered">
-				<h1 class="name">S I M O N &MediumSpace;  L E E</h1>
-				<h2 class="my-subtitle"><span class='crossout'>Front-end</span> Full-stack Developer</h2>
-				<h2 class='subtitle'>MEVN and MERN stack</h2>
-				<img src="./simon.jpg" style="max-height:350px;border-radius:10px;" />
-			</div>
-		</div>
-	</section>
+            <div class="box padd-box">
+                <h3>completed courses</h3>
+                <div class="uk-flex uk-flex-center">
+                    <div class="flex-item">
+                        <a href="#course-info-modal-1" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert1_iom5sr.jpg" alt="fcc1" /></a>
+                    </div>
+                    <div class="flex-item">
+                        <a href="#course-info-modal-2" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert2_qlqzxi.jpg" alt="fcc2" /></a>
+                    </div>
+                </div>
+                <div class="uk-flex uk-flex-center">
+                    <div class="flex-item">
+                        <a href="#course-info-modal-3" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1601355983/dev-portfolio/vuejs-certificate_sf7nmt.jpg" alt="vue-udemy" /></a>
+                    </div>
+                    <!-- <div class="flex-item">
+                        <a href="#course-info-modal-4" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert2_qlqzxi.jpg" alt="fcc2" /></a>
+                    </div> -->
+                </div>
+                <!-- Mustache template, certificate info Modal -->
+                <script id="courses__template" type="text/html">
+                    {{#mycourses}}
+                    <div id="course-info-modal-{{id}}" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 style="color:navy;" class="uk-modal-title">{{ title }}</h2>
+                            <h5 style="color:navy;">Skills learned:</h5>
+                            <p>{{ description }}</p>
+                            <img src="{{imageurl}}" alt="courses" />
+                        </div>
+                    </div>
+                    {{/mycourses}}
+                </script>
+                <div id="courseinfo__container"><!-- Mustache renders data here --></div>
+            </div>
 
-	<section class="padded-section hero is-medium is-light is-bold" data-aos="fade-in">
-		<div class="hero-body">
-			<div class="container has-text-centered">
-				<h1 class="my-subtitle">ABOUT</h1>
+            <!-- Mustache template for the project Modal -->
+            <script id="modal__template" type="text/html">
+                {{#myprojects}}
+                <div id="modal-close-default-{{id}}" uk-modal>
+                    <div class="uk-modal-dialog uk-modal-body">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <h2 style="color:navy;" class="uk-modal-title">{{ title }}</h2>
+                        <p><a href="{{link}}" target="_blank">{{ description }}</a></p>
+                        <img src="{{imageurl}}" />
+                    </div>
+                </div>
+                {{/myprojects}}
+            </script>
 
-				<article class="message is-dark">
-					<div class="message-body">
-						I grew up in Indianapolis. Hard-core Hoosier. Big Pacers fan.
-					</div>
-				</article>
+            <!-- Mustache template for list of projects -->
+            <script id="projects__template" type="text/html">
+                <div class="photos my-6 columns">
+                    <ul class="uk-list uk-list-divider">
+                        {{#myprojects}}
+                        <li><a href="#modal-close-default-{{id}}" uk-toggle>{{ title }}</a> &nbsp; <i class="{{icon}}"></i></li>
+                        {{/myprojects}}
+                    </ul>
+                </div>
+            </script>
+            <!-- Mustache template -->
 
-				<article class="message is-dark">
-					<div class="message-body">
-						I love tacos. Best tacos in Indy? Chris's Ice Cream in Nora. I love pizza. Bazbueax is the best in Indy. I also enjoy photography, tennis, golf, books, and NPR radio.
-					</div>
-				</article>
+            <div class="box padd-box">
+                <p style="margin-top: 1em">Past Freelance Work ( <i class="fas fa-business-time"></i> )</p>
+                <p style="margin-bottom: 3em">and Personal Projects ( <i class="far fa-clipboard"></i> )</p>
+                <div id="projects__container"></div>
+                <div id="modal__container"></div>
+            </div>
 
-				<article class="message is-dark">
-					<div class="message-body">
-						And of course, I enjoy both front-end and back-end development. I'm a huge fan of VueJS and Bulma.io. I use them for a lot of my personal projects. I'm very comfortable working on Node, Express, MongoDB projects. I can also build WordPress themes from scratch. I'm currently learning DenoJS.
-					</div>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<section class="padded-section hero is-medium is-info is-bold" data-aos="fade-in">
-		<div class="hero-body">
-			<div class="container has-text-centered">
-				<h1 class="title mysubtitle">SKILLS</h1>
-				<table class="table">
-					<tr>
-						<th><i class="fab fa-react fa-2x"></i></th>
-						<th><i class="fab fa-vuejs fa-2x"></i></th>
-						<th><i class="fab fa-git fa-2x"></i></th>
-					</tr>
-					<tr>
-						<td>React, Redux</td>
-						<td>Vue, Vuex</td>
-						<td>Git</td>
-					</tr>
-				</table>
-				<table class="table">
-					<tr>
-						<th><i class="fab fa-wordpress fa-2x"></i></th>
-						<th><i class="fab fa-html5 fa-2x"></i></th>
-						<th><i class="fab fa-sass fa-2x"></i></th>
-					</tr>
-					<tr>
-						<td>WordPress</td>
-						<td>HTML5</td>
-						<td>SASS, CSS3</td>
-					</tr>
-				</table>
-				<div class="has-text-centered content">
-					<br>
-					<h2 class='mt-6 subtitle'>Other Skills:</h2>
-					<p><span class='mx-2 tag is-danger'>Node.js</span><span class='mx-2 tag is-danger'>MongoDB</span></p>
-					<p><span class="mx-2 tag is-danger">WebPack</span><span class="mx-2 tag is-danger">Gulp</span></p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="padded-section hero is-medium is-light is-bold" data-aos="fade-in">
-		<div class="hero-body">
-			<div class="container has-text-centered">
-				<h1 class="title mysubtitle">PROJECTS</h1>
-				<div class="columns">
-					<div class="column">
-						<article class="project-article message is-dark">
-								<div class="message-header">
-									<p>eCommerce/React/Redux project</p>
-									<a href="https://github.com/simonhlee97/edutools"> <i class="fab fa-github my-social fa-2x"></i></a>
-								</div>
-								<a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">
-								<div class="message-body">
-									<img src="./crown.jpg" alt="project" style="width:100%; height:auto;" />
-									An e-commerce website, built with React, Redux, Firebase Auth, and Firestore DB.
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="project-article message is-dark">
-								<div class="message-header">
-									<p>VueJS project</p>
-									<a href="https://github.com/simonhlee97/vue-camera-shop"><i class="fab fa-github my-social fa-2x"></i></a>
-								</div>
-							<a href="https://simonleicashop.surge.sh/" target="_blank">
-								<div class="message-body">
-									<img src="https://res.cloudinary.com/ryucave/image/upload/v1598683424/dev-portfolio/leicashop_mea2uz.jpg" alt="leica" style="width:100%; height:auto;" />
-									<p>I'm kind of a photography/camera geek. I window shop a lot and look at cameras I will probably never buy.</p>
-								</div>
-							</a>
-						</article>
-					</div>
-				</div>
-
-				<div class="columns">
-					<div class="column">
-						<article class="project-article message is-link">
-								<div class="message-header">
-									<p>VueJS project</p>
-									<a href="https://github.com/simonhlee97/regionalmanagerapp"><i class="fab fa-github my-social fa-2x"></i></a>
-								</div>
-							<a href="https://simonhlee97.github.io/regionalmanagerapp/" target="_blank">
-								<div class="message-body">
-									<img src="https://res.cloudinary.com/ryucave/image/upload/v1598683455/dev-portfolio/mifflin_o8s1n0.jpg" alt="dunder" style="width:100%;" />
-									<p>A Vue.js single-page-app I made to celebrate the 15 year anniversary of "The Office."</p>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="project-article message is-link">
-							<a href="https://ryucave.com" target="_blank">
-							<div class="message-header">
-									<p>RyuCave.com (my blog)</p>
-									<a href="https://github.com/simonhlee97/eleventy-base-blog" target="_blank"><i class="fab fa-github my-social fa-2x"></i></a>
-							</div>
-							<div class="message-body">
-								<img src="./ryucave.jpg" alt="blog" style="width:100%" />
-								<p>Built with Eleventy, a static site generator, and Nunjucks.js (templating engine). It was formerly a WordPress blog.</p>
-							</div>
-							</a>
-						</article>
-					</div>
-				</div>	
-			</div>
-		</div>
-	</section>
-
-	<section class="padded-section hero is-medium is-info">
-		<div class="hero-body">
-			<div class="container-full">
-				<h1 class="my-subtitle has-text-centered">CERTIFICATES</h1>
-				<div class="columns">
-					<div class="column">
-						<img src="https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert1_iom5sr.jpg" alt="fcc1" />
-					</div>
-					<div class="column" style="text-align: center;">
-						<img src="https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert2_qlqzxi.jpg" alt="fcc2" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="padded-section hero is-dark">
-		<div class="hero-body">
-			<div class="container has-text-centered">
-				<h1 class="title">Available for freelance/contract work</h1>
-				<div class="table-container">
-					<table class="table">
-						<tr class='is-blue'>
-							<th>Service</th>
-							<th>Price</th>
-						</tr>
-						<tr>
-							<td>Static home/landing page</td>
-							<td><i class="fas fa-dollar-sign"></i></td>
-						</tr>
-						<tr>
-							<td>Custom WordPress site</td>
-							<td><i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i></td>
-						</tr>
-						<tr>
-							<td>Full stack app (w/ User auth & registration, REST API, MongoDB, React or Vue front-end)</td>
-							<td><i class="fas fa-dollar-sign"></i> <i class="fas fa-dollar-sign"></i> <i class="fas fa-dollar-sign"></i></td>
-						</tr>
-						<tr>
-							<td>Initial Consultation</td>
-							<td>Free (30 minutes)</td>
-						</tr>
-					</table>
-				</div>
-				<p class="subtitle">If you have any questions, please use the contact form below.</p>
-			</div>
-		</div>
-	</section>
-	<!-- Contact Form Section -->
-	<section class="padded-section hero is-medium is-primary is-bold">
-		<div class="hero-body">
-			<div class="container">
-				<h1 class='title mysubtitle'>CONTACT</h1>
-				<form method="POST" action="https://formspree.io/simonhlee97@hotmail.com">
-					<div class="field">
-						<label class="label">Email</label>
-						<div class="control has-icons-left has-icons-right">
-							<input class="input" type="email" placeholder="Email" required>
-							<span class="icon is-small is-left">
-								<i class="fas fa-envelope"></i>
-							</span>
-						</div>
-					</div>
-					<div class="field">
-						<label class="label">Message</label>
-						<div class="control">
-							<textarea class="textarea" placeholder="Textarea"></textarea>
-						</div>
-					</div>
-
-					<div class="field is-grouped">
-						<div class="control">
-							<button class="button is-link" type="submit"><i class="fas fa-paper-plane"></i>&MediumSpace; SEND MESSAGE</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</section>
-
-	<section class="hero is-link">
-		<div class="hero-body">
-			<div class="container has-text-centered">
-				<p>
-					<img src="./me-guam.jpg" style="width:60%;" />
-				</p>
-				<ul>
-					<li><a href="https://linkedin.com/in/simon-h-lee/" target="_blank"><i class="fab fa-linkedin my-social fa-2x"></i></a></li>
-					<li><a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github my-social fa-2x"></i></a></li>
-					<li><a href="https://codepen.io/simonhlee97"><i class="my-social fab fa-codepen fa-2x"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-
-	<section class="hero is-dark">
-		<div class="hero-body">
-			<div class="container">
-				<p class='has-text-centered'>last modified: 17 Sept 2020</p>
-			</div>
-		</div>
-	</section>
-
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 600,
-    delay: 400,
-    once: false,
-    easing: 'ease-out'
-  });
-</script>
-</body>
+            <div id="last-box" class="box bottom-box">
+                <h5>"I code, therefore I am." <br />- Simon</h5>
+                <div class="link-icons">
+                    <a href="https://linkedin.com/in/simon-h-lee" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                </div>
+                <p><a href="https://registry.jsonresume.org/simonhlee97">Online Resume</a></p>
+                <hr class="small-hr uk-margin-bottom" />
+                <small>last modified: Sept 29, 2020</small>
+                <p><a href="previous.html">previous version</a></p>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+        <script src="./homepage.js"></script>
+    </body>
 </html>

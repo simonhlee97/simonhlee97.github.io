@@ -14,19 +14,19 @@ const courses = {
         {
             id: 1,
             title: 'Responsive Web Design',
-            description: 'Modern web design, CSS3, flexbox, CSS Grid, media queries.',
+            description: 'HTML5, CSS3, Flexbox, CSS Grid, applied visual design, applied accessibility, responsive web design principles',
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert2_qlqzxi.jpg',
         },
         {
             id: 2,
             title: 'JavaScript Algorithms and Data Structures',
-            description: 'Objects, functions, arrays, problem solving.',
+            description: 'JavaScript, ES6, Regular Expressions, Debugging, data structures, algorithm scripting, object oriented programming, functional programming',
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert1_iom5sr.jpg',
         },
         {
             id: 3,
             title: 'VueJS, by Udemy',
-            description: 'VueJS, Vuex, Vue-Router, components, single page apps',
+            description: 'VueJS, Vuex, Vue-Router, components, data flow and communication between components, transitions and animations, directives, filters, mixins, HTTP requests',
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601355983/dev-portfolio/vuejs-certificate_sf7nmt.jpg',
         },
         {

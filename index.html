@@ -53,7 +53,7 @@
             .box.padd-box {
                 padding: 2em 1.5em;
             }
-            #box1 {
+            #box2 {
                 background-image: url('./simon.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -62,7 +62,7 @@
             }
 
             @media only screen and (max-width: 700px) {
-                #box1 {
+                #box2 {
                     background-attachment: fixed;
                 }
                 .container {
@@ -83,12 +83,8 @@
                 color: #050111;
                 transition: 0.7s all;
             }
-            .certificate {
-                margin-bottom: 1em;
-                height: auto;
-                max-width: 100%;
-            }
-            #last-box {
+
+            #box5 {
                 width: 100vw;
                 text-align: center;
                 padding-top: 3em;
@@ -103,11 +99,41 @@
                 margin: 6px;
                 width: 50%;
             }
+            /* css animations */
+            .box {
+                position: relative;
+                animation-name: example;
+                animation-duration: 2.5s;
+            }
+            @keyframes example {
+                from {
+                    scale: 0;
+                    opacity: 0;
+                    transform: rotate(0deg);
+                }
+                to {
+                    scale: 1;
+                    opacity: 1;
+                    transform: rotate(360deg);
+                }
+            }
+            .certificate {
+                margin-bottom: 1em;
+                height: auto;
+                max-width: 100%;
+                transition: 0.6s;
+            }
+            .certificate:hover {
+                transform: translateY(-6px);
+            }
+            .skill-tag {
+                margin: 2px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="box padd-box uk-animation-fade">
+            <div id="box1" class="box padd-box">
                 <h2>( hello ) => { I'm Simon }</h2>
                 <h4>full stack web developer</h4>
                 <p>JavaScript / React & Redux / VueJS & Vuex</p>
@@ -116,14 +142,14 @@
                 <p>WordPress / Gulp / WebPack</p>
             </div>
 
-            <div id="box1" class="box padd-box uk-animation-fade">
-				<p></p>
+            <div id="box2" class="box padd-box">
+                <p></p>
             </div>
 
-            <div class="box padd-box uk-animation-fade">
+            <div id="box3" class="box padd-box">
                 <h3>completed courses</h3>
                 <div class="uk-flex uk-flex-center">
-                    <div class="flex-item">
+                    <div class="flex-item my-link">
                         <a href="#course-info-modal-1" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert1_iom5sr.jpg" alt="fcc1" /></a>
                     </div>
                     <div class="flex-item">
@@ -146,7 +172,7 @@
                             <button class="uk-modal-close-default" type="button" uk-close></button>
                             <h2 style="color:navy;" class="uk-modal-title">{{ title }}</h2>
                             <h5 style="color:navy;">Skills learned:</h5>
-                            <p>{{ description }}</p>
+                            <p>{{#tags}}<span class="uk-label skill-tag">{{}}{{skill}}</span>{{/tags}}</p>
                             <img src="{{imageurl}}" alt="courses" />
                         </div>
                     </div>
@@ -155,7 +181,7 @@
                 <div id="courseinfo__container"><!-- Mustache renders data here --></div>
             </div>
 
-            <!-- Mustache template for the project Modal -->
+            <!-- Mustache template for work & personal projects Modal -->
             <script id="modal__template" type="text/html">
                 {{#myprojects}}
                 <div id="modal-close-default-{{id}}" uk-modal>
@@ -181,14 +207,14 @@
             </script>
             <!-- Mustache template -->
 
-            <div class="box padd-box uk-animation-fade">
+            <div id="box4" class="box padd-box">
                 <p style="margin-top: 1em">Past Freelance Work ( <i class="fas fa-business-time"></i> )</p>
                 <p style="margin-bottom: 3em">and Personal Projects ( <i class="far fa-clipboard"></i> )</p>
                 <div id="projects__container"></div>
                 <div id="modal__container"></div>
             </div>
 
-            <div id="last-box" class="box bottom-box uk-animation-fade">
+            <div id="box5" class="box bottom-box">
                 <h5>"I code, therefore I am." <br />- Simon</h5>
                 <div class="link-icons">
                     <a href="https://linkedin.com/in/simon-h-lee" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>

@@ -14,25 +14,131 @@ const courses = {
         {
             id: 1,
             title: 'Responsive Web Design',
-            description: 'HTML5, CSS3, Flexbox, CSS Grid, applied visual design, applied accessibility, responsive web design principles',
+            tags: [
+                {
+                    skill: 'HTML5',
+                },
+                {
+                    skill: 'CSS3',
+                },
+                {
+                    skill: 'Flexbox',
+                },
+                {
+                    skill: 'CSS Grid',
+                },
+                {
+                    skill: 'applied visual design',
+                },
+                {
+                    skill: 'algorithms',
+                },
+                {
+                    skill: 'applied accessibility',
+                },
+                {
+                    skill: 'responsive web design principles',
+                },
+            ],
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert2_qlqzxi.jpg',
         },
         {
             id: 2,
             title: 'JavaScript Algorithms and Data Structures',
-            description: 'JavaScript, ES6, Regular Expressions, Debugging, data structures, algorithm scripting, object oriented programming, functional programming',
+            tags: [
+                {
+                    skill: 'JavaScript',
+                },
+                {
+                    skill: 'ES6',
+                },
+                {
+                    skill: 'Regular Expressions',
+                },
+                {
+                    skill: 'Debugging',
+                },
+                {
+                    skill: 'data structures',
+                },
+                {
+                    skill: 'algorithms',
+                },
+                {
+                    skill: 'object oriented programming',
+                },
+                {
+                    skill: 'functional programming',
+                },
+            ],
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1598671811/free_code_camp/fcc-cert1_iom5sr.jpg',
         },
         {
             id: 3,
             title: 'VueJS, by Udemy',
-            description: 'VueJS, Vuex, Vue-Router, components, data flow and communication between components, transitions and animations, directives, filters, mixins, HTTP requests',
+            tags: [
+                {
+                    skill: 'VueJS',
+                },
+                {
+                    skill: 'Vuex',
+                },
+                {
+                    skill: 'Vue-Router',
+                },
+                {
+                    skill: 'components',
+                },
+                {
+                    skill: 'data flow and communication between components',
+                },
+                {
+                    skill: 'transitions and animations',
+                },
+                {
+                    skill: 'directives',
+                },
+                {
+                    skill: 'filters and mixins',
+                },
+                {
+                    skill: 'HTTP requests',
+                },
+            ],
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601355983/dev-portfolio/vuejs-certificate_sf7nmt.jpg',
         },
         {
             id: 4,
             title: 'Node and MongoDB, by Udemy',
-            description: 'NodeJS, Express, MongoDB, Mongoose.js, socket.io, data and schema modeling, json-web-tokens, server-side authentication, PostMan, environment variables',
+            tags: [
+                {
+                    skill: 'NodeJS',
+                },
+                {
+                    skill: 'Express',
+                },
+                {
+                    skill: 'Mongoose.js',
+                },
+                {
+                    skill: 'data and schema modeling',
+                },
+                {
+                    skill: 'socket.io',
+                },
+                {
+                    skill: 'json-web-tokens',
+                },
+                {
+                    skill: 'server-side authentication',
+                },
+                {
+                    skill: 'Postman (API testing)',
+                },
+                {
+                    skill: 'environment variables',
+                },
+            ],
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601345213/dev-portfolio/drenglish_sne99e.jpg',
         },
     ],

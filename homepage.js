@@ -156,7 +156,7 @@ const projects = {
         },
         // below, are MY PERSONAL PROJECTS
         {
-            id: 3,
+            id: 2,
             title: 'Socket.io real-time chat app',
             description: 'I learned web sockets and how to build a real-time chat app using the socket.io library',
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601870335/dev-portfolio/chatapp_q2xxjv.jpg',
@@ -164,15 +164,15 @@ const projects = {
             link: 'https://simonsocketapp.herokuapp.com/',
         },
         {
-            id: 2,
+            id: 3,
             title: 'Single Page App with VueJS',
             description: 'I built a small Vue SPA to show my love of cameras and photography.',
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1598683424/dev-portfolio/leicashop_mea2uz.jpg',
             icon: 'far fa-clipboard',
-            link: 'https://simonsocketapp.herokuapp.com/',
+            link: 'https://simonleicashop.surge.sh/',
         },
         {
-            id: 3,
+            id: 4,
             title: 'React/Redux eCommerce store',
             description: "I built a full-stack e-commerce app using React, Redux, Firestore (database), and integrated the Stripe payment API. I also used Google Firebase's Auth SDK",
             imageurl: './crown.jpg',
@@ -180,7 +180,7 @@ const projects = {
             link: 'https://simon-crown-shop-project.herokuapp.com/',
         },
         {
-            id: 4,
+            id: 5,
             title: 'RyuCave.com',
             description: 'My personal blog, ryucave.com, was built with Eleventy, a static site generator.',
             imageurl: './ryucave.jpg',

@@ -109,7 +109,7 @@ const courses = {
         },
         {
             id: 4,
-            title: 'Node and MongoDB, by Udemy',
+            title: 'The Complete NodeJS Developer Course (Udemy)',
             tags: [
                 {
                     skill: 'NodeJS',
@@ -139,7 +139,7 @@ const courses = {
                     skill: 'environment variables',
                 },
             ],
-            imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601345213/dev-portfolio/drenglish_sne99e.jpg',
+            imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601868088/dev-portfolio/udemy-node-mongo-small_iug94s.jpg',
         },
     ],
 }

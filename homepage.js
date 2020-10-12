@@ -195,6 +195,14 @@ const projects = {
             icon: 'far fa-clipboard',
             link: 'https://simonhlee97.github.io/simon-light-dark-mode',
         },
+        {
+            id: 7,
+            title: 'Infinite Scroll',
+            description: 'New set of images will load when user scrolls to bottom of the view port',
+            imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1602473080/dev-portfolio/infinitescroll_jzgvxh.jpg',
+            icon: 'far fa-clipboard',
+            link: 'https://simonhlee97.github.io/simon-infinite-scroll/',
+        },
     ],
 }
 

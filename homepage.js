@@ -187,6 +187,14 @@ const projects = {
             icon: 'far fa-clipboard',
             link: 'https://ryucave.com',
         },
+        {
+            id: 6,
+            title: 'Light and Dark Modes',
+            description: 'A static web page with a theme switcher',
+            imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1602472538/dev-portfolio/simon-theme-switcher_qyomtq.jpg',
+            icon: 'far fa-clipboard',
+            link: 'https://simonhlee97.github.io/simon-light-dark-mode',
+        },
     ],
 }
 

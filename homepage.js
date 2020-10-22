@@ -31,9 +31,6 @@ const courses = {
                     skill: 'applied visual design',
                 },
                 {
-                    skill: 'algorithms',
-                },
-                {
                     skill: 'applied accessibility',
                 },
                 {
@@ -140,6 +137,34 @@ const courses = {
                 },
             ],
             imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601868088/dev-portfolio/udemy-node-mongo-small_iug94s.jpg',
+        },
+        {
+            id: 5,
+            title: 'Advanced React and Redux',
+            tags: [
+                {
+                    skill: 'React',
+                },
+                {
+                    skill: 'Redux',
+                },
+                {
+                    skill: 'Redux-Thunk',
+                },
+                {
+                    skill: 'Server-side auth',
+                },
+                {
+                    skill: 'Client-side auth',
+                },
+                {
+                    skill: 'JWT',
+                },
+                {
+                    skill: 'bcrypt',
+                },
+            ],
+            imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1603255142/dev-portfolio/adv_react-redux_sm_ywcpgz.jpg',
         },
     ],
 }

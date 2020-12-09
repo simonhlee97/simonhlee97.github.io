@@ -1,239 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Lee - home page</title>
+    <link rel="stylesheet" href="./gridlayout.css" />
+    <link rel="stylesheet" href="./mystylesheet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header-comp></header-comp>
+      <myfav-tech></myfav-tech>
+      <my-projects></my-projects>
+      <about-me></about-me>
+      <my-footer></my-footer>
+      <for-example></for-example>
+    </div>
 
-        <!-- UIkit JS -->
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit-icons.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css" />
-        <title>Simon Lee | web developer</title>
-        <style>
-            html {
-                scroll-behavior: smooth;
-                box-sizing: border-box;
-            }
-            body {
-                padding: 2px 2px;
-                overflow-x: hidden;
-            }
-            .container {
-                margin: 4px auto;
-                width: 100%;
-                text-align: center;
-                min-height: 100vh;
-                background-color: #fff;
-                display: grid;
-                grid-template-columns: 50% 50%;
-                grid-row: auto auto;
-                grid-column-gap: 4px;
-                grid-row-gap: 4px;
-            }
-            .container .box {
-                background-color: #333;
-                border-radius: 10px;
-                color: #fff;
-                /* display: flex; */
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                min-height: 50vh;
-            }
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                color: #fff;
-            }
-            .box.padd-box {
-                padding: 2em 1.5em;
-            }
-            #box2 {
-                background-image: url('./simon.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                /* background-attachment: fixed; */
-                border-radius: 10px;
-            }
+    <script src="https://unpkg.com/vue@next"></script>
 
-            @media only screen and (max-width: 700px) {
-                #box2 {
-                    /* background-attachment: fixed; */
-                    background-image: url('./simonmobile.jpg');
-                    /* background-position: 15 50; */
-                }
-                .container {
-                    grid-template-columns: 100%;
-                }
-                .container > div {
-                    height: auto;
-                    align-items: center;
-                    display: block;
-                }
-            }
+    <script>
+      const app = Vue.createApp({});
 
-            i.fab {
-                margin: 5px 15px;
-            }
-            a:hover,
-            i.fab:hover {
-                color: #050111;
-                transition: 0.7s all;
-            }
+      app.component('my-projects', {
+        template: `
+					<div id="my-projects">
+						<h1 class="title mt-5 pt-6 pb-3">My Projects</h1>
+						<p><img class='truepixelsvgs' src='./webdevbw.svg' alt='coding-geek'/></p>
+						<div class="projects-container pb-6 mb-6">
+							<div class='columns mycarddd' :key="proj.id" v-for="proj in projects">
+								<div class='column is-two-fifths'>
+									<img loading="lazy" :src='proj.imageurl' alt='pup' />	
+								</div>
+								<div class='column'>
+									<p class="is-size-4 has-text-link-dark">{{ proj.title }}</p>
+									<p class='my-3'>{{ proj.description}}</p>
+									<p><a :href="proj.appurl" target="_blank">app link</a></p>
+									<p><a :href="proj.codeurl">code repo</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				`,
+        data() {
+          return {
+            projects: [
+              {
+                id: 1,
+                title: 'React, Redux, and Firebase',
+                description: 'An E-Commerce shop with Stripe Payment API integration',
+                appurl: 'https://simon-crown-shop-project.herokuapp.com/',
+                codeurl: 'https://github.com/simonhlee97/edutools',
+                imageurl: 'https://simonhlee97.github.io/crown.jpg',
+              },
+              {
+                id: 2,
+                title: 'socket.io chat app',
+                description: 'Real-time chat application using web sockets',
+                appurl: 'https://simonsocketapp.herokuapp.com/',
+                codeurl: 'https://github.com/simonhlee97/simon-socket',
+                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601870335/dev-portfolio/chatapp_q2xxjv.jpg',
+              },
+              {
+                id: 3,
+                title: 'Infinite Scroll',
+                description: 'Infinite scrolling is a web-design technique that loads content continuously as the user scrolls down the page, eliminating the need for pagination.',
+                appurl: 'https://simonhlee97.github.io/simon-infinite-scroll/',
+                codeurl: 'https://github.com/simonhlee97/simon-infinite-scroll',
+                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1602473080/dev-portfolio/infinitescroll_jzgvxh.jpg',
+              },
+              {
+                id: 4,
+                title: 'Theme Switcher',
+                description: 'Toggle between a Light and Dark Color Theme.',
+                appurl: 'https://simonhlee97.github.io/simon-light-dark-mode/',
+                codeurl: 'https://github.com/simonhlee97/simon-light-dark-mode',
+                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1602472538/dev-portfolio/simon-theme-switcher_qyomtq.jpg',
+              },
+              {
+                id: 5,
+                title: 'RyuCave.com',
+                description: 'My personal blog, built with Eleventy, a static site generator.',
+                appurl: 'https://ryucave.com/',
+                codeurl: 'https://github.com/simonhlee97/eleventy-base-blog',
+                imageurl: 'https://simonhlee97.github.io/ryucave.jpg',
+              },
+              {
+                id: 6,
+                title: 'VueJS app',
+                description: 'Single-page-app created with VueJS.',
+                appurl: 'https://simonleicashop.surge.sh/',
+                codeurl: 'https://github.com/simonhlee97/vue-camera-shop',
+                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1598683424/dev-portfolio/leicashop_mea2uz.jpg',
+              },
+            ],
+          };
+        },
+      });
 
-            #box5 {
-                width: 100vw;
-                text-align: center;
-                padding-top: 3em;
-                padding-bottom: 3em;
-                min-height: 10vh;
-            }
-            .small-hr {
-                width: 20%;
-                margin: 0 auto;
-            }
-            .flex-item {
-                margin: 6px;
-                width: 50%;
-            }
-            /* css animations */
-            .box {
-                position: relative;
-                animation-name: example;
-                animation-duration: 2.5s;
-            }
-            @keyframes example {
-                from {
-                    scale: 0;
-                    opacity: 0;
-                }
-                to {
-                    scale: 1;
-                    opacity: 1;
-                }
-            }
-            .certificate {
-                margin-bottom: 1em;
-                height: auto;
-                max-width: 100%;
-                transition: 0.6s;
-            }
-            .certificate:hover {
-                transform: translateY(-6px);
-                cursor: pointer;
-            }
-            .skill-tag {
-                margin: 2.5px;
-                padding: 0 5px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div id="box1" class="box padd-box">
-                <h2>( hello ) => { I'm Simon }</h2>
-                <h4>full stack web developer</h4>
-                <p><span class="uk-label skill-tag">JavaScript</span><span class="uk-label skill-tag">React & Redux</span><span class="uk-label skill-tag">VueJS & Vuex</span></p>
-                <p><span class="uk-label uk-label-success skill-tag">HTML5</span><span class="uk-label uk-label-success skill-tag">Mustache.js</span><span class="uk-label uk-label-success skill-tag">SASS</span><span class="uk-label uk-label-success skill-tag">CSS3</span></p>
-                <p><span class="uk-label skill-tag">NodeJS</span><span class="uk-label skill-tag">Express</span><span class="uk-label skill-tag">MongoDB, Mongoose</span></p>
-                <p><span class="uk-label uk-label-success skill-tag">git</span><span class="uk-label uk-label-success skill-tag">WebPack</span><span class="uk-label uk-label-success skill-tag">Gulp.js</span><span class="uk-label uk-label-success skill-tag">WordPress</span></p>
+      app.component('header-comp', {
+        template: `<div class="sec-hero">
+						<h1 class="myh1">Simon Lee</h1>
+						<p><svg width="10%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  					<path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+						</svg></p>
+            <h3 class="myh3">web developer</h3>
+          </div>`,
+      });
+
+      app.component('myfav-tech', {
+        template: `
+	<div class='favorites'>
+		<h1 class="title mt-5 has-text-white pt-6 pb-3">My Favorite Technologies</h1>
+		<div class="flex-container">
+			<div class="flex-item"><img class="websvg" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Html-icon2.svg" alt="html-logo" /></div>
+			<div class="flex-item"><img class="websvg vue" alt="Vue.js Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/256px-Vue.js_Logo_2.svg.png" /></div>
+			<div class="flex-item"><img class="websvg" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="react-logo" /></div>
+			<div class="flex-item"><img class="websvg" src="https://upload.wikimedia.org/wikipedia/commons/6/65/Css-icon.svg" alt="css-logo" /></div>
+		</div>
+		<div class="flex-container">
+			<div class="flex-item"><img class="websvg" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="git-logo" /></div>
+			<div class="flex-item"><img class="websvg" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="node-logo" /></div>
+			<div class="flex-item"><img class="websvg" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/MongoDB_Logo.png" alt="react-logo" /></div>
+			<div class="flex-item"><img class="websvg" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Javascript-icon.svg" alt="js-logo" /></div>
+		</div>
+	</div>`,
+      });
+
+      app.component('about-me', {
+        template: `
+					<div class='about-me'>
+						<h3 class='title has-text-white'>About Me</h3>
+						<p><img class='truepixelsvgs' src='./relaxbw.svg' alt='reading'/></p>
+						<div class="notification is-link is-light">
+							Grew up in the Hoosier State (Indiana). Born in Korea.
+						</div>
+						<div class="notification is-link is-light">
+							I enjoy reading, sports, photography, music, and learning new things. And also tacos, pizza, and cheeseburgers.
+						</div>
+					</div>
+				`,
+      });
+
+      app.component('my-footer', {
+        template: `
+            <div id='footer' class="content has-text-centered">
+              <p>
+                Designed and created by <a href="mailto:simonhlee4945@gmail.com">Simon Lee</a>
+              </p>
+              <p>
+                <a href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin-in fa-2x"></i></a> &nbsp;&nbsp;&nbsp; <a href="https://github.com/simonhlee97"><i class="fab fa-github-square fa-2x"></i></a>
+              </p>
+              <p><a  target="_blank" href="http://shorturl.at/gtvAU">Download pdf resume</a></p>
+							<p><a href="https://registry.jsonresume.org/simonhlee97">Online resume</a></p>
+							<p>Last Modified: 13 Dec 2020</p>
+							<p>previous versions: <a href='/previous1.html'>home 1</a> | <a href='/previous2.html'>home 2</a></p>
+							<p>illustrations: <a href='https://www.pixeltrue.com/'>pixeltrue</a></p>
             </div>
+				`,
+      });
 
-            <div id="box2" class="box padd-box">
-                <p></p>
-            </div>
-
-            <div id="box3" class="box padd-box">
-                <h3>completed courses</h3>
-                <div class="uk-flex uk-flex-center">
-                    <div class="flex-item my-link">
-                        <a href="#course-info-modal-1" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1598671811/free_code_camp/fcc-cert1_iom5sr.jpg" alt="fcc1" /></a>
-                    </div>
-                    <div class="flex-item">
-                        <a href="#course-info-modal-2" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1598671811/free_code_camp/fcc-cert2_qlqzxi.jpg" alt="fcc2" /></a>
-                    </div>
-                </div>
-                <div class="uk-flex uk-flex-center">
-                    <div class="flex-item">
-                        <a href="#course-info-modal-3" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1601355983/dev-portfolio/vuejs-certificate_sf7nmt.jpg" alt="vue-udemy" /></a>
-                    </div>
-                    <div class="flex-item">
-                        <a href="#course-info-modal-4" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/c_thumb,w_200,g_face/v1601867851/dev-portfolio/udemy-node-mongo_exsvyq.jpg" alt="node-udemy" /></a>
-                    </div>
-                </div>
-                <div class="uk-flex uk-flex-center">
-                    <div class="flex-item">
-                        <a href="#course-info-modal-5" uk-toggle><img class="certificate" src="https://res.cloudinary.com/ryucave/image/upload/v1603255142/dev-portfolio/adv_react-redux_sm_ywcpgz.jpg" alt="advanced react." /></a>
-                    </div>
-                </div>
-                <!-- Mustache template, certificate info Modal -->
-                <script id="courses__template" type="text/html">
-                    {{#mycourses}}
-                    <div id="course-info-modal-{{id}}" uk-modal>
-                        <div class="uk-modal-dialog uk-modal-body">
-                            <button class="uk-modal-close-default" type="button" uk-close></button>
-                            <h2 style="color:navy;" class="uk-modal-title">{{ title }}</h2>
-                            <h5 style="color:navy;">Skills learned:</h5>
-                            <p>{{#tags}}<span class="uk-label skill-tag">{{}}{{skill}}</span>{{/tags}}</p>
-                            <img src="{{imageurl}}" alt="courses" />
-                        </div>
-                    </div>
-                    {{/mycourses}}
-                </script>
-                <div id="courseinfo__container"><!-- Mustache renders data here --></div>
-            </div>
-
-            <!-- Mustache template for work & personal projects Modal -->
-            <script id="modal__template" type="text/html">
-                {{#myprojects}}
-                <div id="modal-close-default-{{id}}" uk-modal>
-                    <div class="uk-modal-dialog uk-modal-body">
-                        <button class="uk-modal-close-default" type="button" uk-close></button>
-                        <h2 style="color:navy;" class="uk-modal-title">{{ title }}</h2>
-                        <p><a href="{{link}}" target="_blank">{{ description }}</a></p>
-                        <img src="{{imageurl}}" />
-                    </div>
-                </div>
-                {{/myprojects}}
-            </script>
-
-            <!-- Mustache template for list of projects -->
-            <script id="projects__template" type="text/html">
-                <div class="photos my-6 columns">
-                    <ul class="uk-list uk-list-divider">
-                        {{#myprojects}}
-                        <li><a href="#modal-close-default-{{id}}" uk-toggle>{{ title }}</a> &nbsp; <i class="{{icon}}"></i></li>
-                        {{/myprojects}}
-                    </ul>
-                </div>
-            </script>
-            <!-- Mustache template -->
-
-            <div id="box4" class="box padd-box">
-                <p style="margin-top: 1em">Past Freelance Work ( <i class="fas fa-business-time"></i> )</p>
-                <p style="margin-bottom: 3em">and Personal Projects ( <i class="far fa-clipboard"></i> )</p>
-                <div id="projects__container"></div>
-                <div id="modal__container"></div>
-            </div>
-
-            <div id="box5" class="box bottom-box">
-                <h5>"I code, therefore I am." <br />- Simon</h5>
-                <div class="link-icons">
-                    <a href="https://linkedin.com/in/simon-h-lee" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://github.com/simonhlee97/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                </div>
-                <p><a href="https://registry.jsonresume.org/simonhlee97">Online Resume</a></p>
-                <hr class="small-hr uk-margin-bottom" />
-                <small>last modified: Sept 29, 2020</small>
-                <p><a href="previous.html">previous version</a></p>
-            </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
-        <script src="./homepage.js"></script>
-    </body>
+      app.mount('#app');
+    </script>
+  </body>
 </html>

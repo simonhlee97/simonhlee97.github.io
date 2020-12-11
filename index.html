@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simon Lee - home page</title>
-    <link rel="stylesheet" href="./gridlayout.css" />
-    <link rel="stylesheet" href="./mystylesheet.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="app" class="app">
-      <header-comp></header-comp>
-      <myfav-tech></myfav-tech>
-      <my-projects></my-projects>
-      <about-me></about-me>
-      <my-footer></my-footer>
-      <for-example></for-example>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simon Lee - home page</title>
+        <link rel="stylesheet" href="./gridlayout.css" />
+        <link rel="stylesheet" href="./mystylesheet.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="app" class="app">
+            <header-comp></header-comp>
+            <myfav-tech></myfav-tech>
+            <my-projects></my-projects>
+            <about-me></about-me>
+            <my-footer></my-footer>
+            <for-example></for-example>
+        </div>
 
-    <script src="https://unpkg.com/vue@next"></script>
+        <script src="https://unpkg.com/vue@next"></script>
 
-    <script>
-      const app = Vue.createApp({});
+        <script>
+            const app = Vue.createApp({})
 
-      app.component('my-projects', {
-        template: `
+            app.component('my-projects', {
+                template: `
 					<div id="my-projects">
 						<h1 class="title mt-5 pt-6 pb-3">My Projects</h1>
 						<p><img class='truepixelsvgs' src='./webdevbw.svg' alt='coding-geek'/></p>
@@ -51,74 +48,74 @@
 						</div>
 					</div>
 				`,
-        data() {
-          return {
-            projects: [
-              {
-                id: 1,
-                title: 'React, Redux, and Firebase',
-                description: 'An E-Commerce shop with Stripe Payment API integration',
-                appurl: 'https://simon-crown-shop-project.herokuapp.com/',
-                codeurl: 'https://github.com/simonhlee97/edutools',
-                imageurl: 'https://simonhlee97.github.io/crown.jpg',
-              },
-              {
-                id: 2,
-                title: 'socket.io chat app',
-                description: 'Real-time chat application using web sockets',
-                appurl: 'https://simonsocketapp.herokuapp.com/',
-                codeurl: 'https://github.com/simonhlee97/simon-socket',
-                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601870335/dev-portfolio/chatapp_q2xxjv.jpg',
-              },
-              {
-                id: 3,
-                title: 'Infinite Scroll',
-                description: 'Infinite scrolling is a web-design technique that loads content continuously as the user scrolls down the page, eliminating the need for pagination.',
-                appurl: 'https://simonhlee97.github.io/simon-infinite-scroll/',
-                codeurl: 'https://github.com/simonhlee97/simon-infinite-scroll',
-                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1602473080/dev-portfolio/infinitescroll_jzgvxh.jpg',
-              },
-              {
-                id: 4,
-                title: 'Theme Switcher',
-                description: 'Toggle between a Light and Dark Color Theme.',
-                appurl: 'https://simonhlee97.github.io/simon-light-dark-mode/',
-                codeurl: 'https://github.com/simonhlee97/simon-light-dark-mode',
-                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1602472538/dev-portfolio/simon-theme-switcher_qyomtq.jpg',
-              },
-              {
-                id: 5,
-                title: 'RyuCave.com',
-                description: 'My personal blog, built with Eleventy, a static site generator.',
-                appurl: 'https://ryucave.com/',
-                codeurl: 'https://github.com/simonhlee97/eleventy-base-blog',
-                imageurl: 'https://simonhlee97.github.io/ryucave.jpg',
-              },
-              {
-                id: 6,
-                title: 'VueJS app',
-                description: 'Single-page-app created with VueJS.',
-                appurl: 'https://simonleicashop.surge.sh/',
-                codeurl: 'https://github.com/simonhlee97/vue-camera-shop',
-                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1598683424/dev-portfolio/leicashop_mea2uz.jpg',
-              },
-            ],
-          };
-        },
-      });
+                data() {
+                    return {
+                        projects: [
+                            {
+                                id: 1,
+                                title: 'React, Redux, and Firebase',
+                                description: 'An E-Commerce shop with Stripe Payment API integration',
+                                appurl: 'https://simon-crown-shop-project.herokuapp.com/',
+                                codeurl: 'https://github.com/simonhlee97/edutools',
+                                imageurl: 'https://simonhlee97.github.io/crown.jpg',
+                            },
+                            {
+                                id: 2,
+                                title: 'socket.io chat app',
+                                description: 'Real-time chat application using web sockets',
+                                appurl: 'https://simonsocketapp.herokuapp.com/',
+                                codeurl: 'https://github.com/simonhlee97/simon-socket',
+                                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1601870335/dev-portfolio/chatapp_q2xxjv.jpg',
+                            },
+                            {
+                                id: 3,
+                                title: 'Infinite Scroll',
+                                description: 'Infinite scrolling is a web-design technique that loads content continuously as the user scrolls down the page, eliminating the need for pagination.',
+                                appurl: 'https://simonhlee97.github.io/simon-infinite-scroll/',
+                                codeurl: 'https://github.com/simonhlee97/simon-infinite-scroll',
+                                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1602473080/dev-portfolio/infinitescroll_jzgvxh.jpg',
+                            },
+                            {
+                                id: 4,
+                                title: 'Theme Switcher',
+                                description: 'Toggle between a Light and Dark Color Theme.',
+                                appurl: 'https://simonhlee97.github.io/simon-light-dark-mode/',
+                                codeurl: 'https://github.com/simonhlee97/simon-light-dark-mode',
+                                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1602472538/dev-portfolio/simon-theme-switcher_qyomtq.jpg',
+                            },
+                            {
+                                id: 5,
+                                title: 'RyuCave.com',
+                                description: 'My personal blog, built with Eleventy, a static site generator.',
+                                appurl: 'https://ryucave.com/',
+                                codeurl: 'https://github.com/simonhlee97/eleventy-base-blog',
+                                imageurl: 'https://simonhlee97.github.io/ryucave.jpg',
+                            },
+                            {
+                                id: 6,
+                                title: 'VueJS app',
+                                description: 'Single-page-app created with VueJS.',
+                                appurl: 'https://simonleicashop.surge.sh/',
+                                codeurl: 'https://github.com/simonhlee97/vue-camera-shop',
+                                imageurl: 'https://res.cloudinary.com/ryucave/image/upload/v1598683424/dev-portfolio/leicashop_mea2uz.jpg',
+                            },
+                        ],
+                    }
+                },
+            })
 
-      app.component('header-comp', {
-        template: `<div class="sec-hero">
-						<h1 class="myh1">Simon Lee</h1>
+            app.component('header-comp', {
+                template: `<div class="sec-hero">
+						<h1 class="myh1">SIMON LEE</h1>
 						<p><svg width="10%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
   					<path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
 						</svg></p>
             <h3 class="myh3">web developer</h3>
           </div>`,
-      });
+            })
 
-      app.component('myfav-tech', {
-        template: `
+            app.component('myfav-tech', {
+                template: `
 	<div class='favorites'>
 		<h1 class="title mt-5 has-text-white pt-6 pb-3">My Favorite Technologies</h1>
 		<div class="flex-container">
@@ -134,10 +131,10 @@
 			<div class="flex-item"><img class="websvg" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Javascript-icon.svg" alt="js-logo" /></div>
 		</div>
 	</div>`,
-      });
+            })
 
-      app.component('about-me', {
-        template: `
+            app.component('about-me', {
+                template: `
 					<div class='about-me'>
 						<h3 class='title has-text-white'>About Me</h3>
 						<p><img class='truepixelsvgs' src='./relaxbw.svg' alt='reading'/></p>
@@ -149,10 +146,10 @@
 						</div>
 					</div>
 				`,
-      });
+            })
 
-      app.component('my-footer', {
-        template: `
+            app.component('my-footer', {
+                template: `
             <div id='footer' class="content has-text-centered">
               <p>
                 Designed and created by <a href="mailto:simonhlee4945@gmail.com">Simon Lee</a>
@@ -167,9 +164,9 @@
 							<p>illustrations: <a href='https://www.pixeltrue.com/'>pixeltrue</a></p>
             </div>
 				`,
-      });
+            })
 
-      app.mount('#app');
-    </script>
-  </body>
+            app.mount('#app')
+        </script>
+    </body>
 </html>

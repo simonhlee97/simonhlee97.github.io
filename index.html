@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Simon Lee - Software Developer</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             body {
                 background-color: whitesmoke;
-                padding: 4em 6em;
+                padding: 4em 12%;
                 font-family: Arial, Helvetica, sans-serif;
             }
             section {
@@ -42,28 +43,93 @@
             tr:nth-child(even) {
                 background-color: #dddddd;
             }
+            i {
+                font-size: 66px;
+                color: black;
+            }
 
             li {
                 margin-bottom: 1em;
                 line-height: 22px;
                 list-style-type: square;
             }
+            img {
+                border-radius: 50%;
+                max-width: 40%;
+                height: auto;
+            }
+            .skills-intro {
+                margin: 6em 0;
+            }
+            .right-align {
+                text-align: end;
+            }
+            .skills-flex-wrap {
+                margin: 4em 0;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
 
-            @media only screen and (max-width: 600px) {
-                body {
-                    padding: 0.6em;
+            .typewriter {
+                /* overflow: hidden; */ /* Ensures the content is not revealed until the animation */
+                border-right: 0.1em solid rgb(0, 0, 0); /* The typwriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                letter-spacing: 0.1em; /* Adjust as needed */
+                animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            }
+
+            /* The typing effect */
+            @keyframes typing {
+                from {
+                    width: 0;
                 }
+                to {
+                    width: 100%;
+                }
+            }
+
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+                from,
+                to {
+                    border-color: transparent;
+                }
+                50% {
+                    border-color: tomato;
+                }
+            }
+
+            .contact-icon i:hover {
+                color: tomato;
             }
         </style>
     </head>
 
     <body>
         <div class="title-center">
-            <h1>Simon Lee</h1>
-            <p>Indianapolis, IN</p>
+            <h1 style="font-size: 6vw" class="typewriter"><i class="fas fa-terminal"></i> Hi, I'm Simon</h1>
             <p>Software and web developer</p>
+            <img src="./simonmobile.jpg" alt="me" />
+            <p>Coding and learning are 2 of my favorite things to do</p>
         </div>
+
         <section>
+            <div class="skills-intro">
+                <h3>I enjoy building apps and working with ...</h3>
+                <div class="skills-flex-wrap">
+                    <i class="fab fa-react" title="React"></i>
+                    <i class="fab fa-vuejs" title="VueJS"></i>
+                    <i class="fab fa-node" title="NodeJS"></i>
+                    <i class="fab fa-css3" title="CSS"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                </div>
+                <h3 class="right-align">... and always happy to learn new frameworks, tools, and languages</h3>
+            </div>
+
+            <h3>Full List of Skills</h3>
             <table>
                 <tr>
                     <td>Python</td>
@@ -72,7 +138,7 @@
                 </tr>
                 <tr>
                     <td>Django</td>
-                    <td>React</td>
+                    <td>React, React-Native</td>
                     <td>MongoDB</td>
                 </tr>
                 <tr>
@@ -98,8 +164,7 @@
                 <h3>Most Recent Projects</h3>
             </div>
             <ul>
-                <li><a href="https://simonpost.com/" target="_blank">SimonPost.com</a> - my blog, built with Django. <a href="https://github.com/simonhlee97/">📁</a></li>
-                <li><a href="https://seoulstack.com">SeoulStack.com</a> - a Hacker News clone, built with Django, for Seoul's expat community. <a href="https://github.com/simonhlee97/">📁</a></li>
+                <li>SimonPost.com - My blog (currently under revision)</li>
                 <li><a href="https://www.npmjs.com/package/simplesimoncss">SimpleSimonCSS</a> - my 1st npm package. A simple alternative to Bootstrap or Bulma. <a href="https://github.com/simonhlee97/">📁</a></li>
             </ul>
         </section>
@@ -127,14 +192,11 @@
         <section>
             <div class="title-center">
                 <h3>Contact</h3>
+                <div class="contact-icons">
+                    <a class="contact-icon" style="margin-right: 0.7em" href="https://github.com/simonhlee97/"><i class="fab fa-github-square"></i></a>
+                    <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
-
-            <table>
-                <tr>
-                    <td><a href="https://github.com/simonhlee97/">Github</a></td>
-                    <td><a href="https://linkedin.com/in/simon-h-lee">LinkedIn</a></td>
-                </tr>
-            </table>
         </section>
     </body>
 </html>

@@ -71,35 +71,8 @@
                 flex-direction: row;
                 flex-wrap: wrap;
             }
-
-            .typewriter {
-                /* overflow: hidden; */ /* Ensures the content is not revealed until the animation */
-                border-right: 0.1em solid rgb(0, 0, 0); /* The typwriter cursor */
-                white-space: nowrap; /* Keeps the content on a single line */
-                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-                letter-spacing: 0.1em; /* Adjust as needed */
-                animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
-            }
-
-            /* The typing effect */
-            @keyframes typing {
-                from {
-                    width: 0;
-                }
-                to {
-                    width: 100%;
-                }
-            }
-
-            /* The typewriter cursor effect */
-            @keyframes blink-caret {
-                from,
-                to {
-                    border-color: transparent;
-                }
-                50% {
-                    border-color: tomato;
-                }
+            .skills-flex-wrap > i {
+                margin: 20px;
             }
 
             .contact-icon i:hover {
@@ -110,7 +83,7 @@
 
     <body>
         <div class="title-center">
-            <h1 style="font-size: 6vw" class="typewriter"><i class="fas fa-terminal"></i> Hi, I'm Simon</h1>
+            <h1 style="font-size: 6vw"><i class="fas fa-terminal" style="font-size: 50px"></i> Hi, I'm Simon</h1>
             <p>Software and web developer</p>
             <img src="./simonmobile.jpg" alt="me" />
             <p>Coding and learning are 2 of my favorite things to do</p>

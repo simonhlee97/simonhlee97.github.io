@@ -169,7 +169,21 @@
                     <a class="contact-icon" style="margin-right: 0.7em" href="https://github.com/simonhlee97/"><i class="fab fa-github-square"></i></a>
                     <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin"></i></a>
                 </div>
+                <div class="current-time">
+                    <p style='font-size:10pt;margin-top:2em;' id="clock"></p>
+                </div>
             </div>
         </section>
+
+        <script type="text/javascript">
+            var clockElement = document.getElementById('clock');
+        
+            function clock() {
+                clockElement.textContent = new Date().toLocaleString();
+            }
+        
+            setInterval(clock, 1000);
+        </script>
+        
     </body>
 </html>

@@ -137,7 +137,7 @@
                 <h3>Most Recent Projects</h3>
             </div>
             <ul>
-                <li>SimonPost.com - My blog (currently under revision)</li>
+                <li><a href="https://simonpost.com/" target="_blank">SimonPost.com</a> - My tech blog</li>
                 <li><a href="https://www.npmjs.com/package/simplesimoncss">SimpleSimonCSS</a> - my 1st npm package. A simple alternative to Bootstrap or Bulma. <a href="https://github.com/simonhlee97/">📁</a></li>
             </ul>
         </section>
@@ -170,20 +170,19 @@
                     <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <div class="current-time">
-                    <p style='font-size:10pt;margin-top:2em;' id="clock"></p>
+                    <p style="font-size: 10pt; margin-top: 2em" id="clock"></p>
                 </div>
             </div>
         </section>
 
         <script type="text/javascript">
-            var clockElement = document.getElementById('clock');
-        
+            var clockElement = document.getElementById('clock')
+
             function clock() {
-                clockElement.textContent = new Date().toLocaleString();
+                clockElement.textContent = new Date().toLocaleString()
             }
-        
-            setInterval(clock, 1000);
+
+            setInterval(clock, 1000)
         </script>
-        
     </body>
 </html>

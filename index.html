@@ -5,166 +5,140 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Simon Lee - Software Developer</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./animate.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
-            body {
-                background-color: whitesmoke;
-                padding: 4em 12%;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            section {
-                margin: 5em 0;
-            }
-            .title-center {
-                font-size: 2rem;
-                text-align: center;
-            }
-            a {
-                text-decoration: none;
-                color: #2e1ba3;
-            }
-            a:hover {
-                text-decoration: underline;
-                color: tomato;
-            }
-            table {
-                font-family: 'Courier New', Courier, monospace;
-                border-collapse: collapse;
-                width: 100%;
-                table-layout: fixed;
-            }
-            td,
-            th {
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: left;
-                padding: 10px;
-            }
-            tr:nth-child(even) {
-                background-color: #dddddd;
-            }
-            i {
-                font-size: 66px;
-                color: black;
-            }
-
-            li {
-                margin-bottom: 1em;
-                line-height: 22px;
-                list-style-type: square;
-            }
-            img {
-                border-radius: 50%;
-                max-width: 40%;
-                height: auto;
-            }
-            .skills-intro {
-                margin: 6em 0;
-            }
-            .right-align {
-                text-align: end;
-            }
-            .skills-flex-wrap {
-                margin: 4em 0;
-                display: flex;
-                justify-content: space-around;
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            .skills-flex-wrap > i {
-                margin: 20px;
-            }
-
-            .contact-icon i:hover {
-                color: tomato;
-            }
-        </style>
     </head>
 
     <body>
-        <div class="title-center">
-            <h1 style="font-size: 6vw"><i class="fas fa-terminal" style="font-size: 50px"></i> Hi, I'm Simon</h1>
-            <p>Software and web developer</p>
-            <img src="./simonmobile.jpg" alt="me" />
-            <p>Coding and learning are 2 of my favorite things to do</p>
+        <div class="hero">
+            <div class="hero-child">
+                <h1 class="focus-in-expand-fwd" style="font-size: 45px"><i class="fas fa-terminal" style="font-size: 45px"></i> Hi, I'm Simon</h1>
+                <img id="profile-pic" class="text-focus-in" src="./simonmobile.jpg" alt="me" />
+                <h2 class="text-focus-in2">Software and web developer</h2>
+            </div>
         </div>
 
-        <section>
-            <div class="skills-intro">
-                <h3>I enjoy building apps and working with ...</h3>
-                <div class="skills-flex-wrap">
-                    <i class="fab fa-react" title="React"></i>
-                    <i class="fab fa-vuejs" title="VueJS"></i>
-                    <i class="fab fa-node" title="NodeJS"></i>
-                    <i class="fab fa-css3" title="CSS"></i>
-                    <i class="fab fa-python" title="Python"></i>
+        <div class="title-center">
+            <i class="fas fa-arrow-down blink-1"></i>
+        </div>
+
+        <main>
+            <section class="hero">
+                <div class="skills-intro">
+                    <h2>I enjoy building apps and working with ...</h2>
+                    <div class="skills-flex-wrap">
+                        <i class="fab fa-react" title="React"></i>
+                        <i class="fab fa-vuejs" title="VueJS"></i>
+                        <i class="fab fa-node" title="NodeJS"></i>
+                        <i class="fab fa-css3" title="CSS"></i>
+                        <i class="fab fa-python" title="Python"></i>
+                    </div>
+                    <h2 class="right-align">... and always happy to learn new frameworks, tools, and languages</h2>
                 </div>
-                <h3 class="right-align">... and always happy to learn new frameworks, tools, and languages</h3>
+            </section>
+
+            <div class="title-center">
+                <i class="fas fa-arrow-down blink-1"></i>
             </div>
 
-            <h3>Full List of Skills</h3>
-            <table>
-                <tr>
-                    <td>Python</td>
-                    <td>JavaScript</td>
-                    <td>Git</td>
-                </tr>
-                <tr>
-                    <td>Django</td>
-                    <td>React, React-Native</td>
-                    <td>MongoDB</td>
-                </tr>
-                <tr>
-                    <td>Flask</td>
-                    <td>VueJS</td>
-                    <td>PostgreSQL</td>
-                </tr>
-                <tr>
-                    <td>Redux</td>
-                    <td>NodeJS</td>
-                    <td>Linux</td>
-                </tr>
-                <tr>
-                    <td>HTML5</td>
-                    <td>CSS3, SCSS</td>
-                    <td>WebPack, Gulp</td>
-                </tr>
-            </table>
-        </section>
+            <section class="hero">
+                <div class="hero-child">
+                    <h2>Full List of Skills</h2>
+                    <table>
+                        <tr>
+                            <td>Python</td>
+                            <td>JavaScript</td>
+                            <td>Git</td>
+                        </tr>
+                        <tr>
+                            <td>Django</td>
+                            <td>React, React-Native</td>
+                            <td>MongoDB</td>
+                        </tr>
+                        <tr>
+                            <td>Flask</td>
+                            <td>VueJS</td>
+                            <td>PostgreSQL</td>
+                        </tr>
+                        <tr>
+                            <td>Redux</td>
+                            <td>NodeJS</td>
+                            <td>Linux</td>
+                        </tr>
+                        <tr>
+                            <td>HTML5</td>
+                            <td>CSS3, SCSS</td>
+                            <td>WebPack, Gulp</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
 
-        <section>
             <div class="title-center">
-                <h3>Most Recent Projects</h3>
-            </div>
-            <ul>
-                <li><a href="https://simonpost.com/" target="_blank">SimonPost.com</a> - My tech blog</li>
-                <li><a href="https://www.npmjs.com/package/simplesimoncss">SimpleSimonCSS</a> - my 1st npm package. A simple alternative to Bootstrap or Bulma. <a href="https://github.com/simonhlee97/">📁</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="title-center">
-                <h3>Older Projects</h3>
-            </div>
-            <ul>
-                <li><a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">E-commerce shop</a> - built with React, Redux, Firebase, Stripe API. <a href="https://github.com/simonhlee97/edutools">📁</a></li>
-                <li><a href="https://simonsocketapp.herokuapp.com/">socket.io project</a> - a real-time chat app, built with Socket.io. <a href="https://github.com/simonhlee97/simon-socket">📁</a></li>
-                <li><a href="https://simonhlee97.github.io/simon-light-dark-mode/">Dark-Light mode</a> - CSS project, theme switcher. <a href="https://github.com/simonhlee97/simon-light-dark-mode/">📁</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="title-center">
-                <h3>About Simon</h3>
+                <i class="fas fa-arrow-down blink-1"></i>
             </div>
 
-            <p>Born in rice fields (Korea), grew up in corn fields (Indiana).</p>
-            <p>Loves basketball, tennis, Pink Floyd, Led Zeppelin, Simon and Garfunkel, photography, tacos, pizza, books, New Yorker Magazine, podcasts.</p>
-        </section>
+            <div class="section">
+                <div class="title-center">
+                    <h2>Most Recent Projects</h2>
+                </div>
+                <div class="projects-container">
+                    <div class="card">
+                        <h4><a href="https://simonscrimba.netlify.com/" target="_blank">My Scrimba Journey</a></h4>
+                        <p>Here are some of the projects I built while going through their Frontend Career Path.</p>
+                        <p><a href="https://github.com/simonhlee97/my-scrimba-journey">the code</a></p>
+                    </div>
+                    <div class="card">
+                        <h4><a href="https://www.npmjs.com/package/simplesimoncss">SimpleSimonCSS</a></h4>
+                        <p>My 1st npm package. A simple alternative to Bootstrap or Bulma.</p>
+                        <p><a href="https://github.com/simonhlee97/simplesimoncss">the code</a></p>
+                    </div>
+                    <div class="card">
+                        <h4><a href="https://simonpost.com/" target="_blank">SimonPost.com</a></h4>
+                        <p>My tech blog. I write about web development, and not so often, I post about expat life in Korea.</p>
+                    </div>
+                </div>
+            </div>
 
-        <section>
-            <div class="title-center">
-                <h3>Contact</h3>
+            <div class="section">
+                <div class="title-center">
+                    <h2>Older Projects</h2>
+                </div>
+                <div class="projects-container">
+                    <div class="card">
+                        <h4><a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">E-commerce shop</a></h4>
+                        <p>A project built with React, Redux, Firebase, Stripe API.</p>
+                        <p><a href="https://github.com/simonhlee97/edutools">the code</a></p>
+                    </div>
+
+                    <div class="card">
+                        <h4><a href="https://simonsocketapp.herokuapp.com/">socket.io project</a></h4>
+                        <p>A real-time chat app, built with Socket.io</p>
+                        <p><a href="https://github.com/simonhlee97/simon-socket">the code</a></p>
+                    </div>
+
+                    <div class="card">
+                        <h4><a href="https://simonhlee97.github.io/simon-light-dark-mode/">Dark-Light mode</a></h4>
+                        <p>Dark mode and light mode themes.</p>
+                        <p><a href="https://github.com/simonhlee97/simon-light-dark-mode/">the code</a></p>
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="title-center">
+                    <h2>About Simon</h2>
+                </div>
+
+                <div class="about-text">
+                    <p>Born in rice fields (Korea), grew up in corn fields (Indiana). I love basketball, tennis, Pink Floyd, Led Zeppelin, Simon and Garfunkel, photography, tacos, pizza, books, New Yorker Magazine, podcasts.</p>
+                </div>
+            </div>
+
+            <div class="section" style="text-align: center">
+                <h2>Contact</h2>
                 <div class="contact-icons">
                     <a class="contact-icon" style="margin-right: 0.7em" href="https://github.com/simonhlee97/"><i class="fab fa-github-square"></i></a>
                     <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin"></i></a>
@@ -173,7 +147,7 @@
                     <p style="font-size: 10pt; margin-top: 2em" id="clock"></p>
                 </div>
             </div>
-        </section>
+        </main>
 
         <script type="text/javascript">
             var clockElement = document.getElementById('clock')

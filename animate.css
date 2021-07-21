@@ -1,0 +1,59 @@
+/* animations */
+.focus-in-expand-fwd {
+    animation: focus-in-expand-fwd 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes focus-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        transform: translateZ(-800px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.text-focus-in {
+    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s both;
+}
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.text-focus-in2 {
+    animation: text-focus-in 1.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2s both;
+}
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.blink-1 {
+    animation: blink-1 2s cubic-bezier(0.77, 0, 0.175, 1) infinite both;
+}
+@keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}

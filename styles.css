@@ -36,7 +36,9 @@ hr {
     border-bottom: 0.1px solid hsla(0, 9%, 77%, 0.774);
     width: 10%;
 }
-
+.card-gh {
+    font-size: 13pt;
+}
 .projects-container {
     display: flex;
     justify-content: center;

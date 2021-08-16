@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Simon Lee - Software Developer</title>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <link rel="stylesheet" href="./styles.css" />
         <link rel="stylesheet" href="./animate.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -79,6 +80,54 @@
                 <i class="fas fa-arrow-down blink-1"></i>
             </div>
 
+            <!-- EXPERIMENT WITH ALPINE.JS -->
+            <div class="section">
+                <div class="title-center">
+                    <h2>Recent Projects</h2>
+                </div>
+            <div
+                x-data="{ 
+                    pjs : [
+                        {id: 1, name: 'My Scrimba Journey',description: 'hello description', link: 'https://github.com/simonhlee97/scrimba-journey'},
+                        {id: 2, name: 'SimpleSimonCSS',description: 'hello description', link: 'https://github.com/simonhlee97/simplesimoncss'},
+                        {id: 3, name: 'SimonPost.com',description: 'hello description', link: 'https://github.com/simonhlee97/blog'}
+                    ]
+                }"
+            >
+                <template x-for="(pj, index) in pjs" :key="index">
+                    <div class="card">
+                        <p x-text="pj.name"></p>
+                        <p x-text="pj.description"></p>
+                        <a x-bind:href="pj.link"><i class="card-gh fab fa-github-square"></i></a>
+                    </div>
+                </template>
+            </div>
+            </div>
+
+            <h1>Old Projects</h1>
+            <div
+                x-data="{ 
+                    oldprojects : [
+                        {id: 1, name: 'Light & Dark Mode', description: 'a short project description', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'},
+                        {id: 2, name: 'eCommerce Store', description: 'a short project description', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'},
+                        {id: 3, name: 'socket.io real-time chat', description: 'a short project description', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'}
+                    ]
+                }"
+            >
+                <template x-for="(proj, i) in oldprojects" :key="i">
+                    <div class="card">
+                        <p><span x-text="proj.name"></span></p>
+                        <p><span x-text="proj.description"></span></p>
+                        <a x-bind:href="proj.src"><i class="card-gh fab fa-github-square"></i></a>
+                        <a x-bind:href="proj.link"><i class="card-gh fab fa-github-square"></i></a>
+                    </div>
+                </template>
+            </div>
+
+            <!-- EXPERIMENT WITH ALPINE.JS -->
+            <i class="card-gh fa fa-external-link"></i>
+
+
             <div class="section">
                 <div class="title-center">
                     <h2>Most Recent Projects</h2>
@@ -139,6 +188,7 @@
 
             <div class="section" style="text-align: center">
                 <h2>Contact</h2>
+              
                 <div class="contact-icons">
                     <a class="contact-icon" style="margin-right: 0.7em" href="https://github.com/simonhlee97/"><i class="fab fa-github-square"></i></a>
                     <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin"></i></a>
@@ -156,7 +206,7 @@
                 clockElement.textContent = new Date().toLocaleString()
             }
 
-            setInterval(clock, 1000)
+            setInterval(clock, 1000);
         </script>
     </body>
 </html>

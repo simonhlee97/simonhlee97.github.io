@@ -95,13 +95,15 @@
                     }"
                 >
                     <template x-for="(pj, index) in pjs" :key="index">
-                        <div class="card">
-                            <p x-text="pj.name"></p>
-                            <p x-text="pj.short"></p>
-                            <p x-text="pj.long"></p>
+                        <div class="projects-container">
+                            <div class="card">
+                                <p x-text="pj.name"></p>
+                                <p x-text="pj.short"></p>
+                                <p x-text="pj.long"></p>
 
-                            <a x-bind:href="pj.src"><i class="card-gh fab fa-github-square"></i></a>
-                            <a x-bind:href="pj.link"><i class="card-gh fas fa-external-link-alt"></i></a>
+                                <a x-bind:href="pj.src"><i class="card-gh fab fa-github-square"></i></a>
+                                <a x-bind:href="pj.link"><i class="card-gh fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
                     </template>
                 </div>

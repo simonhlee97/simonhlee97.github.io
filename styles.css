@@ -37,7 +37,12 @@ hr {
     width: 10%;
 }
 .card-gh {
-    font-size: 13pt;
+    font-size: 13.5pt;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+.card-gh:hover {
+    color: tomato;
 }
 .projects-container {
     display: flex;

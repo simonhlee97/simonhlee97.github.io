@@ -85,95 +85,49 @@
                 <div class="title-center">
                     <h2>Recent Projects</h2>
                 </div>
-            <div
-                x-data="{ 
-                    pjs : [
-                        {id: 1, name: 'My Scrimba Journey',description: 'hello description', link: 'https://github.com/simonhlee97/scrimba-journey'},
-                        {id: 2, name: 'SimpleSimonCSS',description: 'hello description', link: 'https://github.com/simonhlee97/simplesimoncss'},
-                        {id: 3, name: 'SimonPost.com',description: 'hello description', link: 'https://github.com/simonhlee97/blog'}
-                    ]
-                }"
-            >
-                <template x-for="(pj, index) in pjs" :key="index">
-                    <div class="card">
-                        <p x-text="pj.name"></p>
-                        <p x-text="pj.description"></p>
-                        <a x-bind:href="pj.link"><i class="card-gh fab fa-github-square"></i></a>
-                    </div>
-                </template>
-            </div>
+                <div
+                    x-data="{ 
+                        pjs : [
+                            {id: 1, name: 'My Scrimba Journey', short: 'hello desehfhfhcription',long: 'a longer summary', src: 'https://github.com/simonhlee97/scrimba-journey', link: 'https://netlify.com/'},
+                            {id: 2, name: 'SimpleSimonCSS', short: 'My 1st NPM Package',long: 'a longer summary', src: 'https://github.com/simonhlee97/simplesimoncss', link: 'https://netlify.com/'},
+                            {id: 3, name: 'SimonPost.com', short: 'Personal Blog',long: 'a longer summary', src: 'https://github.com/simonhlee97/blog', link: 'https://netlify.com/'}
+                        ]
+                    }"
+                >
+                    <template x-for="(pj, index) in pjs" :key="index">
+                        <div class="card">
+                            <p x-text="pj.name"></p>
+                            <p x-text="pj.short"></p>
+                            <p x-text="pj.long"></p>
+
+                            <a x-bind:href="pj.src"><i class="card-gh fab fa-github-square"></i></a>
+                            <a x-bind:href="pj.link"><i class="card-gh fas fa-external-link-alt"></i></a>
+                        </div>
+                    </template>
+                </div>
             </div>
 
-            <h1>Old Projects</h1>
+            <h2 class="title-center">Old Projects</h2>
             <div
                 x-data="{ 
                     oldprojects : [
-                        {id: 1, name: 'Light & Dark Mode', description: 'a short project description', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'},
-                        {id: 2, name: 'eCommerce Store', description: 'a short project description', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'},
-                        {id: 3, name: 'socket.io real-time chat', description: 'a short project description', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'}
+                        {id: 1, name: 'Light & Dark Mode', short: 'Theme toggle', long: 'toggle between a dark and light mode theme', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'},
+                        {id: 2, name: 'eCommerce Store', short: 'e-commerce store', long: 'built with React, Redux, Firebase, Stripe API', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'},
+                        {id: 3, name: 'socket.io real-time chat', short: 'chat application', long: 'A real-time chat application using socket.io', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'}
                     ]
                 }"
             >
                 <template x-for="(proj, i) in oldprojects" :key="i">
-                    <div class="card">
-                        <p><span x-text="proj.name"></span></p>
-                        <p><span x-text="proj.description"></span></p>
-                        <a x-bind:href="proj.src"><i class="card-gh fab fa-github-square"></i></a>
-                        <a x-bind:href="proj.link"><i class="card-gh fab fa-github-square"></i></a>
+                    <div class="projects-container">
+                        <div class="card">
+                            <p x-text="proj.name"></p>
+                            <p x-text="proj.short"></p>
+                            <p x-text="proj.long"></p>
+                            <a x-bind:href="proj.src"><i class="card-gh fab fa-github-square"></i></a>
+                            <a x-bind:href="proj.link"><i class="card-gh fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                 </template>
-            </div>
-
-            <!-- EXPERIMENT WITH ALPINE.JS -->
-            <i class="card-gh fa fa-external-link"></i>
-
-
-            <div class="section">
-                <div class="title-center">
-                    <h2>Most Recent Projects</h2>
-                </div>
-                <div class="projects-container">
-                    <div class="card">
-                        <h4><a href="https://simonscrimba.netlify.com/" target="_blank">My Scrimba Journey</a></h4>
-                        <p>Here are some of the projects I built while going through their Frontend Career Path.</p>
-                        <p><a href="https://github.com/simonhlee97/my-scrimba-journey">the code</a></p>
-                    </div>
-                    <div class="card">
-                        <h4><a href="https://www.npmjs.com/package/simplesimoncss">SimpleSimonCSS</a></h4>
-                        <p>My 1st npm package. A simple alternative to Bootstrap or Bulma.</p>
-                        <p><a href="https://github.com/simonhlee97/simplesimoncss">the code</a></p>
-                    </div>
-                    <div class="card">
-                        <h4><a href="https://simonpost.com/" target="_blank">SimonPost.com</a></h4>
-                        <p>My tech blog. I write about web development, and not so often, I post about expat life in Korea.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="title-center">
-                    <h2>Older Projects</h2>
-                </div>
-                <div class="projects-container">
-                    <div class="card">
-                        <h4><a href="https://simon-crown-shop-project.herokuapp.com/" target="_blank">E-commerce shop</a></h4>
-                        <p>A project built with React, Redux, Firebase, Stripe API.</p>
-                        <p><a href="https://github.com/simonhlee97/edutools">the code</a></p>
-                    </div>
-
-                    <div class="card">
-                        <h4><a href="https://simonsocketapp.herokuapp.com/">socket.io project</a></h4>
-                        <p>A real-time chat app, built with Socket.io</p>
-                        <p><a href="https://github.com/simonhlee97/simon-socket">the code</a></p>
-                    </div>
-
-                    <div class="card">
-                        <h4><a href="https://simonhlee97.github.io/simon-light-dark-mode/">Dark-Light mode</a></h4>
-                        <p>Dark mode and light mode themes.</p>
-                        <p><a href="https://github.com/simonhlee97/simon-light-dark-mode/">the code</a></p>
-                    </p>
-                    </div>
-                </div>
             </div>
 
             <div class="section">
@@ -188,7 +142,7 @@
 
             <div class="section" style="text-align: center">
                 <h2>Contact</h2>
-              
+
                 <div class="contact-icons">
                     <a class="contact-icon" style="margin-right: 0.7em" href="https://github.com/simonhlee97/"><i class="fab fa-github-square"></i></a>
                     <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin"></i></a>
@@ -206,7 +160,7 @@
                 clockElement.textContent = new Date().toLocaleString()
             }
 
-            setInterval(clock, 1000);
+            setInterval(clock, 1000)
         </script>
     </body>
 </html>

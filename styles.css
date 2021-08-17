@@ -53,7 +53,7 @@ hr {
 .card {
     background-color: white;
     width: 100%;
-    height: 170px;
+    height: 172px;
     margin: 1.4%;
     padding: 11px;
     text-align: center;
@@ -129,7 +129,7 @@ img {
         padding: 0 3em;
     }
     .card {
-        width: 45%;
+        max-width: 70%;
     }
     .about-text {
         padding: 0 5.8em;
@@ -139,7 +139,7 @@ img {
     main {
         padding: 0 6em;
     }
-    .card {
-        width: 30%;
-    }
+    /* .card {
+        width: 285px;
+    } */
 }

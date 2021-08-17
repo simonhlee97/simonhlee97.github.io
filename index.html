@@ -88,9 +88,9 @@
                 <div
                     x-data="{ 
                         pjs : [
-                            {id: 1, name: 'My Scrimba Journey', short: 'hello desehfhfhcription',long: 'a longer summary', src: 'https://github.com/simonhlee97/scrimba-journey', link: 'https://netlify.com/'},
-                            {id: 2, name: 'SimpleSimonCSS', short: 'My 1st NPM Package',long: 'a longer summary', src: 'https://github.com/simonhlee97/simplesimoncss', link: 'https://netlify.com/'},
-                            {id: 3, name: 'SimonPost.com', short: 'Personal Blog',long: 'a longer summary', src: 'https://github.com/simonhlee97/blog', link: 'https://netlify.com/'}
+                            {id: 1, name: 'My Scrimba Journey', short: 'Scrimba course projects', src: 'https://github.com/simonhlee97/scrimba-journey', link: 'https://simonscrimba.netlify.app/'},
+                            {id: 2, name: 'SimpleSimonCSS', short: 'My 1st NPM Package', src: 'https://github.com/simonhlee97/simplesimoncss', link: 'https://www.npmjs.com/package/simplesimoncss'},
+                            {id: 3, name: 'SimonPost.com', short: 'Personal Blog', src: 'https://github.com/simonhlee97/eleventy-base-blog-1', link: 'https://simonpost.com/'}
                         ]
                     }"
                 >
@@ -99,8 +99,6 @@
                             <div class="card">
                                 <p x-text="pj.name"></p>
                                 <p x-text="pj.short"></p>
-                                <p x-text="pj.long"></p>
-
                                 <a x-bind:href="pj.src"><i class="card-gh fab fa-github-square"></i></a>
                                 <a x-bind:href="pj.link"><i class="card-gh fas fa-external-link-alt"></i></a>
                             </div>
@@ -113,9 +111,9 @@
             <div
                 x-data="{ 
                     oldprojects : [
-                        {id: 1, name: 'Light & Dark Mode', short: 'Theme toggle', long: 'toggle between a dark and light mode theme', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'},
-                        {id: 2, name: 'eCommerce Store', short: 'e-commerce store', long: 'built with React, Redux, Firebase, Stripe API', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'},
-                        {id: 3, name: 'socket.io real-time chat', short: 'chat application', long: 'A real-time chat application using socket.io', src: 'https://github.com/simonhlee97/blog', link: 'https://netlifyapp.com'}
+                        {id: 1, name: 'Light & Dark Mode', short: 'toggle between a dark and light mode theme', src: 'https://github.com/simonhlee97/simon-light-dark-mode/', link: 'https://simonhlee97.github.io/simon-light-dark-mode/'},
+                        {id: 2, name: 'eCommerce Store', short: 'An online store built with React, Redux, Firebase, Stripe API', src: 'https://github.com/simonhlee97/edutools', link: 'https://simon-crown-shop-project.herokuapp.com/'},
+                        {id: 3, name: 'socket.io real-time chat', short: 'A real-time chat application using socket.io', src: 'https://github.com/simonhlee97/simon-socket', link: 'https://simonsocketapp.herokuapp.com/'}
                     ]
                 }"
             >
@@ -124,7 +122,6 @@
                         <div class="card">
                             <p x-text="proj.name"></p>
                             <p x-text="proj.short"></p>
-                            <p x-text="proj.long"></p>
                             <a x-bind:href="proj.src"><i class="card-gh fab fa-github-square"></i></a>
                             <a x-bind:href="proj.link"><i class="card-gh fas fa-external-link-alt"></i></a>
                         </div>

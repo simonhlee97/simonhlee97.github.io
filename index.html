@@ -6,46 +6,122 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Simon Lee - Software Developer</title>
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+        <link rel="stylesheet" href="./flex.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="./animate.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body>
-        <div class="hero">
+        <div class="hero center">
             <div class="hero-child">
                 <h1 class="focus-in-expand-fwd" style="font-size: 45px"><i class="fas fa-terminal" style="font-size: 45px"></i> Hi, I'm Simon</h1>
-                <img id="profile-pic" class="text-focus-in" src="./simonmobile.jpg" alt="me" />
+                <div class="image-wrapper">
+                    <img id="profile-pic" class="text-focus-in" src="./simonmobile.jpg" alt="me" />
+                </div>
                 <h2 class="text-focus-in2">Software and web developer</h2>
             </div>
         </div>
+        <main class='row'>
+            <section class="philosophy column">
+                
+                <h2 class='center'>My Dev Philosophy</h2>
+                <div class="center phil-buttons">
+                    <a href="https://componentdriven.org"><button class='philos'>Component-Driven Development</button></a><br><br>
+                    <a href="https://bradfrost.com/blog/post/atomic-web-design/"><button class='philos'>Atomic Design</button></a><br><br>
+                    <a href="https://bradfrost.com/blog/post/mobile-first-responsive-web-design/"><button class='philos'>Mobile-first, responsive design</button></a>
+                </div>
+                
+            </section>
 
-        <div class="title-center">
-            <i class="fas fa-arrow-down blink-1"></i>
-        </div>
+            <section class="work-setup column">
+                <h2 class='center'>My Favorite Tools 🧰</h2>
+                <button class="accordion">Operating System</button>
+                <div class="panel">
+                    <p><img width="90" src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" alt="Ubuntu" /></p>
+                    <p>Ubuntu</p>
+                </div>
 
-        <main>
-            <section class="hero">
-                <div class="skills-intro">
-                    <h2>I enjoy building apps and working with ...</h2>
-                    <div class="skills-flex-wrap">
-                        <i class="fab fa-react" title="React"></i>
-                        <i class="fab fa-vuejs" title="VueJS"></i>
-                        <i class="fab fa-node" title="NodeJS"></i>
-                        <i class="fab fa-css3" title="CSS"></i>
-                        <i class="fab fa-python" title="Python"></i>
-                    </div>
-                    <h2 class="right-align">... and always happy to learn new frameworks, tools, and languages</h2>
+                <button class="accordion">Editor</button>
+                <div class="panel">
+                    <p><img width="90" src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS code"></p>
+                    <p>VS Code</p>
+                </div>
+
+                <button class="accordion">Favorite books, references</button>
+                <div class="panel">
+                    <p>JavaScript.info</p>
+                    <p>Mozilla Developers Network</p>
                 </div>
             </section>
 
-            <div class="title-center">
-                <i class="fas fa-arrow-down blink-1"></i>
-            </div>
+            <section class="new projects column">
+                <h2 class="center">Recent Projects</h2>
+                <div class="flex-container"
+                    x-data="{ 
+                        pjs : [
+                            {id: 1, name: 'My Scrimba Journey', short: 'Scrimba course projects', src: 'https://github.com/simonhlee97/scrimba-journey', link: 'https://simonscrimba.netlify.app/'},
+                            {id: 2, name: 'SimpleSimonCSS', short: 'My 1st NPM Package', src: 'https://github.com/simonhlee97/simplesimoncss', link: 'https://www.npmjs.com/package/simplesimoncss'},
+                            {id: 3, name: 'SimonPost.com', short: 'Personal Blog', src: 'https://github.com/simonhlee97/eleventy-base-blog-1', link: 'https://simonpost.com/'}
+                        ]
+                    }"
+                >
+                    <template class='card' x-for="(pj, index) in pjs" :key="index">
+                        <div class='card-content'>
+                            <h4 x-text="pj.name"></h4>
+                            <span x-text="pj.short"></span>
+                            <br>
+                            <br>
+                            <div class="icons">
+                                <a x-bind:href="pj.src"><i class="card-icons fab fa-github-square"></i></a>
+                                <a x-bind:href="pj.link"><i class="card-icons fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
 
-            <section class="hero">
-                <div class="hero-child">
-                    <h2>Full List of Skills</h2>
+            <section class="old projects column">
+                
+                <h2 class="center">Old Projects</h2>
+                <div class="flex-container"
+                    x-data="{ 
+                        oldprojects : [
+                            {id: 1, name: 'Light & Dark Mode', short: 'toggle between a dark and light mode theme', src: 'https://github.com/simonhlee97/simon-light-dark-mode/', link: 'https://simonhlee97.github.io/simon-light-dark-mode/'},
+                            {id: 2, name: 'eCommerce Store', short: 'An online store built with React, Redux, Firebase, Stripe API', src: 'https://github.com/simonhlee97/edutools', link: 'https://simon-crown-shop-project.herokuapp.com/'},
+                            {id: 3, name: 'socket.io real-time chat', short: 'A real-time chat application using socket.io', src: 'https://github.com/simonhlee97/simon-socket', link: 'https://simonsocketapp.herokuapp.com/'}
+                        ]
+                    }"
+                >
+                    <template class="card" x-for="(proj, i) in oldprojects" :key="i">
+                        <div class='card-content'>
+                            <h4 x-text="proj.name"></h4>
+                            <span class='short' x-text="proj.short"></span>
+                            <br>
+                            <br>
+                            <div class="icons">
+                                <a x-bind:href="pj.src"><i class="card-icons fab fa-github-square"></i></a>
+                                <a x-bind:href="pj.link"><i class="card-icons fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+
+            <section class="skills column">
+                <h2 class='center devskills'>Dev Skills</h2>
+                <div class="icons-container">
+                    <i class="dev-icon fab fa-js-square fa-3x" title="JavaScript"></i>
+                    <i class="dev-icon fab fa-react fa-3x" title="React"></i>
+                    <i class="dev-icon fab fa-vuejs fa-3x" title="VueJS"></i>
+                    <i class="dev-icon fab fa-node fa-3x" title="NodeJS"></i>
+                    <i class="dev-icon fab fa-css3 fa-3x" title="CSS"></i>
+                </div>
+            </section>
+
+            <section class="skills column">
+                <h2 class='center'>Dev Skills</h2>
                     <table>
                         <tr>
                             <td>Python</td>
@@ -73,85 +149,34 @@
                             <td>WebPack, Gulp</td>
                         </tr>
                     </table>
-                </div>
             </section>
-
-            <div class="title-center">
-                <i class="fas fa-arrow-down blink-1"></i>
-            </div>
-
-            <!-- EXPERIMENT WITH ALPINE.JS -->
-            <div class="section">
-                <div class="title-center">
-                    <h2>Recent Projects</h2>
-                </div>
-                <div
-                    x-data="{ 
-                        pjs : [
-                            {id: 1, name: 'My Scrimba Journey', short: 'Scrimba course projects', src: 'https://github.com/simonhlee97/scrimba-journey', link: 'https://simonscrimba.netlify.app/'},
-                            {id: 2, name: 'SimpleSimonCSS', short: 'My 1st NPM Package', src: 'https://github.com/simonhlee97/simplesimoncss', link: 'https://www.npmjs.com/package/simplesimoncss'},
-                            {id: 3, name: 'SimonPost.com', short: 'Personal Blog', src: 'https://github.com/simonhlee97/eleventy-base-blog-1', link: 'https://simonpost.com/'}
-                        ]
-                    }"
-                >
-                    <template x-for="(pj, index) in pjs" :key="index">
-                        <div class="projects-container">
-                            <div class="card">
-                                <p x-text="pj.name"></p>
-                                <p x-text="pj.short"></p>
-                                <a x-bind:href="pj.src"><i class="card-gh fab fa-github-square"></i></a>
-                                <a x-bind:href="pj.link"><i class="card-gh fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-            </div>
-
-            <h2 class="title-center">Old Projects</h2>
-            <div
-                x-data="{ 
-                    oldprojects : [
-                        {id: 1, name: 'Light & Dark Mode', short: 'toggle between a dark and light mode theme', src: 'https://github.com/simonhlee97/simon-light-dark-mode/', link: 'https://simonhlee97.github.io/simon-light-dark-mode/'},
-                        {id: 2, name: 'eCommerce Store', short: 'An online store built with React, Redux, Firebase, Stripe API', src: 'https://github.com/simonhlee97/edutools', link: 'https://simon-crown-shop-project.herokuapp.com/'},
-                        {id: 3, name: 'socket.io real-time chat', short: 'A real-time chat application using socket.io', src: 'https://github.com/simonhlee97/simon-socket', link: 'https://simonsocketapp.herokuapp.com/'}
-                    ]
-                }"
-            >
-                <template x-for="(proj, i) in oldprojects" :key="i">
-                    <div class="projects-container">
-                        <div class="card">
-                            <p x-text="proj.name"></p>
-                            <p x-text="proj.short"></p>
-                            <a x-bind:href="proj.src"><i class="card-gh fab fa-github-square"></i></a>
-                            <a x-bind:href="proj.link"><i class="card-gh fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </template>
-            </div>
-
-            <div class="section">
-                <div class="title-center">
-                    <h2>About Simon</h2>
-                </div>
-
-                <div class="about-text">
-                    <p>Born in rice fields (Korea), grew up in corn fields (Indiana). I love basketball, tennis, Pink Floyd, Led Zeppelin, Simon and Garfunkel, photography, tacos, pizza, books, New Yorker Magazine, podcasts.</p>
-                </div>
-            </div>
-
-            <div class="section" style="text-align: center">
-                <h2>Contact</h2>
-
-                <div class="contact-icons">
-                    <a class="contact-icon" style="margin-right: 0.7em" href="https://github.com/simonhlee97/"><i class="fab fa-github-square"></i></a>
-                    <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <div class="current-time">
-                    <p style="font-size: 10pt; margin-top: 2em" id="clock"></p>
-                </div>
-            </div>
         </main>
 
+        <footer>
+            <section class="about center">
+                <h2>About Simon</h2>
+
+                <div class="about--text">
+                    <p>Born in rice fields (Korea), grew up in corn fields (Indiana). I love basketball, tennis, Pink Floyd, Led Zeppelin, Simon and Garfunkel, photography, tacos, pizza, books, New Yorker Magazine, podcasts.</p>
+                </div>
+
+                <div class="contact-icons center">
+                    <a class="contact-icon" style="margin-right: 0.7em" href="https://github.com/simonhlee97/"><i class="fab fa-github-square fa-5x"></i></a>
+                    <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin fa-5x"></i></a>
+                </div>
+
+                <div class="current-time center">
+                    <p class='center' style="font-size: 10pt; margin-top: 2em" id="clock"></p>
+                </div>
+            </section>
+        </footer>
+
+    
+            
+            
+        </footer>
+
+        <!-- END OF NEW HOME PAGE -->
         <script type="text/javascript">
             var clockElement = document.getElementById('clock')
 
@@ -159,7 +184,22 @@
                 clockElement.textContent = new Date().toLocaleString()
             }
 
-            setInterval(clock, 1000)
+            setInterval(clock, 1000);
+            // accordions
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                });
+            }
         </script>
     </body>
 </html>

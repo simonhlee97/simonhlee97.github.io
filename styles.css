@@ -69,22 +69,7 @@ a:hover {
     text-decoration: underline;
     color: tomato;
 }
-table {
-    font-family: 'Courier New', Courier, monospace;
-    border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
-}
-td,
-th {
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: left;
-    padding: 10px;
-}
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
+
 i {
     font-size: 66px;
     color: black;

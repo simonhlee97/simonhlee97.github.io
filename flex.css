@@ -126,7 +126,7 @@ div.icons {
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0 5px;
     justify-content: center;
 }
 table {
@@ -149,7 +149,7 @@ tr:nth-child(even) {
 .column {
     flex: 100%;
     max-width: 100%;
-    margin: 4px;
+    margin: 5px;
     padding-top: 3px;
 }
 
@@ -207,5 +207,5 @@ section.about {
     min-height: 190px;
 }
 .additional {
-    margin-top: 3em;
+    margin: 2em auto 2em auto;
 }

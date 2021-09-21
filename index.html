@@ -20,45 +20,81 @@
                 <div class="image-wrapper">
                     <img id="profile-pic" class="text-focus-in" src="./simonmobile.jpg" alt="me" />
                 </div>
-                <h2 class="text-focus-in2">Software and web developer</h2>
+                <div style="margin:1em; " class="text-focus-in2">
+                    <h4>Software and web developer</h4>
+                    <p style='font-size: 0.8rem;'>and Windows XP user during my college years</p>
+                </div>
             </div>
         </div>
+
         <main class='row'>
-            <section class="philosophy column">
-                
-                <h2 class='center'>My Dev Philosophy</h2>
-                <div class="center phil-buttons">
-                    <a href="https://componentdriven.org"><button class='philos'>Component-Driven Development</button></a><br><br>
-                    <a href="https://bradfrost.com/blog/post/atomic-web-design/"><button class='philos'>Atomic Design</button></a><br><br>
-                    <a href="https://bradfrost.com/blog/post/mobile-first-responsive-web-design/"><button class='philos'>Mobile-first, responsive design</button></a>
+            <section class="philosophy column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">My Dev Philosophy</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
                 </div>
-                
-            </section>
-
-            <section class="work-setup column">
-                <h2 class='center'>My Favorite Tools 🧰</h2>
-                <button class="accordion">Operating System</button>
-                <div class="panel">
-                    <p><img width="90" src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" alt="Ubuntu" /></p>
-                    <p>Ubuntu</p>
-                </div>
-
-                <button class="accordion">Editor</button>
-                <div class="panel">
-                    <p><img width="90" src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS code"></p>
-                    <p>VS Code</p>
-                </div>
-
-                <button class="accordion">Favorite books, references</button>
-                <div class="panel">
-                    <p>JavaScript.info</p>
-                    <p>Mozilla Developers Network</p>
+                <div class="parent">
+                    <div class="window-body center child">
+                        <button><a href="https://componentdriven.org">Component-Driven Development</a></button><br>
+                        <button><a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a></button><br>
+                        <button><a href="https://bradfrost.com/blog/post/mobile-first-responsive-web-design/">Mobile-first and Responsive Design</a></button><br>
+                    </div>
                 </div>
             </section>
 
-            <section class="new projects column">
-                <h2 class="center">Recent Projects</h2>
-                <div class="flex-container"
+            <section class="work-setup column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">My Favorite Tools 🧰</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="window-body center child">
+                        <button class="accordion">Operating System</button>
+                        <div class="panel">
+                            <p><img width="80" src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" alt="Ubuntu" /></p>
+                            <p>Ubuntu</p>
+                        </div>
+
+                        <button class="accordion">Editor</button>
+                        <div class="panel">
+                            <p><img width="80" src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS code"></p>
+                            <p>VS Code</p>
+                        </div>
+
+                        <button class="accordion">Favorite books, references</button>
+                        <div class="panel">
+                            <p>JavaScript.info</p>
+                            <p>Mozilla Developers Network</p>
+                        </div>
+
+                        <div class="additional">
+                            <pre>I am also very interested in:
+                                <br>C:&#92;<a href="https://storybook.js.org/" target="_blank">StoryBook.js</a> and <a href="https://quasar.dev" target="_blank">Quasar</a>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="new projects column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Recent Projects</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="child window-body flex-container"
                     x-data="{ 
                         pjs : [
                             {id: 1, name: 'My Scrimba Journey', short: 'Scrimba course projects', src: 'https://github.com/simonhlee97/scrimba-journey', link: 'https://simonscrimba.netlify.app/'},
@@ -80,75 +116,111 @@
                         </div>
                     </template>
                 </div>
-            </section>
-
-            <section class="old projects column">
+                </div>
                 
-                <h2 class="center">Old Projects</h2>
-                <div class="flex-container"
-                    x-data="{ 
-                        oldprojects : [
-                            {id: 1, name: 'Light & Dark Mode', short: 'toggle between a dark and light mode theme', src: 'https://github.com/simonhlee97/simon-light-dark-mode/', link: 'https://simonhlee97.github.io/simon-light-dark-mode/'},
-                            {id: 2, name: 'eCommerce Store', short: 'An online store built with React, Redux, Firebase, Stripe API', src: 'https://github.com/simonhlee97/edutools', link: 'https://simon-crown-shop-project.herokuapp.com/'},
-                            {id: 3, name: 'socket.io real-time chat', short: 'A real-time chat application using socket.io', src: 'https://github.com/simonhlee97/simon-socket', link: 'https://simonsocketapp.herokuapp.com/'}
-                        ]
-                    }"
-                >
-                    <template class="card" x-for="(proj, i) in oldprojects" :key="i">
-                        <div class='card-content'>
-                            <h4 x-text="proj.name"></h4>
-                            <span class='short' x-text="proj.short"></span>
-                            <br>
-                            <br>
-                            <div class="icons">
-                                <a x-bind:href="pj.src"><i class="card-icons fab fa-github-square"></i></a>
-                                <a x-bind:href="pj.link"><i class="card-icons fas fa-external-link-alt"></i></a>
+            </section>
+
+            <section class="old projects column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Old Projects</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="flex-container window-body child"
+                        x-data="{ 
+                            oldprojects : [
+                                {id: 1, name: 'Light & Dark Mode', short: 'toggle between a dark and light mode theme', src: 'https://github.com/simonhlee97/simon-light-dark-mode/', link: 'https://simonhlee97.github.io/simon-light-dark-mode/'},
+                                {id: 2, name: 'eCommerce Store', short: 'An online store built with React, Redux, Firebase, Stripe API', src: 'https://github.com/simonhlee97/edutools', link: 'https://simon-crown-shop-project.herokuapp.com/'},
+                                {id: 3, name: 'socket.io real-time chat', short: 'A real-time chat application using socket.io', src: 'https://github.com/simonhlee97/simon-socket', link: 'https://simonsocketapp.herokuapp.com/'}
+                            ]
+                        }"
+                    >
+                        <template class="card" x-for="(proj, i) in oldprojects" :key="i">
+                            <div class='card-content'>
+                                <h4 x-text="proj.name"></h4>
+                                <span class='short' x-text="proj.short"></span>
+                                <br>
+                                <br>
+                                <div class="icons">
+                                    <a x-bind:href="pj.src"><i class="card-icons fab fa-github-square"></i></a>
+                                    <a x-bind:href="pj.link"><i class="card-icons fas fa-external-link-alt"></i></a>
+                                </div>
                             </div>
+                        </template>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="skills column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Dev Skills</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="window-body child">
+                        <h3>My Dev Skills</h3>
+                        <div class="icons-container">
+                            <i class="dev-icon fab fa-js-square fa-3x" title="JavaScript"></i>
+                            <i class="dev-icon fab fa-react fa-3x" title="React"></i>
+                            <i class="dev-icon fab fa-vuejs fa-3x" title="VueJS"></i>
+                            <i class="dev-icon fab fa-node fa-3x" title="NodeJS"></i>
+                            <i class="dev-icon fab fa-css3 fa-3x" title="CSS"></i>
                         </div>
-                    </template>
+                    </div>
                 </div>
             </section>
 
-            <section class="skills column">
-                <h2 class='center devskills'>Dev Skills</h2>
-                <div class="icons-container">
-                    <i class="dev-icon fab fa-js-square fa-3x" title="JavaScript"></i>
-                    <i class="dev-icon fab fa-react fa-3x" title="React"></i>
-                    <i class="dev-icon fab fa-vuejs fa-3x" title="VueJS"></i>
-                    <i class="dev-icon fab fa-node fa-3x" title="NodeJS"></i>
-                    <i class="dev-icon fab fa-css3 fa-3x" title="CSS"></i>
+            <section class="skills column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Dev Skills</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
                 </div>
-            </section>
-
-            <section class="skills column">
-                <h2 class='center'>Dev Skills</h2>
-                    <table>
-                        <tr>
-                            <td>Python</td>
-                            <td>JavaScript</td>
-                            <td>Git</td>
-                        </tr>
-                        <tr>
-                            <td>Django</td>
-                            <td>React, React-Native</td>
-                            <td>MongoDB</td>
-                        </tr>
-                        <tr>
-                            <td>Flask</td>
-                            <td>VueJS</td>
-                            <td>PostgreSQL</td>
-                        </tr>
-                        <tr>
-                            <td>Redux</td>
-                            <td>NodeJS</td>
-                            <td>Linux</td>
-                        </tr>
-                        <tr>
-                            <td>HTML5</td>
-                            <td>CSS3, SCSS</td>
-                            <td>WebPack, Gulp</td>
-                        </tr>
-                    </table>
+                <div class="parent">
+                    <div class="window-body child">
+                        
+                        <table>
+                            <tr>
+                                <td>Python</td>
+                                <td>JavaScript</td>
+                                <td>Git</td>
+                            </tr>
+                            <tr>
+                                <td>Django</td>
+                                <td>React</td>
+                                <td>MongoDB</td>
+                            </tr>
+                            <tr>
+                                <td>Flask</td>
+                                <td>VueJS</td>
+                                <td>PostgreSQL</td>
+                            </tr>
+                            <tr>
+                                <td>Redux</td>
+                                <td>NodeJS</td>
+                                <td>React Native</td>
+                            </tr>
+                            <tr>
+                                <td>HTML5</td>
+                                <td>CSS3, SCSS</td>
+                                <td>WebPack</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
             </section>
         </main>
 

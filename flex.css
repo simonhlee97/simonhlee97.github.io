@@ -18,6 +18,7 @@ body {
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 p {
     max-width: 70ch;
@@ -196,8 +197,10 @@ button {
 }
 .about--text {
     margin: 3em auto;
-    text-align: center;
+    /* text-align: center; */
     line-height: 18.5px;
+    text-align: justify;
+    padding: 0 2em;
 }
 section.about {
     padding-top: 7em;

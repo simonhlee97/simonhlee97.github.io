@@ -124,7 +124,7 @@ a:hover {
 .flip-container {
     margin: 0 auto;
     width: 300px;
-    perspective: 1000;
+    /* perspective: 1; */
     text-align: center;
 }
 .flip-container:hover .card {
@@ -247,7 +247,7 @@ form select {
 .flex-container {
     background: hsl(225, 100%, 70%);
     border: 1px solid black;
-    padding: 5px;
+    padding: 2em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -256,6 +256,7 @@ form select {
     width: 400px;
     background: hsl(225, 100%, 80%);
     margin: 5px;
+    padding: 2.5em;
     flex-grow: 1;
 }
 .tags {
@@ -279,6 +280,11 @@ td {
 }
 
 .proj-thumb {
-    max-width: 32%;
+    max-width: auto;
     height: auto;
 }
+
+/* .project-item-flex-container {
+    display: flex;
+    flex-direction: column;
+} */

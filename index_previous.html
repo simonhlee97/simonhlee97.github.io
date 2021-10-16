@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simon Lee - Software Developer</title>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+        <link rel="stylesheet" href="./flex.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="hero center">
+            <div class="hero-child">
+                <h1 class="focus-in-expand-fwd" style="font-size: 45px"><i class="fas fa-terminal" style="font-size: 45px"></i> Hi, I'm Simon</h1>
+                <div class="image-wrapper">
+                    <img id="profile-pic" class="text-focus-in" src="./simonmobile.jpg" alt="me" />
+                </div>
+                <div style="margin:1em; " class="text-focus-in2">
+                    <h4>Software and web developer</h4>
+                    <p style='font-size: 0.8rem;'>and Windows XP user during my college years</p>
+                </div>
+            </div>
+        </div>
+
+        <main class='row'>
+            <section class="philosophy column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">My Dev Philosophy</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="window-body center child">
+                        <button><a href="https://componentdriven.org">Component-Driven Development</a></button><br>
+                        <button><a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a></button><br>
+                        <button><a href="https://bradfrost.com/blog/post/mobile-first-responsive-web-design/">Mobile-first and Responsive Design</a></button><br>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work-setup column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">My Favorite Tools 🧰</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="window-body center child">
+                        <button class="accordion">Operating System</button>
+                        <div class="panel">
+                            <p><img width="80" src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" alt="Ubuntu" /></p>
+                            <p>Ubuntu</p>
+                        </div>
+
+                        <button class="accordion">Editor</button>
+                        <div class="panel">
+                            <p><img width="80" src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS code"></p>
+                            <p>VS Code</p>
+                        </div>
+
+                        <button class="accordion">Favorite books, references</button>
+                        <div class="panel">
+                            <p>JavaScript.info</p>
+                            <p>Mozilla Developers Network</p>
+                        </div>
+
+                        <div class="additional">
+                            <pre>I am also very interested in:
+                                <br>C:&#92;<a href="https://storybook.js.org/" target="_blank">StoryBook.js</a> and <a href="https://quasar.dev" target="_blank">Quasar</a>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="new projects column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Recent Projects</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="child window-body flex-container"
+                    x-data="{ 
+                        pjs : [
+                            {id: 1, name: 'My Scrimba Journey', short: 'Course projects from Frontend Career Path courses at Scrimba', src: 'https://github.com/simonhlee97/scrimba-journey', link: 'https://simonscrimba.netlify.app/'},
+                            {id: 2, name: 'SimpleSimonCSS', short: 'My 1st NPM Package', src: 'https://github.com/simonhlee97/simplesimoncss', link: 'https://www.npmjs.com/package/simplesimoncss'},
+                            {id: 3, name: 'SimonPost.com', short: 'Personal Blog', src: 'https://github.com/simonhlee97/eleventy-base-blog-1', link: 'https://simonpost.com/'}
+                        ]
+                    }"
+                >
+                    <template class='card' x-for="(pj, index) in pjs" :key="index">
+                        <div class='card-content'>
+                            <h4 x-text="pj.name"></h4>
+                            <span x-text="pj.short"></span>
+                            <br>
+                            <br>
+                            <div class="icons">
+                                <a x-bind:href="pj.src"><i class="card-icons fab fa-github-square"></i></a>
+                                <a x-bind:href="pj.link"><i class="card-icons fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+
+            <section class="old projects column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Old Projects</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="flex-container window-body child"
+                        x-data="{ 
+                            oldprojects : [
+                                {id: 1, name: 'Light & Dark Mode', short: 'toggle between a dark and light mode theme', src: 'https://github.com/simonhlee97/simon-light-dark-mode/', link: 'https://simonhlee97.github.io/simon-light-dark-mode/'},
+                                {id: 2, name: 'eCommerce Store', short: 'An online store built with React, Redux, Firebase, Stripe API', src: 'https://github.com/simonhlee97/edutools', link: 'https://simon-crown-shop-project.herokuapp.com/'},
+                                {id: 3, name: 'socket.io real-time chat', short: 'A real-time chat application using socket.io', src: 'https://github.com/simonhlee97/simon-socket', link: 'https://simonsocketapp.herokuapp.com/'}
+                            ]
+                        }"
+                    >
+                        <template class="card" x-for="(proj, i) in oldprojects" :key="i">
+                            <div class='card-content'>
+                                <h4 x-text="proj.name"></h4>
+                                <span class='short' x-text="proj.short"></span>
+                                <br>
+                                <br>
+                                <div class="icons">
+                                    <a x-bind:href="pj.src"><i class="card-icons fab fa-github-square"></i></a>
+                                    <a x-bind:href="pj.link"><i class="card-icons fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="skills column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Dev Skills</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="window-body child">
+                        <h3>My Dev Skills</h3>
+                        <div class="icons-container">
+                            <i class="dev-icon fab fa-js-square fa-3x" title="JavaScript"></i>
+                            <i class="dev-icon fab fa-react fa-3x" title="React"></i>
+                            <i class="dev-icon fab fa-vuejs fa-3x" title="VueJS"></i>
+                            <i class="dev-icon fab fa-node fa-3x" title="NodeJS"></i>
+                            <i class="dev-icon fab fa-css3 fa-3x" title="CSS"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills column window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Dev Skills</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div class="window-body child">
+                        
+                        <table>
+                            <tr>
+                                <td>Python</td>
+                                <td>JavaScript</td>
+                                <td>Git</td>
+                            </tr>
+                            <tr>
+                                <td>Django</td>
+                                <td>React</td>
+                                <td>MongoDB</td>
+                            </tr>
+                            <tr>
+                                <td>Flask</td>
+                                <td>VueJS</td>
+                                <td>PostgreSQL</td>
+                            </tr>
+                            <tr>
+                                <td>Redux</td>
+                                <td>NodeJS</td>
+                                <td>React Native</td>
+                            </tr>
+                            <tr>
+                                <td>HTML5</td>
+                                <td>CSS3, SCSS</td>
+                                <td>WebPack</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+
+        <footer>
+            <section class="about center">
+                <h2>About Simon</h2>
+
+                <div class="about--text">
+                    <p>Born in rice fields (Korea), grew up in corn fields (Indiana). I love basketball, tennis, Pink Floyd, Led Zeppelin, Simon and Garfunkel, photography, tacos, pizza, books, New Yorker Magazine, podcasts.</p>
+                </div>
+
+                <div class="contact-icons center">
+                    <a class="contact-icon" style="margin-right: 0.7em" href="https://github.com/simonhlee97/"><i class="fab fa-github-square fa-5x"></i></a>
+                    <a class="contact-icon" style="margin-left: 0.7em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin fa-5x"></i></a>
+                </div>
+
+                <div class="current-time center">
+                    <p class='center' style="font-size: 10pt; margin-top: 2em" id="clock"></p>
+                </div>
+            </section>
+        </footer>
+
+
+        <!-- END OF NEW HOME PAGE -->
+        <script type="text/javascript">
+            var clockElement = document.getElementById('clock')
+
+            function clock() {
+                clockElement.textContent = new Date().toLocaleString()
+            }
+
+            setInterval(clock, 1000);
+            // accordions
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                });
+            }
+        </script>
+    </body>
+</html>

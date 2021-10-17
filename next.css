@@ -247,7 +247,7 @@ form select {
 .flex-container {
     background: hsl(225, 100%, 70%);
     border: 1px solid black;
-    padding: 2em;
+    padding: 0.3em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -255,8 +255,8 @@ form select {
 .flex-container > * {
     width: 400px;
     background: hsl(225, 100%, 80%);
-    margin: 5px;
-    padding: 2.5em;
+    margin: 8px;
+    padding: 0.3em;
     flex-grow: 1;
 }
 .tags {

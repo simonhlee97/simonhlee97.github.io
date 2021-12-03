@@ -10,75 +10,43 @@ html {
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 body {
-    background: var(--green);
-    background: linear-gradient(240deg, var(--green) 0, var(--green2) 40%);
     padding: 0;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-section.hero {
-    min-height: 50vh;
-    width: 100%;
-    display: grid;
-    place-items: center;
-}
-.child {
-    padding: 1.5rem;
-    /* height: 42vh; */
-    /* border-radius: 10px;
-    border: 0.1px solid var(--darkblue); */
-    /* font-size: 2rem; */
-    text-align: center;
-}
-
-p {
-    max-width: 70ch;
-}
-
-.active,
-.accordion:hover {
-    background-color: #ccc;
-}
-
-.accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: '\2212';
-}
-
-.panel {
-    padding: 0 12px;
-    color: black;
     margin: 0 auto;
-    max-height: 0;
-    overflow: hidden;
-    text-align: center;
-    transition: max-height 0.2s ease-out;
-}
+    max-width: 880px;
+    font-size: 16px;
 
-.card-title {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-family: Helvetica, sans-serif;
+    background-color: #d4cece;
+}
+main {
+    padding: 2em;
+}
+section {
+    margin: 5em 0;
+}
+p {
+    max-width: 78ch;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1.3em;
+}
+hr {
+    border-top: 0.0001px solid rgba(180, 180, 180, 0.603);
+    margin: 1em 0;
 }
 
 .fab {
     margin: 3px;
+    color: blue;
 }
-
-p {
-    font-size: 1rem;
+.fab:hover {
+    color: hsl(225, 100%, 70%);
 }
 
 a {
@@ -88,80 +56,27 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-.squid {
+.logos {
+    width: 160px;
+    height: auto;
+}
+.business-card {
     display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    /* margin: 0 auto; */
+    border-radius: 2px;
+    padding: 0.5px;
+    max-width: 458px;
+    margin: 3em auto;
+    background-color: #1b1a1a;
+    color: whitesmoke;
 }
-.squid > div {
-    margin: 9px;
+.img-panel {
+    width: 49%;
 }
-.triangle {
-    width: 0;
-    height: 0;
-    border-width: 0 30px 52px 30px;
-    border-color: transparent transparent #000000 transparent;
-    border-style: solid;
-}
-.square {
-    width: var(--dimension);
-    height: var(--dimension);
-    border: 3px solid black;
-}
-.circle {
-    width: var(--dimension);
-    height: var(--dimension);
-    border: 3px solid black;
-    border-radius: 50%;
-}
-
-/* flip card */
-.flip-container {
-    margin: 0 auto;
-    width: 300px;
-    /* perspective: 1; */
+.info-panel {
+    width: 51%;
+    padding-top: 1em;
     text-align: center;
 }
-.flip-container:hover .card {
-    transform: rotateY(180deg);
-}
-.card,
-.front,
-.back {
-    height: 170px;
-    width: 300px;
-    cursor: pointer;
-}
-.card {
-    transition: 0.7s;
-    transform-style: preserve-3d;
-    position: relative;
-}
-.front,
-.back {
-    backface-visibility: hidden;
-    position: absolute;
-}
-.front {
-    z-index: 1;
-    transform: rotateY(180deg);
-    background-color: rgba(190, 137, 88, 0.9);
-    background-image: url('./squidcard.jpg');
-    text-align: center;
-    padding-top: 39px;
-}
-.back {
-    z-index: 2; /* back side, placed above front */
-    transform: rotateY(0deg);
-    background-color: rgba(190, 137, 88, 0.9);
-    background-image: url('./squidcard.jpg');
-}
-
 /* formspree */
 /* reset */
 form input,
@@ -233,14 +148,16 @@ form select {
     text-transform: none;
 }
 
-.current {
+.skills-icons {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    margin: 1em auto;
+    margin-bottom: 2em;
+    justify-content: center;
 }
-.current > img {
-    margin: 5px;
-    flex-grow: 1;
-    max-width: 350px;
+.skills-icons > * {
+    margin: 0 1em;
+    color: black;
 }
 
 /* project cards */
@@ -250,28 +167,46 @@ form select {
     padding: 0.3em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .flex-container > * {
-    width: 400px;
+    width: 340px;
     background: hsl(225, 100%, 80%);
     margin: 8px;
     padding: 0.3em;
     flex-grow: 1;
 }
-.tags {
-    padding: 1em 0;
-    display: flex;
-    flex-wrap: wrap;
+.project-card > img {
+    max-width: 100%;
+    height: auto;
 }
 
-.tag {
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+}
+.tags > * {
     margin: 3px;
-    font-size: 8pt;
-    padding: 2.5px 4px;
+    font-size: 10pt;
+    padding: 7px 8px 3.8px 8px;
     color: white;
     border-radius: 6px;
     background-color: black;
+}
+
+.fa-code-branch {
+    color: white;
+    background-color: orangered;
+    font-size: 11pt;
+    padding: 4.5px 15px;
+    margin: 6px 0 0 4px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.fa-code-branch:hover {
+    background-color: white;
+    color: orangered;
 }
 
 td {
@@ -283,55 +218,11 @@ td {
     max-width: auto;
     height: auto;
 }
-
-.nav {
-    text-align: center;
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
 }
-.nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.nav li {
-    padding: 0em;
-    font-size: 15pt;
-    display: inline;
-    float: left;
-    height: 66px;
-    width: 33.333333%;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
-}
-.nav .about {
-    background: #7accc8;
-}
-.nav .projects {
-    background: #4aaaa5;
-}
-.nav .contact {
-    background: #35404f;
-}
-.nav li a {
-    font-family: FontAwesome;
-    color: #eee;
-    font-size: 22pt;
-    text-decoration: none;
-    display: inline-block;
-}
-.nav li i {
-    color: #fff;
-    padding-top: 3px;
-}
-.nav li b {
-    display: none;
-    padding-top: 0.5em;
-}
-.nav a:hover {
-    color: #fff;
-}
-.nav a:hover i {
-    display: none;
-}
-.nav a:hover b {
-    display: block;
+nav > a {
+    margin: 0 1em;
 }

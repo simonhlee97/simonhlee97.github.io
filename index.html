@@ -4,96 +4,78 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="./next.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-        <title>Player 457: Simon Lee</title>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <title>Simon Lee</title>
     </head>
     <body>
-        <div class="nav">
-            <ul>
-                <li class="about">
-                    <a href="#about"><i class="icon far fa-circle fa-2x"></i><b>About</b></a>
-                </li>
-                <li class="projects">
-                    <a href="#projects"><i class="icon fas fa-caret-up fa-2x"></i><b>Projects</b></a>
-                </li>
-                <li class="contact">
-                    <a href="#contact"><i class="icon far fa-square fa-2x"></i><b>Contact</b></a>
-                </li>
-            </ul>
-        </div>
+        <main>
+            <nav>
+                <a href="#about"><b>About</b></a>
+                <a href="#projects"><b>Projects</b></a>
+                <a href="#contact"><b>Contact</b></a>
+            </nav>
 
-        <section class="hero my-16">
-            <div class="child text-center">
-                <h1 class="text-shadow-md text-2xl sm:text-6xl md:text-8xl">Hi, I'm Simon.</h1>
-                <img class="text-center my-8 mx-auto" width="100" height="100" style="border-radius: 50%" src="./simonface.jpg" alt="me" />
-                <h3 class="mt-4 text-2xl sm:text-xl md:text-4xl">Web Developer</h3>
-            </div>
-        </section>
+            <section>
+                <div class="business-card">
+                    <div class="img-panel">
+                        <img style="width: 198px; border-radius: 2px" src="./simonface.jpg" alt="me" />
+                    </div>
+                    <div class="info-panel">
+                        <h2>Simon Lee</h2>
+                        <h3>Web Developer</h3>
+                        <span class=""
+                            ><a href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin fa-3x"></i></a
+                        ></span>
+                    </div>
+                </div>
+            </section>
 
-        <div class="px-10 sm:px-20 md:px-36 lg:px-56">
+            <section>
+                <div class="skills-icons">
+                    <i class="fab fa-js-square fa-2x" title="JavaScript"></i>
+                    <i class="fab fa-react fa-2x" title="React"></i>
+                    <i class="fab fa-vuejs fa-2x" title="VueJS"></i>
+                    <i class="fab fa-node fa-2x" title="NodeJS"></i>
+                    <i class="fab fa-css3 fa-2x" title="CSS"></i>
+                </div>
+            </section>
+
             <section id="about my-6">
                 <h3 class="text-5xl tracking-wider my-3">ABOUT</h3>
                 <p>
-                    I am in the early stages of my web development career and journey. I first started out with WordPress themes (php, html, css, js), then went into full JavaScript mode and learned templating (Handlebars, Mustache, Pug, Nunjucks, etc.), React, Vue, and some server-side JS (Node, Express REST APIs). I also spent some time playing with Django, Flask, and Python, so I am pretty open
-                    to learning new languages, tools, and frameworks. I'm a life-long learner and growth-mindset type who enjoys daily improvement.
+                    I am in the early stages of my web development career and journey. I started out building WordPress themes (php, html, css, js), then moved on to fullstack JavaScript, including templating (Handlebars, Mustache, Pug, Nunjucks, etc.), React, Vue, and some server-side JS (Node, Express REST APIs). I also spent some time playing with Django, Flask, and Python,
+                    so I am pretty open to learning new languages, tools, and frameworks. (I also recently learned Laravel, which is a fun framework to work with.) I'm a life-long learner and growth-mindset type who enjoys daily improvement.
                 </p>
-                <div class="my-8">
-                    <i class="fab fa-js-square fa-4x" title="JavaScript"></i>
-                    <i class="fab fa-react fa-4x" title="React"></i>
-                    <i class="fab fa-vuejs fa-4x" title="VueJS"></i>
-                    <i class="fab fa-node fa-4x" title="NodeJS"></i>
-                    <i class="fab fa-css3 fa-4x" title="CSS"></i>
-                </div>
-
-                <div class='p-4 border border-black'>
-                    <h4 class='my-8 text-3xl'>Currently building projects with:</h4>
-                    <div class="flex flex-wrap">
-                        <img class='mr-14 mb-10 max-h-20' src="./nextjs/dark/nextjs-logotype-dark.png" alt="next">
-                        <img class='mr-14 mb-10 max-h-16' src="./logotype/dark/vercel-logotype-dark.png" alt="vercel">
-                        <img class='max-h-16' src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype.128b6e12eb85d013bc9f80a917f57efe.svg" alt="tail">
-                    </div>
-                </div>
-
-                <hr class="my-8" />
-                <p>
-                    I'm a Korean-born 'Hoosier' (a person from Indiana), so born in rice fields, grew up in corn fields. I've also lived in Chicago and Seoul, and I've been in Korea since Nov. 2018. I enjoy books, tennis, golf, basketball, podcasts, New Yorker Magazine, Pink Floyd, Led Zeppelin, Simon and Garfunkel, tacos, pizza, and
-                    burgers.
-                </p>
+                <p>I'm a Korean-born 'Hoosier' (a person from Indiana), so born in rice fields, grew up in corn fields. I've also lived in Chicago and Seoul, and I've been in Korea since Nov. 2018. I enjoy books, tennis, golf, basketball, podcasts, New Yorker Magazine, Pink Floyd, Led Zeppelin, Simon and Garfunkel, tacos, pizza, and burgers.</p>
             </section>
 
-            <section id="projects" class="my-24">
-                <h3 class="text-5xl tracking-wider my-3">PROJECTS</h3>
-                <div class="container pt-8 mx-auto" x-data="{myProjects: sourceData}">
-                    <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-5"> -->
-                    <div class="flex-container">
-                        <template x-for="item in myProjects" :key="item">
-                            <div class="break-normal flex-col sm:flex-row shadow hover:bg-indigo-200 hover:shadow-lg hover:rounded transition duration-150 ease-in-out transform hover:scale-105 p-3">
-                                <img class="proj-thumb rounded-md mr-16 lg:mr-8" :src="`${item.image}`" />
-                                <div class="text-sm">
-                                    <p class="my-3"><a class="text-xl uppercase text-gray-900" :href="item.link" x-text="item.title"></a></p>
-                                    <p class="my-3"><a class="text-gray-900" :href="item.repo"><i class="cursor-pointer text-blue-900 fab fa-github"></i></a></p>
-                                    <p class="text-gray-600 my-4" x-text="item.description"></p>
-                                    <hr />
-                                    <div class="tags"></ul>
-                                        <template x-for="tag in item.tags">
-                                            <span class="break-normal tag" x-text="tag"></span>
-                                        </template>
-                                    </div>
-                                    <hr />
-                                    <p class="text-gray-600 my-4">
-                                        <a class="text-gray-900" :href="item.blogpost">read more about this project... &nbsp;<i style="color:navy;" class="fas fa-external-link-alt"></i></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </template>
+            <hr />
+
+            <section id="projects">
+                <h3>PROJECTS</h3>
+                <div class="flex-container">
+                    <div class="project-card">
+                        <h2><a href="https://netflix-wannabe.vercel.app/">Netflix Clone</a></h2>
+                        <img src="./game1.jpg" alt="game" />
+                        <div class="tags"><span>React</span><span>Next.js</span><span>Styled Components</span> <span>Tailwind</span></div>
+                        <div class="links">
+                            <a href="https://github.com/simonhlee97/netflix-wannabe"><i class="fas fa-code-branch"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h2><a href="https://simon-crown-shop-project.herokuapp.com/">Ecommerce Shop</a></h2>
+                        <img src="./shop.jpg" alt="ecommerce" />
+                        <div class="tags"><span>React</span><span>Firebase</span><span>Stripe</span></div>
+                        <div class="links">
+                            <a href="https://github.com/simonhlee97/edutools"><i class="fas fa-code-branch"></i></a>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            <hr />
 
             <section id="contact" class="contact my-24">
                 <!-- formspree? -->
@@ -115,34 +97,9 @@
                 <hr class="my-8" />
                 <div class="contact-icons center">
                     <a class="mr-6" href="https://github.com/simonhlee97/"><i class="fab fa-github-square fa-3x hover:shadow-lg hover:rounded transition duration-150 ease-in-out transform hover:scale-105"></i></a>
-                    <a href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin fa-3x hover:shadow-lg hover:rounded transition duration-150 ease-in-out transform hover:scale-105"></i></a>
+                    <a href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin fa-3x"></i></a>
                 </div>
             </section>
-        </div>
-
-        <script>
-            var sourceData = [
-                {
-                    id: '1',
-                    title: 'Netflix Clone',
-                    description: 'React, Next.js, and Supabase clone of Netflix',
-                    repo: 'https://github.com/simonhlee97/netflix-wannabe',
-                    link: 'https://netflix-wannabe.vercel.app/',
-                    image: './game1.jpg',
-                    tags: ['React', 'Next.js', 'Supabase', 'Styled Components', 'Fuse.js', 'Compound Components'],
-                    blogpost: 'https://simonpost.com',
-                },
-                {
-                    id: '2',
-                    title: 'E-commerce Shop',
-                    description: 'An online shop built with React, Redux, Stripe, and Firebase',
-                    repo: 'https://github.com/simonhlee97/edutools',
-                    link: 'https://simon-crown-shop-project.herokuapp.com/',
-                    image: './shop.jpg',
-                    tags: ['React', 'Redux', 'Firebase', 'Stripe API', 'Bootstrap'],
-                    blogpost: 'https://simonpost.com',
-                },
-            ]
-        </script>
+        </main>
     </body>
 </html>

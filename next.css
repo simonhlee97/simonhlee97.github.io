@@ -150,13 +150,13 @@ form select {
 
 .skills-icons {
     display: flex;
-    width: 100%;
+    width: 90%;
     margin: 1em auto;
     margin-bottom: 2em;
     justify-content: center;
 }
 .skills-icons > * {
-    margin: 0 1em;
+    margin: 0 7px;
     color: black;
 }
 

@@ -25,16 +25,21 @@ body {
     background-color: #d4cece;
 }
 main {
-    padding: 2em;
+    padding: 2.2em;
 }
 section {
     margin: 5em 0;
 }
 p {
-    max-width: 78ch;
+    max-width: 80ch;
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 1.3em;
+}
+@media (min-width: 700px) {
+    p{
+        max-width: 99ch;
+    }
 }
 hr {
     border-top: 0.0001px solid rgba(180, 180, 180, 0.603);

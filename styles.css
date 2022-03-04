@@ -3,7 +3,7 @@
     --blue: #aedefd;
     --darkblue: #0d057c;
     --dimension: 52px;
-    --green: rgba(4, 168, 194, 0.2);
+    --green: #1c889933;
     --green2: rgba(4, 168, 194, 0.4);
 }
 html {
@@ -20,9 +20,9 @@ body {
     margin: 0 auto;
     max-width: 880px;
     font-size: 16px;
-
     font-family: Helvetica, sans-serif;
-    background-color: #d4cece;
+    color: #adbac7;
+    background-color: #22272E;
 }
 main {
     padding: 2.2em;
@@ -51,15 +51,26 @@ hr {
     color: blue;
 }
 .fab:hover {
-    color: hsl(225, 100%, 70%);
+    color: #668cff;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+nav a {
+    color: #adbac7;
+    margin: 0 1em;
+
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #668cff;
 }
 
 a {
-    color: black;
     text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
 }
 .logos {
     width: 160px;
@@ -115,7 +126,7 @@ form textarea,
 .StripeElement {
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: blue;
     padding: 0.75em 1rem;
     margin-bottom: 1.5rem;
 }
@@ -123,10 +134,10 @@ form input:focus,
 form select:focus,
 form textarea:focus,
 .StripeElement:focus {
-    background-color: white;
+    background-color: var(--green2);
     outline-style: solid;
     outline-width: thin;
-    outline-color: gray;
+    outline-color: var(--blue);
     outline-offset: -1px;
 }
 form [type='text'],
@@ -162,7 +173,7 @@ form select {
 }
 .skills-icons > * {
     margin: 0 7px;
-    color: black;
+    color: var(--blue);
 }
 
 /* project cards */
@@ -223,11 +234,7 @@ td {
     max-width: auto;
     height: auto;
 }
-nav {
-    display: flex;
-    justify-content: center;
-    padding: 1em 0;
-}
-nav > a {
-    margin: 0 1em;
+
+.tc {
+    text-align: center;
 }

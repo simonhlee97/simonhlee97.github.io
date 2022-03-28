@@ -5,6 +5,8 @@
     --dimension: 52px;
     --green: #1c889933;
     --green2: rgba(4, 168, 194, 0.4);
+    --text: #adbac7;
+    --github-bg: #22272E;
 }
 html {
     overflow-y: scroll;
@@ -21,8 +23,8 @@ body {
     max-width: 860px;
     font-size: 16px;
     font-family: Helvetica, sans-serif;
-    color: #adbac7;
-    background-color: #22272E;
+    color: var(--text);
+    background-color: var(--github-bg);
 }
 main {
     padding: 2.2em;
@@ -93,6 +95,14 @@ a {
     width: 51%;
     padding-top: 1em;
     text-align: center;
+}
+#resume {
+    color: whitesmoke;
+}
+#resume:hover {
+    color: var(--blue);
+    cursor: pointer;
+    text-decoration: underline;
 }
 /* formspree */
 /* reset */

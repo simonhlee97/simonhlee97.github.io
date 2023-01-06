@@ -115,15 +115,13 @@ form label,
 .StripeElement {
     font-family: inherit;
     font-size: 100%;
-    color: inherit;
+    color: white;
     border: none;
     border-radius: 0;
     display: block;
     width: 100%;
     padding: 0;
     margin: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 form label,
 form legend {
@@ -137,7 +135,7 @@ form textarea,
 .StripeElement {
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: blue;
+    background-color: tomato;
     padding: 0.75em 1rem;
     margin-bottom: 1.5rem;
 }
@@ -268,4 +266,12 @@ td {
 
 .tc {
     text-align: center;
+}
+
+#form-submit-btn {
+    border-radius: 9px;
+}
+#form-submit-btn:hover {
+    background-color: var(--github-bg);
+    border: 1px solid white;
 }

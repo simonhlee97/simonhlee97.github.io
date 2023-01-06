@@ -6,22 +6,22 @@
 body {
   color: var(--blue);
   padding: 2.5em;
-  background-color: #bec1dd;
-  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%230329b4' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-color: #DFDBE5;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230c259d' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 section {
   background-color: whitesmoke;
   max-width: 900px;
-  margin: 0 auto 3em auto;
+  margin: 0 auto 1.5em auto;
   border-radius: 6px;
   padding: 2em 3em 2em 3em;
-  box-shadow: 3px 2px 3px #2a2f8b;
+  box-shadow: 3px 2px 3px #272957;
 }
 
-
 h1 {
-  font-size: clamp(1.8rem, calc(1.8rem + ((1vw - 0.25rem) * 0.8421)), 2.6rem);
+  /* font-size: clamp(1.8rem, calc(1.9rem + ((1vw - 0.25rem) * 0.9421)), 9.6rem); */
+  font-size: clamp(32px, calc(2rem + ((1vw - 4px) * 1.7308)), 50px);
 }
 
 .project {
@@ -122,6 +122,23 @@ form select {
   color: #7092f7;
   cursor: pointer;
   text-decoration: underline;
+}
+
+ul.tags {
+  list-style-type: none;
+  padding-left: 0px;
+}
+ul.tags > li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+}
+li.badge {
+  background-color: var(--blue);
+  color: white;
+  border: 1px solid black;
+  padding: 5px 9px;
+  border-radius: 19px;
+  font-size: 9pt;
 }
 
 @media (max-width: 600px) {

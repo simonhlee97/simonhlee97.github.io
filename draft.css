@@ -4,6 +4,7 @@
 }
 
 body {
+  background-attachment: fixed;
   color: var(--blue);
   padding: 2.5em;
   background-color: #DFDBE5;

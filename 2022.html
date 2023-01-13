@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <title>Simon Lee - web developer</title>
+    </head>
+    <body>
+        <main>
+            <nav>
+                <a href="#about"><b>About</b></a>
+                <a href="#projects"><b>Projects</b></a>
+                <a href="#contact"><b>Contact</b></a>
+            </nav>
+
+            <section>
+                <div class="business-card">
+                    <div class="img-panel">
+                        <img style="width: 198px; border-radius: 2px" src="./simonface.jpg" alt="me" />
+                    </div>
+                    <div class="info-panel">
+                        <h2>Simon Lee</h2>
+                        <h3>Web Developer</h3>
+                        <span class=""
+                            ><a href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin fa-3x"></i></a
+                        ></span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="tc">👍 MVC 💙 Jamstack</h2>
+            </section>
+
+            <section>
+                <h3 class="tc">My 🍞 and 🧈</h3>
+                <div class="skills-icons">
+                    <i class="fab fa-js-square fa-2x" title="JavaScript"></i>
+                    <i class="fab fa-react fa-2x" title="React"></i>
+                    <i class="fab fa-vuejs fa-2x" title="VueJS"></i>
+                    <i class="fab fa-node fa-2x" title="NodeJS"></i>
+                    <i class="fab fa-css3 fa-2x" title="CSS"></i>
+                </div>
+            </section>
+
+            <section id="about my-6">
+                <h3 class="text-5xl tracking-wider my-3">ABOUT</h3>
+                <p>
+                    I am in the early stages of my web development career and journey. I started out building WordPress themes (php, html, css, js), then moved on to fullstack JavaScript, including templating (Handlebars, Mustache, Pug, Nunjucks, etc.), React, Vue, and some server-side JS (Node, Express REST APIs). Recently, I've been learning how to use Jamstack and serverless tools and backend services to build fullstack applications,
+                    so I am pretty open to learning new languages, tools, and frameworks. I'm a life-long learner and growth-mindset type who enjoys daily improvement. And I love reading, writing, and talking about code.
+                </p>
+                <p>I'm a Korean-born 'Hoosier' (a person from Indiana), so born in rice fields, grew up in corn fields. I've also lived in Chicago and Seoul, and I've been in Korea since Nov. 2018. I enjoy books, tennis, golf, basketball, podcasts, New Yorker Magazine, Pink Floyd, Led Zeppelin, Simon and Garfunkel, tacos, pizza, and burgers.</p>
+                <p><a id="resume" href="https://github.com/simonhlee97/career-docs/blob/main/resume.simon.lee.pdf">🗂 My resume (PDF)</a></p>
+            </section>
+
+            <hr />
+            <section id="projects">
+                <h3>PROJECTS</h3>
+                <div class="flex-container">
+                    <div class="project-card">
+                        <h2><a class="project-title" href="https://simonpost.com/" target="_blank">SimonPost.com (my dev blog)</a></h2>
+                        <img src="./post.jpg" alt="simonpostcom" />
+                        <div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span></div>
+                        <div class="links">
+                            <a href="https://github.com/simonhlee97/simonpostcom"><i class="fas fa-code-branch"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h2 class="project-title"><a class="project-title" href="https://netflix-wannabe.vercel.app/">Netflix Clone</a></h2>
+                        <img src="./game1.jpg" alt="game" />
+                        <div class="tags"><span>React</span><span>Next.js</span><span>Styled Components</span> <span>Tailwind</span></div>
+                        <div class="links">
+                            <a href="https://github.com/simonhlee97/netflix-wannabe"><i class="fas fa-code-branch"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h2 class="project-title"><a class="project-title" href="https://simon-crown-shop-project.herokuapp.com/">Ecommerce Shop</a></h2>
+                        <img src="./shop.jpg" alt="ecommerce" />
+                        <div class="tags"><span>React</span><span>Firebase</span><span>Stripe</span></div>
+                        <div class="links">
+                            <a href="https://github.com/simonhlee97/edutools"><i class="fas fa-code-branch"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr />
+
+            <section id="contact" class="contact my-24">
+                <!-- formspree? -->
+                <h3 class="text-5xl my-3">CONTACT</h3>
+
+                <h4 class="my-8">Feel free to send me a quick message (below) or connect with me on GitHub or LinkedIn.</h4>
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xqkwqdzw" method="post">
+                    <fieldset id="fs-frm-inputs">
+                        <label for="full-name">Name</label>
+                        <input type="text" name="name" id="full-name" placeholder="Name" required="" />
+                        <label for="email-address">Email Address</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="you@email.com" required="" />
+                        <label for="message">Message</label>
+                        <textarea rows="5" name="message" id="message" placeholder="What would you like to ask Simon?" required=""></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
+                    </fieldset>
+                    <input class="text-indigo-500 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-blue active:bg-indigo-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="submit" value="Submit" />
+                </form>
+                <hr class="my-8" />
+                <div class="contact-icons center">
+                    <a class="mr-6" href="https://github.com/simonhlee97/"><i class="fab fa-github-square fa-3x hover:shadow-lg hover:rounded transition duration-150 ease-in-out transform hover:scale-105"></i></a>
+                    <a href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin fa-3x"></i></a>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

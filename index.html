@@ -4,21 +4,25 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./draft.css" />
+        <link rel="stylesheet" href="./2023.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Simon Lee - software developer</title>
     </head>
     <body>
         <main id="main">
             <section class="flex flex-col md:flex-row">
+                <div class="card-banner">
+                    <span class="card-header">Hi, I'm Simon</span>
+                </div>
                 <img style="width: 110px; border-radius: 50%" src="./simonface.jpg" alt="me" />
-                <h1 class="title">Hi, I'm Simon</h1>
                 <h3>Coder & life-long learner</h3>
                 <h3>From Indianapolis, IN 🇺🇸</h3>
             </section>
 
             <section>
-                <h2>MY CODING CHOPS 🔪</h2>
+                <div class="card-banner">
+                    <span class="card-header">My Coding Chops 🔪</span>
+                </div>
                 <div class="skills-icons">
                     <?xml version="1.0" ?><svg height="38px" viewBox="0 0 512 512" width="38px" xmlns="http://www.w3.org/2000/svg">
                         <title />
@@ -215,11 +219,13 @@
                         </g>
                     </svg>
                 </div>
-                <p>[ Also learning TypeScript and Rust/WebAssembly ]</p>
+                <p><small>[ Also learning TypeScript and Rust/WebAssembly ]</small></p>
             </section>
 
             <section id="projects">
-                <h2>PROJECTS</h2>
+                <div class="card-banner">
+                    <span class="card-header">Projects</span>
+                </div>
                 <div class="project">
                     <h3><a href="https://marbled-rye-bookshelf.vercel.app/" class="project-title">Book Blog</a></h3>
                     <ul class="tags">
@@ -246,10 +252,20 @@
                         <li class="badge">Next.js</li>
                     </ul>
                 </div>
+
+                <div class="project">
+                    <h3><a href="https://simonpost.com/" class="project-title">SimonPost.com - my blog and 2nd brain</a></h3>
+                    <ul class="tags">
+                        <li class="badge">Docusaurus 2.0</li>
+                        <li class="badge">React</li>
+                    </ul>
+                </div>
             </section>
 
             <section id="about my-6">
-                <h2>ABOUT</h2>
+                <div class="card-banner">
+                    <span class="card-header">About</span>
+                </div>
                 <p>
                     I am in the early stages of my web development career and journey. I started out building WordPress themes (php, html, css, js), then moved on to fullstack JavaScript, including templating (Handlebars, Mustache, Pug, Nunjucks, etc.), React, Vue, and some backend development.
                     Recently, I've been learning how to use Jamstack and serverless tools to build fullstack applications, so I am pretty open to learning new languages, tools, and frameworks. I'm a life-long learner and growth-mindset type who enjoys daily improvement. And I love reading, writing,
@@ -263,7 +279,9 @@
             </section>
 
             <section>
-                <h2>CONTACT</h2>
+                <div class="card-banner">
+                    <span class="card-header">Contact</span>
+                </div>
                 <a style="margin-right: 1em" href="https://linkedin.com/in/simon-h-lee"><i class="fab fa-linkedin fa-3x"></i></a>
                 <a class="mr-6" href="https://github.com/simonhlee97/"><i class="fab fa-github-square fa-3x hover:shadow-lg hover:rounded transition duration-150 ease-in-out transform hover:scale-105"></i></a>
             </section>

@@ -1,0 +1,100 @@
+:root{
+  --yellow: #FDB525;
+  --blue: #091F40;
+}
+
+body {
+  color: var(--blue);
+  padding: 2.5em;
+  /* background-color: #DFDBE5; */
+  /* background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230c259d' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+}
+
+body {
+  background-color: #a2a2b5;
+  background-attachment: fixed;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2306062e' fill-opacity='0.93'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+section {
+  background-color: whitesmoke;
+  max-width: 900px;
+  margin: 0 auto 3.9em auto;
+  border-radius: 6px;
+  padding: 7em 3em 2em 3em;
+  box-shadow: 3px 2px 3px #272957;
+}
+section .card-banner {
+  width: 275px;
+  font-size: 16pt;
+  margin-top: -111px;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  background-color: var(--blue);
+  color: whitesmoke;
+  text-align: center;
+}
+
+h1 {
+  /* font-size: clamp(1.8rem, calc(1.9rem + ((1vw - 0.25rem) * 0.9421)), 9.6rem); */
+  font-size: clamp(32px, calc(2rem + ((1vw - 4px) * 1.7308)), 50px);
+}
+
+.project {
+  border: 1px solid #008bf8;
+  margin-bottom: 1.5em;
+  padding: 1em;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fab {
+  margin: 3px;
+  color: var(--blue);
+}
+
+.fab:hover {
+  color: #7092f7;
+}
+
+#resume, .project-title {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+#resume:hover, .project-title:hover {
+  color: #7092f7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+ul.tags {
+  list-style-type: none;
+  padding-left: 0px;
+}
+ul.tags > li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+}
+li.badge {
+  background-color: var(--blue);
+  color: white;
+  border: 1px solid black;
+  padding: 5px 9px;
+  border-radius: 19px;
+  font-size: 9pt;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1.25em;
+  }
+  section {
+    padding: 7em 3em 2em 3em;
+  }
+}

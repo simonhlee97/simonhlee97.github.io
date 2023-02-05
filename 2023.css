@@ -19,12 +19,12 @@ body {
 section {
   background-color: whitesmoke;
   max-width: 900px;
-  margin: 0 auto 3.9em auto;
+  margin: 0 auto 4.2em auto;
   border-radius: 6px;
   padding: 7em 3em 2em 3em;
   box-shadow: 3px 2px 3px #272957;
 }
-section .card-banner {
+section .card-header {
   width: 275px;
   font-size: 16pt;
   margin-top: -111px;
@@ -92,9 +92,14 @@ li.badge {
 
 @media (max-width: 600px) {
   body {
-    padding: 1.25em;
+    padding: 2.5em 0.8em;
   }
   section {
-    padding: 7em 3em 2em 3em;
+    padding: 7em 2em 2em 2em;
+  }
+  section .card-header {
+    width: 205px;
+    font-size: 12pt;
+    margin-top: -110px;
   }
 }

@@ -98,8 +98,10 @@ li.badge {
     padding: 7em 2em 2em 2em;
   }
   section .card-header {
-    width: 205px;
+    width: 200px;
     font-size: 12pt;
-    margin-top: -110px;
+    margin-top: -129px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

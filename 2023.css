@@ -4,7 +4,7 @@
 }
 
 body {
-  padding-top: 3em;
+  padding-top: 3.5em;
   padding-left: 3.5em;
   padding-right: 3.5em;
   background-color: #a2a2b5;
@@ -14,13 +14,14 @@ body {
   background-image: url('https://images.unsplash.com/photo-1562832135-14a35d25edef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1245&q=80');
 }
 
-section {
+section, section.section {
   background-color: whitesmoke;
   max-width: 900px;
   margin: 0 auto 5.5em auto;
   border-radius: 6px;
   padding: 7em 3em 2em 3em;
   box-shadow: 3px 2px 3px #272957;
+  transition: transform 1s, opacity 1s;
 }
 section .card-header {
   width: 275px;
@@ -33,6 +34,11 @@ section .card-header {
   background-color: var(--blue);
   color: whitesmoke;
   text-align: center;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(6rem);
 }
 
 h1 {

@@ -3,6 +3,13 @@
   --blue: #091F40;
 }
 
+
+
+.section-transition {
+  opacity: 1;
+  transform: none;
+}
+
 body {
   padding-top: 3.5em;
   padding-left: 3.5em;
@@ -21,7 +28,13 @@ section, section.section {
   border-radius: 6px;
   padding: 7em 3em 2em 3em;
   box-shadow: 3px 2px 3px #272957;
-  transition: transform 1s, opacity 1s;
+  /* opacity: 0; */
+  transform: scale(1), translateY(4em);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .section {
+    transition: opacity 1s ease, transform 1s ease;
+  }
 }
 section .card-header {
   width: 275px;
@@ -34,11 +47,6 @@ section .card-header {
   background-color: var(--blue);
   color: whitesmoke;
   text-align: center;
-}
-
-.section--hidden {
-  opacity: 0;
-  transform: translateY(6rem);
 }
 
 h1 {
@@ -108,4 +116,20 @@ li.badge {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+section.about p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #252525;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #252525;
 }

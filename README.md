@@ -1,5 +1,5 @@
 # Simon Lee
 
-### web developer
+## web developer
 
-### link: [simonhlee97.github.io](simonhlee97.github.io)
+### link: [Simon's home page](https://simonhlee97.github.io/)

@@ -1,6 +1,8 @@
 :root {
   --gray: #4d5358;
   --blue: #15202e;
+  --purple1: #313050;
+  --purple2: #5A5973;
 }
 body {
 	animation: color-change 2.5s linear alternate both;
@@ -9,11 +11,11 @@ body {
 }
 @keyframes color-change {
   0% {
-    background: #c2d4e9;
+    background: var(--purple2);
   }
 
   100% {
-    background: var(--blue);
+    background: var(--purple1);
   }
 }
 .header {

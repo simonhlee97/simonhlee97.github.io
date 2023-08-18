@@ -92,6 +92,11 @@ h2:hover {
   stroke: #90a2f3;
 }
 
+.scroll {
+  text-align: center;
+  padding: 2em;
+}
+
 /* .projects {
   margin: 6em auto;
   max-width: 800px;

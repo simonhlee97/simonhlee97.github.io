@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Custom Site Theming</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500;700&display=swap" rel="stylesheet" />
+    <script src="./tennis-settings.js" type="module"></script>
+  </head>
+  <body>
+    <aside class="container" aria-label="Settings section">
+      <div class="settings-wrapper">
+        <h2 class="h3">Custom Site Settings</h2>
+        <div class="settings">
+          <div class="stack">
+            <fieldset class="radio-wrapper">
+              <legend>Website Theme</legend>
+              <div class="radio">
+                <input type="radio" name="theme" id="hard" />
+                <div class="check"></div>
+                <label for="hard">Hard court</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="theme" id="clay" />
+                <div class="check"></div>
+                <label for="clay">Clay</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="theme" id="grass" />
+                <div class="check"></div>
+                <label for="grass">Grass</label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="banner" data-bkg="accent2"></div>
+    <div class="court">
+      <div class="base-line"></div>
+      <div class="center-line"></div>
+      <div class="net"></div>
+    </div>
+    <div class="wrapper">
+      <main>
+        <section aria-labelledby="recent-posts">
+          <div class="card-wrapper">
+            <article class="card">
+              <div>
+                <p>Design involves problem identification, research, brainstorming, prototyping, testing, and refining. Effective communication and feedback are crucial.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="banner" data-bkg="primary"></div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas width="800" height="600" id="canvas"></canvas>
+
+    <script>
+      var canvas = document.getElementById('canvas')
+      var c = canvas.getContext('2d')
+
+      c.globalCompositeOperation = 'lighter'
+      c.fillStyle = '#ff6699' //fill with a pink
+      for (var i = 0; i < 50; i++) {
+        c.beginPath()
+        c.arc(Math.random() * 400, Math.random() * 400, 40, 0, Math.PI * 2)
+        c.closePath()
+        c.fill()
+      }
+
+      var img = new Image()
+      img.onload = function () {
+        c.drawImage(img, 0, 0)
+        var data = c.getImageData(0, 0, canvas.width, canvas.height)
+
+        // invert each pixel
+        for (let n = 0; n < data.width * data.height; n++) {
+          var index = n * 4
+          data.data[index] = 255 - data.data[index]
+          data.data[index + 1] = 255 - data.data[index + 1]
+          data.data[index + 2] = 255 - data.data[index + 2]
+        }
+        // c.putImageData(data, 0, 0)
+      }
+      img.src = 'https://picsum.photos/536/354'
+    </script>
+  </body>
+</html>

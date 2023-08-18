@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project - css build tools</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 3em;
+      }
+      .step {
+        border: 1px solid slategray;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Themers - generate css themes</h1>
+
+    <div class="step">
+      <h3>Step 1</h3>
+      <label for="bg-picker">Pick Background Color:</label>
+      <input id="bg-picker" type="color" />
+    </div>
+
+    <div class="step">
+      <h3>Step 2</h3>
+      <label for="text-picker">Primary text color:</label>
+      <input id="text-picker" type="color" />
+      <p id="your-color"></p>
+    </div>
+
+    <div class="step">
+      <input type="text" placeholder="some text" id="hello" />
+    </div>
+
+    <div class="step output-css">
+      <h3>Your CSS Code:</h3>
+      <hr />
+      <code>
+        <pre>
+          body { 
+            background-color: blue;
+            color: white; 
+          }
+        </pre>
+      </code>
+    </div>
+
+    <script>
+      const bgPicker = document.getElementById('bg-picker')
+      const textPicker = document.getElementById('text-picker')
+      const yourColor = document.querySelector('#your-color')
+      const body = document.body
+
+      const hello = document.querySelector('hello')
+
+      console.log(hello)
+
+      bgPicker.addEventListener('input', function () {
+        body.style.backgroundColor = this.value
+      })
+
+      textPicker.addEventListener('input', function () {
+        body.style.color = this.value
+        yourColor.textContent = textPicker.value
+      })
+
+      // const colorPicker = document.getElementById('color-picker')
+      const image = (document.getElementById('image').style.webkitFilter = 'invert(11%)')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #224b7c;
+}
+
+.court {
+  position: relative;
+  width: 660px;
+  height: 86%;
+  background-color: #5E8FCA;
+  border: 3px solid whitesmoke;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.base-line,
+.center-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.base-line {
+  left: 0;
+}
+
+.center-line {
+  border-top: 1px dashed #FFF;
+}
+
+.net {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #FFF;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.net::before,
+.net::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: #FFF;
+}
+
+.net::before {
+  top: 50%;
+  left: -6px;
+  transform: translateY(-50%);
+}
+
+.net::after {
+  bottom: 50%;
+  left: -6px;
+  transform: translateY(50%);
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #224b7c;
+}
+
+.item1 {
+  grid-area: one;
+  width: 45px;
+}
+
+.item2 {
+  grid-area: two;
+  height: 360px;
+}
+
+.item3 {
+  grid-area: three;
+  width: 45px;
+}
+
+.item4 {
+  grid-area: four;
+  width: 204px;
+  height: 210px;
+}
+
+.item5 {
+  grid-area: five;
+  width: 204px;
+  height: 210px;
+}
+
+.item6 {
+  grid-area: six;
+  width: 204px;
+  height: 210px;
+}
+
+.item7 {
+  grid-area: seven;
+  width: 204px;
+  height: 210px;
+}
+
+.item8 {
+  grid-area: eight;
+  height: 360px;
+}
+
+.grid-container {
+  width: 360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    'one two two three'
+    'one four five three'
+    'one six seven three'
+    'one eight eight three';
+  background-color: #5E8FCA;
+  
+}
+.grid-container>div {
+  background-color: #5E8FCA;
+  text-align: center;
+  font-size: 16px;
+  border: 4px solid white;
+}

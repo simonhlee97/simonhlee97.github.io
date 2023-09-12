@@ -75,6 +75,24 @@
         font-size: 9pt;
         border-radius: 18px;
       }
+      .dream {
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      .project {
+        max-width: 486px;
+        background: #f4f1f1;
+        margin: auto;
+        border-radius: 12px;
+        margin-bottom: 1em;
+        padding: 1em;
+      }
+      .project a {
+        text-decoration: none;
+      }
+      .project:hover {
+        background-color: white;
+      }
     </style>
   </head>
   <body>
@@ -82,7 +100,7 @@
       <h1 class="title">Hi, I'm Simon</h1>
       <img style="width: 110px; border-radius: 50%" src="./simonface.jpg" alt="me" />
 
-      <h4>Web Developer, Tech Nerd 💾</h4>
+      <h4>Web Developer, Tech Enthusiast 💾</h4>
       <h4>Tennis Geek 🎾</h4>
     </section>
 
@@ -107,28 +125,27 @@
 
     <section class="projects">
       <h2>Portfolio</h2>
-      <p>project 1</p>
-      <p>project 2</p>
-      <p>project 3</p>
+      <div class="project">
+        <a href="https://my-tennis-platter.netlify.app/">
+          <h3>My Tennis Blog</h3>
+          <img src="./tennisplatter.jpg" alt="tennisproject" />
+        </a>
+      </div>
     </section>
 
     <section class="about">
       <h2>quick intro</h2>
+      <p>I am an early-stage web developer. I enjoy building UIs, working with databases, and trying out different coding tools. But more importantly, I enjoy working with cool devs and being part of a community.</p>
       <p>
-        I am an early-stage web developer. I first learned custom WordPress themes, then moved on to fullstack JavaScript, including templating (Handlebars, Mustache, etc.), React, Vue, and some backend development. Recently, I've been using MVC frameworks (Rails) and Jamstack tools to build
-        fullstack applications, so I am pretty open to learning new languages, tools, and frameworks. I'm a life-long learner and growth-mindset type who enjoys daily improvement. And I love reading, writing, and talking about code.
-      </p>
-      <p>
-        I'm a Korean-born 'Hoosier' (a person from Indiana), so born in rice fields, grew up in corn fields. I've also lived in Chicago and Seoul, and I've been in Korea since Nov. 2018. I enjoy books, tennis, golf, basketball, podcasts, New Yorker Magazine, Pink Floyd, Led Zeppelin, Simon and
-        Garfunkel, tacos, pizza, and burgers.
+        I'm a Korean-born 'Hoosier' (a person from Indiana), so born in rice fields, grew up in corn fields. I've also lived in Chicago and Seoul, and I've been in Korea since Nov. 2018. I enjoy books, TENNIS 🎾, golf, basketball, podcasts, Pink Floyd, Led Zeppelin, Simon and Garfunkel, tacos,
+        pizza, and burgers.
       </p>
     </section>
 
     <section class="projects">
       <h2>other intersts</h2>
       <p>Machine Learning</p>
-      <p>Rust and Web Assembly</p>
-      <p>Data Visualization</p>
+      <p class="dream">Dream Job: combine my love for coding and tennis!</p>
     </section>
 
     <script>

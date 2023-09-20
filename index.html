@@ -98,6 +98,41 @@
         background-color: white;
         opacity: 1;
       }
+      .card {
+        display: flex;
+        padding: 24px;
+        margin: 1em auto;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+        max-width: 428px;
+        gap: 28px;
+        font-size: 15px;
+        font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #333;
+        background: #f0ecec;
+        transition: background 0.5s;
+      }
+      .card:hover {
+        background: #fff;
+      }
+      .card__image {
+        width: 130px;
+        border-radius: 50%;
+        /* margin-right: 28px; */
+      }
+      .card__title {
+        margin-top: 0;
+        font-size: 1.4em;
+        font-weight: bold;
+      }
+      .card__body {
+        line-height: 1.5;
+      }
+      .card__body:last-child {
+        margin-bottom: 0;
+      }
     </style>
   </head>
   <body>
@@ -130,12 +165,16 @@
 
     <section class="projects">
       <h2>Portfolio</h2>
-      <div class="project">
-        <a href="https://my-tennis-platter.netlify.app/">
-          <h3>My Tennis Blog</h3>
-          <img src="./tennisplatter.jpg" alt="tennisproject" />
-        </a>
-      </div>
+
+      <a href="https://my-tennis-platter.netlify.app/" class="card" target="_blank">
+        <div class="card__section">
+          <img src="./tennisBlog.jpg" alt="tennisblog" class="card__image" />
+        </div>
+        <div class="card__section">
+          <p class="card__title">My Tennis Blog</p>
+          <p class="card__body">I built this blog with 11ty, vanilla CSS, hosted on Netlify.</p>
+        </div>
+      </a>
     </section>
 
     <section class="about">

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Tron;
+  src: url('../Tr2n.ttf');
+}
+
+.tron {
+  font-family: Tron, 'Poppins', Arial, sans-serif;
+  font-weight: 900;
+  color: #18CAE6;
+}

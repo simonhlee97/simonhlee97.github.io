@@ -4,259 +4,239 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <title>Simon Lee - software developer</title>
-    <style>
-      :root {
-        --light-blue: #2f305e;
-      }
-      body {
-        padding: 2em 2em;
-        background: #eee;
-        color: rgb(68, 67, 67);
-        font-family: Helvetica, sans-serif;
-      }
-      section {
-        text-align: center;
-        margin: 0 auto 1.8em auto;
-        padding: 1.5em 1em 1em 1em;
-        background: #d1d6dbe0;
-        border: 1px solid rgba(176, 176, 203, 0.617);
-      }
-      section.about {
-        text-align: justify;
-        padding: 1.9em;
-      }
-      .title {
-        font-size: 30pt;
-      }
-      section.skills {
-        padding-bottom: 1em;
-      }
+    <title>Simon Lee | Web Developer | Portfolio</title>
+    <link rel="stylesheet" href="./2024.css" />
+    <link rel="stylesheet" href="./fonts.css" />
 
-      p {
-        /* line-height: 1.5; */
-        margin-bottom: 1em;
-      }
-      h2 {
-        text-align: center;
-        margin-bottom: 1em;
-        text-transform: uppercase;
-      }
-      .feather {
-        width: 24px;
-        height: 24px;
-        stroke: currentColor;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        fill: none;
-      }
-      .social-link {
-        margin: 0 1em;
-      }
-      img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .header > * {
-        margin-bottom: 24px;
-      }
-      .list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      .skills span {
-        border: 1px solid rgba(176, 176, 203, 0.617);
-        color: var(--light-blue);
-        padding: 10px 16px;
-        font-size: 9pt;
-        border-radius: 18px;
-      }
-      .dream {
-        font-weight: 800;
-        text-transform: uppercase;
-      }
-      .project {
-        max-width: 486px;
-        background: #f4f1f1;
-        margin: auto;
-        border-radius: 12px;
-        margin-bottom: 1em;
-        padding: 1em;
-        opacity: 0.6;
-        transition: 0.3s;
-      }
-      .project a {
-        text-decoration: none;
-      }
-      .project:hover {
-        background-color: white;
-        opacity: 1;
-      }
-      .card {
-        display: flex;
-        padding: 18px;
-        margin: 1em auto;
-        box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
-        max-width: 434px;
-        gap: 22px;
-        font-size: 15px;
-        font-family: 'Inconsolata', 'Courier New', Courier, monospace;
-        font-weight: 600;
-        border-radius: 8px;
-        text-decoration: none;
-        color: #333;
-        background: #f0ecec;
-        transition: background 0.5s;
-      }
-      .card:hover {
-        background: #fff;
-      }
-      .card__image {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-      .card__title {
-        margin-top: 0;
-        font-size: 1.4em;
-        font-weight: bold;
-      }
-      .card__body {
-        line-height: 1.5;
-      }
-      .card__body:last-child {
-        margin-bottom: 0;
-      }
-
-      .card_n {
-        width: 250px;
-        background: white;
-        padding: 0.4em;
-        margin: auto;
-        border-radius: 6px;
-      }
-      .card_n a {
-        text-decoration: none;
-      }
-
-      .card_n-image {
-        background-color: rgb(236, 236, 236);
-        background-image: url('./tennisBlog.jpg');
-        background-size: cover;
-        width: 100%;
-        height: 130px;
-        border-radius: 6px 6px 0 0;
-      }
-
-      .category {
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 0.7em;
-        font-weight: 600;
-        color: rgb(63, 121, 230);
-        padding: 10px 7px 0;
-      }
-
-      .category:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
-
-      .heading {
-        font-weight: 600;
-        color: rgb(88, 87, 87);
-        padding: 7px;
-      }
-
-      .heading:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
-
-      .author {
-        color: gray;
-        font-weight: 400;
-        font-size: 11px;
-        padding-top: 20px;
-      }
-
-      .name {
-        font-weight: 600;
-      }
-
-      .name:hover {
-        cursor: pointer;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
-  <body>
-    <section class="header">
-      <h1 class="title">Hi, I'm Simon</h1>
-      <img style="width: 110px; border-radius: 50%" src="./simonface.jpg" alt="me" />
-
-      <h4>Web Developer, Tech Enthusiast 💾</h4>
-      <h4>Tennis Geek 🎾</h4>
-    </section>
-
-    <section class="connect">
-      <h2>connect</h2>
-      <a class="social-link" href="https://github.com/simonhlee97"><i data-feather="github"></i></a>
-      <a class="social-link" href="https://www.linkedin.com/in/simon-h-lee/"><i data-feather="linkedin"></i></a>
-      <a class="social-link" href="https://kit.co/babolat_baseliner"><i data-feather="shopping-bag"></i></a>
-    </section>
-
-    <section class="skills">
-      <h2>web development skills</h2>
-      <div class="list">
-        <span>HTML5, CSS3</span>
-        <span>JavaScript</span>
-        <span>React.js</span>
-        <span>Vue.js</span>
-        <span>Node.js</span>
-        <span>WordPress</span>
-        <span>Ruby on Rails</span>
-      </div>
-    </section>
-
-    <section class="projects">
-      <h2>Portfolio</h2>
-      <div class="card_n">
-        <a href="https://tennis-level-midnight.netlify.app/" target="_blank">
-          <div class="card_n-image"></div>
-          <div class="category">My Tennis Blog</div>
-          <div class="heading">
-            I built my tennis blog with 11ty, vanilla CSS, hosted on Netlify.
-            <div class="author">#markdown, #nunjucks, #11ty</div>
+  <body class="main-content">
+    <header class="container header active" id="home">
+      <div class="header-content">
+        <div class="left-header">
+          <div class="h-shape"></div>
+          <div class="image">
+            <img src="./payphone.jpg" alt="hero" />
           </div>
-        </a>
+        </div>
+        <div class="right-header">
+          <h1 class="name">Hi, I'm <span class="tron">Simon</span></h1>
+          <h3 class="sub-title">Web and WordPress Developer.</h3>
+          <p>I'm a Web Developer, always testing my creativity and looking for new challenges. My bread and butter: <strong>JavaScript</strong>, <strong>React</strong>, <strong>Vue</strong> and <strong>WordPress</strong> development.</p>
+          <div class="btn-con">
+            <a href="" class="main-btn">
+              <span class="btn-text">Download CV</span>
+              <span class="btn-icon"><i class="fas fa-download"></i></span>
+            </a>
+          </div>
+        </div>
       </div>
-    </section>
+    </header>
+    <main>
+      <section class="container about" id="about">
+        <div class="main-title">
+          <h2>About <span class="tron text-xl">me</span><span class="bg-text">about Simon</span></h2>
+        </div>
 
-    <section class="about">
-      <h2>quick intro</h2>
-      <p>
-        I am an early-stage web developer. I've learned a few different stacks (e.g. MERN), WordPress, and I enjoy building UIs, working with databases, and trying out different coding tools. But more importantly, I enjoy working with cool devs, growing professionally, and being part of a community.
-      </p>
-      <p>
-        I'm currently living in Indianapolis. I'm a Korean-born 'Hoosier' (a person from Indiana), so born in rice fields, grew up in corn fields. I've also lived in Chicago and Seoul. I enjoy books, TENNIS 🎾, running, basketball, podcasts, Pink Floyd, Led Zeppelin, Simon and Garfunkel, tacos,
-        pizza, and burgers.
-      </p>
-    </section>
+        <div class="testcontainer">
+          <details class="about-item testcolumn">
+            <summary>
+              <p class="large-text"><i class="fab fa-wordpress"></i></p>
+              <p class="small-text">WordPress</p>
+            </summary>
+            <ul class="skill-list">
+              <li>Advanced Custom Fields</li>
+              <li>WooCommerce</li>
+              <li>Gutenberg</li>
+              <li>Elementor</li>
+              <li>Custom Themes</li>
+              <li>Custom Blocks</li>
+              <li>Plugin Development</li>
+            </ul>
+          </details>
 
-    <section class="projects">
-      <h2>other intersts</h2>
-      <p>Machine Learning</p>
-      <p class="dream">Dream Job: combine my love of CODING and TENNIS!</p>
-    </section>
+          <details class="about-item testcolumn">
+            <summary>
+              <p class="large-text"><i class="fab fa-js-square"></i></p>
+              <p class="small-text">JavaScript</p>
+            </summary>
+            <ul class="skill-list">
+              <li>React, Next.js</li>
+              <li>Vue</li>
+              <li>ES6+, NodeJS</li>
+              <li>Webpack, Vite</li>
+            </ul>
+          </details>
+          <details class="about-item testcolumn">
+            <summary>
+              <p class="large-text"><i class="fas fa-terminal"></i></p>
+              <p class="small-text">Dev</p>
+            </summary>
+            <ul class="skill-list">
+              <li>git</li>
+              <li>Ruby / Ruby on Rails</li>
+              <li>Python / Flask</li>
+              <li>MySQL / PostgreSQL</li>
+            </ul>
+          </details>
+          <details class="about-item testcolumn">
+            <summary>
+              <p class="large-text"><i class="fab fa-wpexplorer"></i></p>
+              <p class="small-text">Other</p>
+            </summary>
+            <p class="small-font pl-1">
+              I'm currently living in Indianapolis. I'm a Korean-born 'Hoosier' (a person from Indiana), so born in rice fields, grew up in corn fields. I've also lived in Chicago and Seoul. I enjoy tennis, running, basketball, podcasts, and exploring local cuisine, especially tacos, pizza, and
+              burgers.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="container" id="portfolio">
+        <div class="main-title">
+          <h2>My <span class="tron text-xl">Portfolio</span><span class="bg-text">My Work</span></h2>
+        </div>
+        <p class="port-text">Some recent projects I have been working on</p>
+        <div class="portfolios">
+          <div class="portfolio-item">
+            <div class="image">
+              <img src="./simon-pixels.jpg" alt="pixels" />
+            </div>
+            <div class="hover-items">
+              <h3>Project Repo & Demo</h3>
+              <div class="icons">
+                <a href="https://github.com/simonhlee97/simon-pixels/" target="_blank" class="icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://simon-pixels.netlify.app/" target="_blank" class="icon">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-    <script>
-      feather.replace()
-    </script>
+          <div class="portfolio-item">
+            <div class="image">
+              <img src="./threat.jpg" alt="tennisBlog" />
+            </div>
+            <div class="hover-items">
+              <h3>Project Repo & Demo</h3>
+              <div class="icons">
+                <a href="https://github.com/simonhlee97/simon-tennis-platter" target="_blank" class="icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://tennis-level-midnight.netlify.app/" target="_blank" class="icon">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <div class="image">
+              <img src="img/port3.jpg" alt="" />
+            </div>
+            <div class="hover-items">
+              <h3>Project Source</h3>
+              <div class="icons">
+                <a href="#" class="icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="icon">
+                  <i class="fab fa-behance"></i>
+                </a>
+                <a href="#" class="icon">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container contact" id="contact">
+        <div class="contact-container">
+          <div class="main-title">
+            <h2>Contact <span class="tron">Me</span><span class="bg-text">contact</span></h2>
+          </div>
+
+          <div class="tc">
+            <!-- <div class="left-contact"> -->
+            <h3 class="tc py-4">Connect or reach out with any questions</h3>
+
+            <div class="tc">
+              <div class="connect-item">
+                <div class="icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Location</span>
+                </div>
+                <p>
+                  <span>Indianapolis, IN</span>
+                </p>
+              </div>
+              <div class="connect-item">
+                <div class="icon">
+                  <i class="fas fa-envelope"></i>
+                  <span>Email</span>
+                </div>
+                <p>
+                  <span>psyminrhee79@icloud.com</span>
+                </p>
+              </div>
+              <div class="connect-item">
+                <div class="icon">
+                  <i class="fas fa-user-graduate"></i>
+                  <span>Education</span>
+                </div>
+                <p>
+                  <span>Indiana University, Kelley School of Business, Indianapolis</span>
+                </p>
+              </div>
+
+              <div class="connect-item">
+                <div class="icon">
+                  <i class="fas fa-globe-africa"></i>
+                  <span>Languages</span>
+                </div>
+                <p>
+                  <span>English</span>
+                </p>
+              </div>
+
+              <div class="connect-item icons link-items">
+                <a href="https://linkedin.com/in/simon-h-lee" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/simonhlee97" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="controls">
+      <div class="control active-btn" data-id="home">
+        <i class="fas fa-home"></i>
+      </div>
+      <div class="control" data-id="about">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="control" data-id="portfolio">
+        <i class="fas fa-briefcase"></i>
+      </div>
+
+      <div class="control" data-id="contact">
+        <i class="fas fa-envelope-open"></i>
+      </div>
+    </div>
+    <div class="theme-btn">
+      <i class="fas fa-adjust"></i>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>

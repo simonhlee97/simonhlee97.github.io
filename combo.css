@@ -122,7 +122,7 @@ h1 {
 .tennis td,
 .tennis th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 6px;
 }
 
 .tennis tr:nth-child(even) {
@@ -134,10 +134,10 @@ h1 {
 }
 
 .tennis th {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #0d7cdd;
   color: white;
 }
 

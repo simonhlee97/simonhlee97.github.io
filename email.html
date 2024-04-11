@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon's Email Signature Generator (prototype)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 4em;
+        background-color: #caccd3;
+      }
+      label {
+        font-weight: normal;
+        margin-bottom: -12px;
+      }
+      textarea {
+        color: #081b82;
+        width: 100%;
+        height: 360px;
+        font-size: 12pt;
+        resize: none;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      #title {
+        padding-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="title">Email Signature Generator</h2>
+    <form id="signatureForm">
+      <div class="field">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" />
+      </div>
+      <div class="field">
+        <label for="jobTitle">Job Title:</label><br />
+        <input type="text" id="jobTitle" name="jobTitle" />
+      </div>
+      <div class="field">
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" />
+      </div>
+      <div class="field">
+        <label for="phone">Phone:</label><br />
+        <input type="tel" id="phone" name="phone" />
+      </div>
+    </form>
+
+    <hr />
+
+    <h3>Your Email Signature Markup</h3>
+
+    <article>
+      <textarea id="generatedHtml" readonly></textarea>
+      <button id="copyButton">Copy to clipboard</button>
+    </article>
+
+    <p style="font-size: 13pt">Just copy/paste this snippet into your Outlook Mail's Signature field.</p>
+
+    <script>
+      function generateHtml() {
+        const name = document.getElementById('name').value.trim()
+        const jobTitle = document.getElementById('jobTitle').value.trim()
+        const email = document.getElementById('email').value.trim()
+        const phone = document.getElementById('phone').value.trim()
+
+        const html = `<p style="color:salmon;">${name}</p>
+<p style="color:tomato;">5 Rivers Automation</p>
+<p style="color:tomato;">${jobTitle}</p>
+<p>Email: <a href="mailto:${email}">${email}</a></p>
+<p>Phone: <a href="tel:${phone}">${phone}</a></p>`.replace(/^\s*[\r\n]+|\s*$/gm, '') // Remove leading whitespace from each line;
+
+        document.getElementById('generatedHtml').value = html
+      }
+      function copyToClipboard() {
+        const generatedHtml = document.getElementById('generatedHtml')
+        generatedHtml.select()
+        document.execCommand('copy')
+        alert('Snippet copied to clipboard!')
+      }
+      document.getElementById('copyButton').addEventListener('click', copyToClipboard)
+
+      // Trigger generation on form input change
+      const formInputs = document.querySelectorAll('#signatureForm input')
+      formInputs.forEach((input) => {
+        input.addEventListener('input', generateHtml)
+      })
+    </script>
+  </body>
+</html>

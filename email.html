@@ -33,11 +33,19 @@
     <form id="signatureForm">
       <div class="field">
         <label for="name">Name:</label><br />
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name" name="name" placeholder="Elvis Presley" />
+      </div>
+      <div class="field">
+        <label for="avatarUrl">Profile Pic URL:</label><br />
+        <input type="text" id="avatarUrl" name="avatarUrl" placeholder="https://picsum.photos/id/237" />
       </div>
       <div class="field">
         <label for="jobTitle">Job Title:</label><br />
-        <input type="text" id="jobTitle" name="jobTitle" />
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="Rock Star" />
+      </div>
+      <div class="field">
+        <label for="department">Department:</label><br />
+        <input type="text" id="department" name="department" />
       </div>
       <div class="field">
         <label for="email">Email:</label><br />
@@ -63,9 +71,12 @@
     <script>
       function generateHtml() {
         const name = document.getElementById('name').value.trim()
+        const avatarUrl = document.getElementById('avatarUrl').value.trim()
         const jobTitle = document.getElementById('jobTitle').value.trim()
         const email = document.getElementById('email').value.trim()
+        const department = document.getElementById('department').value.trim()
         const phone = document.getElementById('phone').value.trim()
+
 
         const html = `<p style="color:salmon;">${name}</p>
 <p style="color:tomato;">5 Rivers Automation</p>
@@ -73,7 +84,195 @@
 <p>Email: <a href="mailto:${email}">${email}</a></p>
 <p>Phone: <a href="tel:${phone}">${phone}</a></p>`.replace(/^\s*[\r\n]+|\s*$/gm, '') // Remove leading whitespace from each line;
 
-        document.getElementById('generatedHtml').value = html
+const html2 = `<table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+    <tbody>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                    <tbody>
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;" class="template1__ImageContainer-sc-nmby7a-0 guKKwa">
+                                                <img src="${avatarUrl}" role="presentation" style="border-radius:50%; display: block; max-width: 108px;" width="130" class="image__StyledImage-sc-hupvqm-0 kYkhsl" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="30"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;" class="template1__ImageContainer-sc-nmby7a-0 guKKwa">
+                                                <img src="https://github.com/simonhlee97.png" role="presentation" style="display: block; max-width: 130px;" width="130" class="image__StyledImage-sc-hupvqm-0 kYkhsl" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td width="46"><div></div></td>
+                            <td style="padding: 0px; vertical-align: middle;">
+                                <h2 color="#000000" style="margin: 0px; font-size: 18px; color: rgb(0, 0, 0); font-weight: 600;" class="name__NameContainer-sc-1m457h3-0 gsCpOr"><span>${name}</span></h2>
+                                <p color="#000000" font-size="medium" style="margin: 0px; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;" class="job-title__Container-sc-1hmtp73-0 hWtcow"><span>${jobTitle}</span></p>
+                                <p color="#000000" font-size="medium" style="margin: 0px; font-weight: 500; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;" class="company-details__CompanyContainer-sc-j5pyy8-0 eYVggq">
+                                    <span>${department}</span><span>&nbsp;|&nbsp;</span><span>5 Rivers Automation</span>
+                                </p>
+                                <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                                    <tbody>
+                                        <tr>
+                                            <td height="30"></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                color="#f86295"
+                                                direction="horizontal"
+                                                width="auto"
+                                                height="1"
+                                                style="width: 100%; border-bottom: 1px solid rgb(248, 98, 149); border-left: medium; display: block;"
+                                                class="color-divider__Divider-sc-1h38qjv-0 icFEOy"
+                                            ></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="30"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                                    <tbody>
+                                        <tr style="vertical-align: middle;" height="25">
+                                            <td width="30" style="vertical-align: middle;">
+                                                <table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                                <span color="#f86295" width="11" style="display: inline-block; background-color: rgb(248, 98, 149);" class="contact-info__IconWrapper-sc-mmkjr6-1 brbfIW">
+                                                                    <img
+                                                                        src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
+                                                                        color="#f86295"
+                                                                        alt="mobilePhone"
+                                                                        width="13"
+                                                                        style="display: block; background-color: rgb(248, 98, 149);"
+                                                                        class="contact-info__ContactLabelIcon-sc-mmkjr6-0 kInyhW"
+                                                                    />
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td style="padding: 0px; color: rgb(0, 0, 0);">
+                                                <a href="tel:${phone}" color="#000000" style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" class="contact-info__ExternalLink-sc-mmkjr6-2 dExxuU">
+                                                    <span>${phone}</span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr style="vertical-align: middle;" height="25">
+                                            <td width="30" style="vertical-align: middle;">
+                                                <table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                                <span color="#f86295" width="11" style="display: inline-block; background-color: rgb(248, 98, 149);" class="contact-info__IconWrapper-sc-mmkjr6-1 brbfIW">
+                                                                    <img
+                                                                        src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png"
+                                                                        color="#f86295"
+                                                                        alt="emailAddress"
+                                                                        width="13"
+                                                                        style="display: block; background-color: rgb(248, 98, 149);"
+                                                                        class="contact-info__ContactLabelIcon-sc-mmkjr6-0 kInyhW"
+                                                                    />
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td style="padding: 0px;">
+                                                <a href="mailto:${email}" color="#000000" style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" class="contact-info__ExternalLink-sc-mmkjr6-2 dExxuU">
+                                                    <span>${email}</span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr style="vertical-align: middle;" height="25">
+                                            <td width="30" style="vertical-align: middle;">
+                                                <table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                                <span color="#f86295" width="11" style="display: inline-block; background-color: rgb(248, 98, 149);" class="contact-info__IconWrapper-sc-mmkjr6-1 brbfIW">
+                                                                    <img
+                                                                        src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
+                                                                        color="#f86295"
+                                                                        alt="website"
+                                                                        width="13"
+                                                                        style="display: block; background-color: rgb(248, 98, 149);"
+                                                                        class="contact-info__ContactLabelIcon-sc-mmkjr6-0 kInyhW"
+                                                                    />
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td style="padding: 0px;">
+                                                <a href="//5rivers.io" color="#000000" style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;" class="contact-info__ExternalLink-sc-mmkjr6-2 dExxuU"><span>5rivers.io</span></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                                    <tbody>
+                                        <tr>
+                                            <td height="30"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span style="display: block; text-align: left;">
+                                    <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="//www.example.com"
+                                        isimage=""
+                                        color="#7075db"
+                                        textcolor="#ffffff"
+                                        alignment="left"
+                                        style="
+                                            border-width: 6px 12px;
+                                            border-style: solid;
+                                            border-color: rgb(112, 117, 219);
+                                            display: inline-block;
+                                            background-color: rgb(112, 117, 219);
+                                            color: rgb(255, 255, 255);
+                                            font-weight: 700;
+                                            text-decoration: none;
+                                            text-align: center;
+                                            line-height: 40px;
+                                            font-size: 12px;
+                                            border-radius: 3px;
+                                        "
+                                        class="cta__CtaButton-sc-sq0d6i-0 ccnqLe"
+                                    >
+                                        Learn More
+                                    </a>
+                                </span>
+                                <table cellpadding="0" cellspacing="0" border="0" style="font-size: medium; font-family: Arial;" globalstyles="[object Object]" class="table__StyledTable-sc-1avdl6r-0 gZiJTA">
+                                    <tbody>
+                                        <tr>
+                                            <td height="30"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+`
+
+        document.getElementById('generatedHtml').value = html2
       }
       function copyToClipboard() {
         const generatedHtml = document.getElementById('generatedHtml')

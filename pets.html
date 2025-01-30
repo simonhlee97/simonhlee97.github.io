@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSV to HTML Table with Links</title>
+		<style>
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			th,
+			td {
+				border: 1px solid #ccc;
+				padding: 8px;
+				text-align: left;
+			}
+			th {
+				background-color: #f4f4f4;
+			}
+			a {
+				color: blue;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Greater Atlanta Dog Rescues</h1>
+		<table id="csvTable"></table>
+
+		<script>
+			// Path to the local CSV file
+			const csvFilePath = 'rescue-data.csv'
+
+			// Fetch and display the CSV file
+			fetch(csvFilePath)
+				.then((response) => {
+					if (!response.ok) {
+						throw new Error(`Failed to load CSV file: ${response.statusText}`)
+					}
+					return response.text()
+				})
+				.then((csvText) => {
+					displayCSVTable(csvText)
+				})
+				.catch((error) => {
+					console.error(error)
+					const table = document.getElementById('csvTable')
+					table.innerHTML = `<tr><td colspan="3" style="color:red;">Error loading CSV file</td></tr>`
+				})
+
+			// Function to parse and display CSV in the table
+			function displayCSVTable(csvText) {
+				const rows = csvText.split('\n')
+				const table = document.getElementById('csvTable')
+				table.innerHTML = '' // Clear any existing content
+
+				rows.forEach((row, rowIndex) => {
+					const cells = row.split(',')
+					const rowElement = document.createElement(rowIndex === 0 ? 'thead' : 'tr')
+
+					cells.forEach((cell, cellIndex) => {
+						const cellElement = document.createElement(rowIndex === 0 ? 'th' : 'td')
+
+						// If this is the column for URLs, create an anchor tag
+						if (rowIndex > 0 && cellIndex === 2) {
+							// Assuming URL is in the 2nd column
+							const link = document.createElement('a')
+							link.href = cell.trim()
+							link.textContent = cell.trim()
+							link.target = '_blank' // Open in a new tab
+							cellElement.appendChild(link)
+						} else {
+							cellElement.textContent = cell.trim()
+						}
+
+						rowElement.appendChild(cellElement)
+					})
+
+					table.appendChild(rowElement)
+				})
+			}
+		</script>
+	</body>
+</html>

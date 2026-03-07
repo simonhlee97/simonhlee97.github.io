@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blue Jays Walkup Songs</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+
+<style>
+
+body {
+    text-align: center;
+    padding: 12px;
+}
+
+table {
+    margin: 0 auto;
+    width: 92%;
+}
+
+th, td {
+    text-align: left;
+}
+
+td {
+    padding-top: 19px;
+}
+
+.drag-handle {
+    cursor: grab;
+    font-size: 20px;
+}
+
+.playing {
+    background-color: #fff7cc;
+}
+.walkup-btn {
+  font-weight: bold;
+  background-color: #2ecc71;
+}
+</style>
+</head>
+
+<body>
+
+<button id="spotify-login">Login with Spotify</button>
+
+<h2>Blue Jays Walkup Songs</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player Name</th>
+      <th>Walk-Up</th>
+      <th>Order</th>
+    </tr>
+  </thead>
+
+<tbody id="table-body"></tbody>
+
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+
+<script>
+
+// =============================
+// GLOBAL STATE
+// =============================
+
+let currentAudio = null;
+let currentRow = null;
+
+let spotifyPlayer;
+let spotifyDeviceId;
+
+
+// =============================
+// CSV LOADING
+// =============================
+
+Papa.parse("bluejays.csv", {
+    download: true,
+    header: true,
+    complete: function(results) {
+
+        console.table(results.data);
+
+        const tbody = document.getElementById("table-body");
+
+        results.data.forEach(player => {
+
+            const tr = document.createElement("tr");
+
+            tr.innerHTML = `
+                <td>${player.player}</td>
+                <td><button class="walkup-btn">▶ Walk-Up</button></td>
+                <td class="drag-handle">☰</td>
+            `;
+
+            const walkBtn = tr.querySelector(".walkup-btn");
+
+            walkBtn.addEventListener("click", () =>
+                walkUpPlayer(player.name_audio, player.spotify_track, player.startat, tr)
+            );
+            tbody.appendChild(tr);
+        });
+
+    }
+});
+
+
+// =============================
+// LOCAL MP3 PLAYER (ANNOUNCER)
+// =============================
+
+function playNameAudio(file, row){
+
+    if(currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    if(currentRow){
+        currentRow.classList.remove("playing");
+    }
+
+    currentAudio = new Audio(file);
+    currentAudio.play();
+
+    row.classList.add("playing");
+    currentRow = row;
+
+}
+
+
+// =============================
+// SPOTIFY TRACK PLAYER
+// =============================
+async function stopSpotifyPlayback(){
+
+    if(!spotifyDeviceId) return;
+
+    const token = localStorage.getItem("spotify_access_token");
+
+    await fetch(`https://api.spotify.com/v1/me/player/pause?device_id=${spotifyDeviceId}`, {
+        method: "PUT",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    });
+
+}
+
+
+async function playSpotifyTrack(trackId, startat, row){
+
+    await stopSpotifyPlayback();   // ⭐ stop currently playing track
+
+    if(!spotifyDeviceId){
+        console.warn("Spotify player not ready yet");
+        return;
+    }
+
+    const token = localStorage.getItem("spotify_access_token");
+
+    const startMs = parseInt(startat);
+
+    await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDeviceId}`, {
+        method: "PUT",
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            uris: [`spotify:track:${trackId}`],
+            position_ms: startMs
+        })
+    });
+
+    setTimeout(async () => {
+
+        await stopSpotifyPlayback();
+
+    }, 10000);
+
+}
+
+async function walkUpPlayer(nameFile, trackId, startat, row){
+
+    if(currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    if(currentRow){
+        currentRow.classList.remove("playing");
+    }
+
+    row.classList.add("playing");
+    currentRow = row;
+
+    // stop any previous announcer audio
+    if(currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+
+    // play announcer name
+    currentAudio = new Audio(nameFile);
+    currentAudio.play();
+
+    // stadium pause
+    await new Promise(r => setTimeout(r, 2000));
+
+    // ⭐ if no track ID, stop here
+    if(!trackId || trackId.trim() === ""){
+        console.log("Name announcement only (no walk-up song)");
+        return;
+    }
+
+    // start spotify music
+    playSpotifyTrack(trackId, startat, row);
+
+}
+
+
+// =============================
+// TABLE DRAG SORTING
+// =============================
+
+new Sortable(document.getElementById("table-body"), {
+    animation: 150,
+    handle: ".drag-handle"
+});
+
+
+// =============================
+// SPOTIFY AUTHENTICATION (PKCE)
+// =============================
+
+const clientId = "b48893c4966747d7a821a0d8af256d22";
+const redirectUri = "https://simonhlee97.github.io/bluejays.html";
+
+const scope = [
+  "streaming",
+  "user-read-email",
+  "user-read-private",
+  "user-modify-playback-state",
+  "user-read-playback-state"
+].join(" ");
+
+function generateRandomString(length) {
+
+  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const values = crypto.getRandomValues(new Uint8Array(length));
+
+  return values.reduce((acc, x) => acc + possible[x % possible.length], "");
+
+}
+
+async function sha256(plain) {
+
+  const encoder = new TextEncoder();
+  const data = encoder.encode(plain);
+
+  return window.crypto.subtle.digest("SHA-256", data);
+
+}
+
+function base64encode(input) {
+
+  return btoa(String.fromCharCode(...new Uint8Array(input)))
+    .replace(/=/g, "")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_");
+
+}
+
+
+document.getElementById("spotify-login").addEventListener("click", async () => {
+
+  const codeVerifier = generateRandomString(64);
+  localStorage.setItem("code_verifier", codeVerifier);
+
+  const hashed = await sha256(codeVerifier);
+  const codeChallenge = base64encode(hashed);
+
+  const authUrl = new URL("https://accounts.spotify.com/authorize");
+
+  authUrl.search = new URLSearchParams({
+    response_type: "code",
+    client_id: clientId,
+    scope: scope,
+    code_challenge_method: "S256",
+    code_challenge: codeChallenge,
+    redirect_uri: redirectUri
+  }).toString();
+
+  window.location.href = authUrl;
+
+});
+
+
+async function getAccessToken(code) {
+
+  const codeVerifier = localStorage.getItem("code_verifier");
+
+  const payload = {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      client_id: clientId,
+      grant_type: "authorization_code",
+      code: code,
+      redirect_uri: redirectUri,
+      code_verifier: codeVerifier
+    })
+  };
+
+  const response = await fetch("https://accounts.spotify.com/api/token", payload);
+  const data = await response.json();
+
+  localStorage.setItem("spotify_access_token", data.access_token);
+
+}
+
+
+async function handleRedirect() {
+
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("code");
+
+  if (code) {
+
+    await getAccessToken(code);
+
+    window.history.replaceState({}, document.title, "/bluejays.html");
+
+  }
+
+}
+
+handleRedirect();
+
+
+// =============================
+// SPOTIFY WEB PLAYER
+// =============================
+
+window.onSpotifyWebPlaybackSDKReady = () => {
+
+  const token = localStorage.getItem("spotify_access_token");
+
+  spotifyPlayer = new Spotify.Player({
+    name: "Blue Jays Walkup Player",
+    getOAuthToken: cb => { cb(token); },
+    volume: 0.8
+  });
+
+  spotifyPlayer.addListener('ready', ({ device_id }) => {
+
+    console.log("Spotify Player Ready", device_id);
+
+    spotifyDeviceId = device_id;
+
+    fetch("https://api.spotify.com/v1/me/player", {
+      method: "PUT",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        device_ids: [device_id],
+        play: false
+      })
+    });
+
+  });
+
+  spotifyPlayer.addListener('initialization_error', e => console.error(e));
+  spotifyPlayer.addListener('authentication_error', e => console.error(e));
+  spotifyPlayer.addListener('account_error', e => console.error(e));
+  spotifyPlayer.addListener('playback_error', e => console.error(e));
+
+  spotifyPlayer.connect();
+
+};
+
+</script>
+
+</body>
+</html>

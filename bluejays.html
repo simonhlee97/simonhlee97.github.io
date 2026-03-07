@@ -208,6 +208,8 @@ async function stopSpotifyPlayback(){
 
 async function playSpotifyTrack(trackId, startat, row){
 
+    await stopSpotifyPlayback();
+
     const token = localStorage.getItem("spotify_access_token");
 
     const startMs = parseInt(startat);
@@ -217,6 +219,7 @@ async function playSpotifyTrack(trackId, startat, row){
     // if browser player doesn't exist (mobile), activate phone device
     if(!deviceId){
         deviceId = await activateSpotifyDevice();
+        spotifyDeviceId = deviceId;
     }
 
     await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
@@ -239,10 +242,7 @@ async function playSpotifyTrack(trackId, startat, row){
 
 async function walkUpPlayer(nameFile, trackId, startat, row){
 
-    if(currentAudio){
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-    }
+    
 
     if(currentRow){
         currentRow.classList.remove("playing");

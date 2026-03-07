@@ -214,7 +214,7 @@ async function playSpotifyTrack(trackId, startat, row){
 
         const seconds = Math.floor(startMs / 1000);
 
-        const url = `https://open.spotify.com/track/${trackId}?t=${seconds}`;
+        const url = `https://open.spotify.com/track/${trackId}#${seconds}`;
 
         window.location.href = url;
 

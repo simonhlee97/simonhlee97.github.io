@@ -154,6 +154,42 @@ function playNameAudio(file, row){
 // =============================
 // SPOTIFY TRACK PLAYER
 // =============================
+
+async function activateSpotifyDevice(){
+
+    const token = localStorage.getItem("spotify_access_token");
+
+    const res = await fetch("https://api.spotify.com/v1/me/player/devices", {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    });
+
+    const data = await res.json();
+
+    if(!data.devices || data.devices.length === 0){
+        console.warn("No Spotify devices found");
+        return null;
+    }
+
+    // choose the first active device or fallback to first device
+    let device = data.devices.find(d => d.is_active) || data.devices[0];
+
+    await fetch("https://api.spotify.com/v1/me/player", {
+        method: "PUT",
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            device_ids: [device.id],
+            play: false
+        })
+    });
+
+    return device.id;
+}
+    
 async function stopSpotifyPlayback(){
 
     if(!spotifyDeviceId) return;
@@ -173,20 +209,17 @@ async function stopSpotifyPlayback(){
 async function playSpotifyTrack(trackId, startat, row){
 
     const token = localStorage.getItem("spotify_access_token");
+
     const startMs = parseInt(startat);
 
-    let url;
+    let deviceId = spotifyDeviceId;
 
-    // desktop → play through browser player
-    if(!isMobile && spotifyDeviceId){
-        url = `https://api.spotify.com/v1/me/player/play?device_id=${spotifyDeviceId}`;
-    }
-    // mobile → play on active spotify device
-    else{
-        url = `https://api.spotify.com/v1/me/player/play`;
+    // if browser player doesn't exist (mobile), activate phone device
+    if(!deviceId){
+        deviceId = await activateSpotifyDevice();
     }
 
-    await fetch(url, {
+    await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
         method: "PUT",
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -199,14 +232,7 @@ async function playSpotifyTrack(trackId, startat, row){
     });
 
     setTimeout(async () => {
-
-        await fetch(`https://api.spotify.com/v1/me/player/pause`, {
-            method: "PUT",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
-
+        await stopSpotifyPlayback();
     }, 10000);
 
 }

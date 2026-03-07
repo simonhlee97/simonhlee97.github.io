@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
 
 <style>
-
 body {
     text-align: center;
     padding: 12px;
@@ -215,7 +214,7 @@ async function playSpotifyTrack(trackId, startat, row){
 
         const seconds = Math.floor(startMs / 1000);
 
-        const url = `spotify:track:${trackId}?t=${seconds}`;
+        const url = `https://open.spotify.com/track/${trackId}?t=${seconds}`;
 
         window.location.href = url;
 
@@ -277,7 +276,7 @@ async function walkUpPlayer(nameFile, trackId, startat, row){
     currentAudio.play();
 
     // stadium pause
-    await new Promise(r => setTimeout(r, 2000));
+    await new Promise(r => setTimeout(r, 2900));
 
     // ⭐ if no track ID, stop here
     if(!trackId || trackId.trim() === ""){

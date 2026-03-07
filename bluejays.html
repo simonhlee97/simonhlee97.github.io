@@ -72,6 +72,8 @@ img.logo {
 
 <script>
 
+
+
 // =============================
 // GLOBAL STATE
 // =============================
@@ -81,6 +83,8 @@ let currentRow = null;
 
 let spotifyPlayer;
 let spotifyDeviceId;
+
+let isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
     
 // hide login button if already authenticated
 if(localStorage.getItem("spotify_access_token")){
@@ -168,18 +172,21 @@ async function stopSpotifyPlayback(){
 
 async function playSpotifyTrack(trackId, startat, row){
 
-    await stopSpotifyPlayback();   // ⭐ stop currently playing track
-
-    if(!spotifyDeviceId){
-        console.warn("Spotify player not ready yet");
-        return;
-    }
-
     const token = localStorage.getItem("spotify_access_token");
-
     const startMs = parseInt(startat);
 
-    await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDeviceId}`, {
+    let url;
+
+    // desktop → play through browser player
+    if(!isMobile && spotifyDeviceId){
+        url = `https://api.spotify.com/v1/me/player/play?device_id=${spotifyDeviceId}`;
+    }
+    // mobile → play on active spotify device
+    else{
+        url = `https://api.spotify.com/v1/me/player/play`;
+    }
+
+    await fetch(url, {
         method: "PUT",
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -193,7 +200,12 @@ async function playSpotifyTrack(trackId, startat, row){
 
     setTimeout(async () => {
 
-        await stopSpotifyPlayback();
+        await fetch(`https://api.spotify.com/v1/me/player/pause`, {
+            method: "PUT",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
 
     }, 10000);
 

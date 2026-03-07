@@ -75,6 +75,11 @@ let currentRow = null;
 
 let spotifyPlayer;
 let spotifyDeviceId;
+    
+// hide login button if already authenticated
+if(localStorage.getItem("spotify_access_token")){
+  document.getElementById("spotify-login").style.display = "none";
+}
 
 
 // =============================

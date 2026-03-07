@@ -208,21 +208,31 @@ async function stopSpotifyPlayback(){
 
 async function playSpotifyTrack(trackId, startat, row){
 
-    await stopSpotifyPlayback();
-
-    const token = localStorage.getItem("spotify_access_token");
-
     const startMs = parseInt(startat);
+
+    // MOBILE: open Spotify app
+    if(isMobile){
+
+        const seconds = Math.floor(startMs / 1000);
+
+        const url = `spotify:track:${trackId}?t=${seconds}`;
+
+        window.location.href = url;
+
+        return;
+    }
+
+    // DESKTOP: use Web Playback SDK
+    const token = localStorage.getItem("spotify_access_token");
 
     let deviceId = spotifyDeviceId;
 
-    // if browser player doesn't exist (mobile), activate phone device
     if(!deviceId){
         deviceId = await activateSpotifyDevice();
         spotifyDeviceId = deviceId;
     }
 
-    await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
+    const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
         method: "PUT",
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -233,6 +243,11 @@ async function playSpotifyTrack(trackId, startat, row){
             position_ms: startMs
         })
     });
+
+    if(!res.ok){
+        const text = await res.text();
+        console.error("Spotify play error:", text);
+    }
 
     setTimeout(async () => {
         await stopSpotifyPlayback();
